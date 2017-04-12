@@ -50,3 +50,10 @@ $btn-font-weight: $font-weight-medium !default;
 $btn-default-color: $silver-dark !default;
 $btn-primary-color: $color-primary !default;
 $btn-link-disabled-color: $grey-dark !default;
+
+// Tabs setting
+$nav-tabs-border-color: transparent !default;
+$nav-tabs-link-hover-border-color: $color-primary !default;
+$nav-tabs-active-link-hover-bg: transparent !default;
+$nav-tabs-active-link-hover-color: darken($color-primary, 20%) !default;
+$nav-tabs-active-link-hover-border-color: $color-primary !default;

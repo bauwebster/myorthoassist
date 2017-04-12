@@ -172,10 +172,8 @@ Table of Contents:
 #primary_menu {
   .mobile {
     @extend .visible-xs;
-    @extend .visible-sm;
   }
   .desktop {
     @extend .hidden-xs;
-    @extend .hidden-sm;
   }
 }

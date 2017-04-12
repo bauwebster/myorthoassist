@@ -6,7 +6,7 @@
           span(aria-hidden='true') &times;
         h4.modal-title Upload Images/Documents
       .modal-body
-        div
+        .text-center
           ul.nav.nav-tabs(role='tablist')
             li.active(role='presentation')
               a(href='#ortho_set', aria-controls='home', role='tab', data-toggle='tab') Ortho Set
@@ -21,9 +21,15 @@
             li(role='presentation')
               a(href='#documents', aria-controls='settings', role='tab', data-toggle='tab') Documents
           .tab-content
-            #ortho_set.tab-pane.active(role='tabpanel') 1
-            #panorex.tab-pane(role='tabpanel') 2
-            #lateral_cef.tab-pane(role='tabpanel') 3
-            #intra_oral.tab-pane(role='tabpanel') 4
-            #misc_photos.tab-pane(role='tabpanel') 5
-            #documents.tab-pane(role='tabpanel') 6
+            #ortho_set.tab-pane.active(role='tabpanel')
+              p.how_to Drag & Drop Your Document Below
+            #panorex.tab-pane(role='tabpanel')
+              p.how_to Drag & Drop Your Images in the Blocks Below 
+            #lateral_cef.tab-pane(role='tabpanel')
+              p.how_to Drag & Drop Your Images in Respective Blocks Below 
+            #intra_oral.tab-pane(role='tabpanel')
+              p.how_to Drag & Drop Your Image Below
+            #misc_photos.tab-pane(role='tabpanel')
+              p.how_to Drag & Drop Your Image Below
+            #documents.tab-pane(role='tabpanel')
+              p.how_to Drag & Drop Your Images in Respective Blocks Below 

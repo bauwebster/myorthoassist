@@ -218,38 +218,6 @@
       margin-left: 3px;
     }
   }
-  .nav-tabs {
-    border: none;
-    list-style-type: none;
-    li {
-      a {
-        padding: 0;
-        border: none;
-        background: none;
-        color: $grey-darkest;
-        text-transform: uppercase;
-        font-weight: $font-weight-medium;
-        border-bottom: 3px solid transparent;
-        &:hover, &:focus {
-          color: $grey-darkest;
-          border-bottom: 3px solid transparent;
-        }
-      }
-      &.active a {
-        color: $brand-primary;
-        font-weight: $font-weight-bold;
-        border-bottom: 3px solid $color-primary;
-        &:hover, &:focus {
-          border: none;
-          color: inherit;
-          border-bottom: 3px solid $color-primary;
-        }
-      }
-      &:not(:last-child) {
-        margin-right: $px_fifteen;
-      }
-    }
-  }
   .tab-pane {
     > .row {
       margin-bottom: $px_fifteen;
@@ -278,6 +246,7 @@
     @include font-size(16px);
     text-transform: uppercase;
   }
+  @include tab-styles();
   @media #{$phablet} {
     h1 {
       @include font-size(16px);
