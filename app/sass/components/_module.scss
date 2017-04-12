@@ -1,0 +1,144 @@
+@mixin modal_uploadfiles() {
+  .modal-title {
+    text-align: center;
+    color: $color-primary;
+    text-transform: uppercase;
+  }
+  .modal-body {
+    background: $grey;
+    margin: $px_fifteen;
+    color: $color-primary;
+    @include font-size(14px);
+    border: 1px solid $grey-dark;
+    font-weight: $font-weight-bold;
+  }
+}
+
+@mixin modal_disclaimer() {
+  .modal-title {
+    text-align: center;
+    color: $color-primary;
+    @include font-size(20px);
+    text-transform: uppercase;
+  }
+  .modal-body {
+    background: $grey;
+    color: $color-primary;
+    @include font-size(12px);
+    border: 1px solid $grey-dark;
+    font-weight: $font-weight-bold;
+    margin: $px_fifteen $px_fifteen 0;
+    p {
+      margin-bottom: 0;
+    }
+    @media #{$mobile} {
+      max-height: 300px;
+      overflow-y: scroll;
+    }
+  }
+  .modal-footer {
+    @include clearfix();
+    a {
+      @include font-size(16px);
+      text-transform: uppercase;
+    }
+  }
+  #btn_disagree {
+    @extend .pull-left;
+  }
+}
+
+@mixin modal_resetpassword() {
+  .modal-header {
+    position: relative;
+    padding: 0;
+    button {
+      top: 15px;
+      right: 15px;
+      z-index: 1000;
+      position: absolute;
+    }
+  }
+  .modal-body {
+    text-align: center;
+    text-transform: none;
+    padding: $px_thirty*1.5 0;
+    p {
+      color: $black;
+      @include font-size(16px);
+      font-weight: $font-weight-regular;
+    }
+    span {
+      display: block;
+      margin-top: $px_ten;
+      color: $color-primary;
+      @include font-size(14px);
+    }
+    span span {
+      display: inline;
+      font-weight: $font-weight-medium;
+    }
+  }
+  #reset_email {
+    min-width: 150px;
+    border-radius: 23px;
+    @include font-size(16px);
+  }
+}
+
+@mixin fieldset_colored() {
+  position: relative;
+  border-radius: 2px;
+  background: $grey-lightest;
+  border: 1px solid $color-primary;
+  padding: $px_thirty $px_fifteen $px_fifteen; //~ 30px 15px 15px
+  legend {
+    top: -12px;
+    width: auto;
+    padding: 2px 4px;
+    position: absolute;
+    background: $silver;
+    color: $color-primary;
+    display: inline-block;
+    @include font-size(14px);
+    font-weight: $font-weight-bold;
+  }
+}
+
+@mixin pushy_overrides() {
+  .pushy {
+    background: $color-primary;
+    box-shadow: inset 0 0 5px 5px rgba(0, 0, 0, 0.2);
+    h1 {
+      color: $grey-tone;
+      @include font-size(24px);
+      text-transform: uppercase;
+      font-weight: $font-weight-medium;
+      padding: $px_fifteen $px_thirty $px_ten;
+    }
+    a {
+      @include font-size(14px);
+      color: $white;
+      border-top: 1px solid lighten($color-primary, 4%);
+      border-bottom: 1px solid darken($color-primary, 4%);
+    }
+    a:hover {
+      color: darken($white, 20%);
+    }
+    a:active {
+      box-shadow: inset 0 0 15px 3px rgba(0, 0, 0, 0.2);
+      border-top: 1px solid rgba(0, 0, 0, 0.2);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    ul {
+      margin: 0 !important;
+      padding: 0;
+      border-top: 1px solid darken($color-primary, 4%);
+    }
+    @media #{$phablet} {
+      h1 {
+        @include font-size(20px);
+      }
+    }
+  }
+}

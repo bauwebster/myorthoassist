@@ -1,0 +1,29 @@
+#upload_files.modal.fade(tabindex='-1', role='dialog')
+  .modal-dialog(role='document')
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') &times;
+        h4.modal-title Upload Images/Documents
+      .modal-body
+        div
+          ul.nav.nav-tabs(role='tablist')
+            li.active(role='presentation')
+              a(href='#ortho_set', aria-controls='home', role='tab', data-toggle='tab') Ortho Set
+            li(role='presentation')
+              a(href='#panorex', aria-controls='profile', role='tab', data-toggle='tab') Panorex
+            li(role='presentation')
+              a(href='#lateral_cef', aria-controls='messages', role='tab', data-toggle='tab') Lateral CEF
+            li(role='presentation')
+              a(href='#intra_oral', aria-controls='settings', role='tab', data-toggle='tab') Intra-Oral Radiographs
+            li(role='presentation')
+              a(href='#misc_photos', aria-controls='settings', role='tab', data-toggle='tab') Misc Photos/Radiographs
+            li(role='presentation')
+              a(href='#documents', aria-controls='settings', role='tab', data-toggle='tab') Documents
+          .tab-content
+            #ortho_set.tab-pane.active(role='tabpanel') 1
+            #panorex.tab-pane(role='tabpanel') 2
+            #lateral_cef.tab-pane(role='tabpanel') 3
+            #intra_oral.tab-pane(role='tabpanel') 4
+            #misc_photos.tab-pane(role='tabpanel') 5
+            #documents.tab-pane(role='tabpanel') 6

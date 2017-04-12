@@ -1,0 +1,52 @@
+// Border Radius setting
+$border-radius-base: 2px !default;
+
+// Standard setting
+$brand-primary: $color-primary !default;
+$font-family-sans-serif: "Roboto", "Noto Sans", Helvetica, Arial, sans-serif !default;
+$icon-font-path: 'if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/") !default';
+
+// Collapse setting
+$grid-float-breakpoint: 0 !default;
+$grid-float-breakpoint-max: 0 !default;
+
+// Modal setting
+$modal-title-padding: 15px 15px 0 !default;
+$modal-backdrop-bg: $black !default;
+$modal-backdrop-opacity: 0.5 !default;
+$modal-header-border-color: transparent !default;
+$modal-footer-border-color: transparent !default;
+
+// Input setting
+$input-border: $grey-dark !default;
+$input-color: $grey-tone !default;
+$input-color-placeholder: $grey-tone !default;
+
+// Navbar setting
+$navbar-height: 80px !default;
+$navbar-margin-bottom: 0 !default;
+$navbar-default-color: $white !default;
+$navbar-border-radius: 0 !default;
+$navbar-default-bg: transparent !default;
+$navbar-default-border: transparent !default;
+
+// Navbar links setting
+$navbar-default-link-color: $white !default;
+$navbar-default-link-hover-color: darken($white, 20%) !default;
+$navbar-default-link-hover-bg: transparent !default;
+$navbar-default-brand-color: $white !default;
+$navbar-default-link-active-color: darken($white, 20%) !default;
+$navbar-default-link-active-bg: transparent !default;
+$navbar-default-brand-hover-color: darken($white, 20%) !default;
+$navbar-default-brand-hover-bg: transparent !default;
+
+// Navbar collapse setting
+$navbar-default-toggle-hover-bg: transparent !default;
+$navbar-default-toggle-icon-bar-bg: $white !default;
+$navbar-default-toggle-border-color: transparent !default;
+
+// Button setting
+$btn-font-weight: $font-weight-medium !default;
+$btn-default-color: $silver-dark !default;
+$btn-primary-color: $color-primary !default;
+$btn-link-disabled-color: $grey-dark !default;

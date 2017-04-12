@@ -1,0 +1,757 @@
+/*
+  Table of Contents:
+  0. Navigation
+  1. Pushy Styles
+  2. Login Page
+  3. Profile Page
+  4. Cases Page
+  5. Miscellanous
+*/
+
+// 0. Navigation
+.navbar {
+  border: none;
+  @include font-size(14px);
+  background: transparent url('../images/background_nav.png') center/contain repeat;
+  > div,
+  .navbar-brand {
+    position: relative;
+  }
+  .logo {
+    position: absolute;
+    top: 16px;
+    width: 140px;
+  }
+  .navbar-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    a {
+      display: block;
+      margin: $px_fifteen+5 $px_fifteen;
+      @media #{$phablet} {
+        margin: $px_fifteen;
+      }
+    }
+    img {
+      width: 40px;
+    }
+  }
+  .fa {
+    margin-left: 4px;
+  }
+  @media #{$phablet__up} {
+    .collapse {
+      margin-right: $px_thirty+$px_fifteen; //~ 45px
+    }
+  }
+  @media #{$phablet} {
+    .navbar-header {
+      float: none;
+      display: block;
+      text-align: center;
+    }
+    .navbar-brand {
+      float: none;
+      height: auto;
+      line-height: normal;
+      padding: $px_fifteen;
+      display: inline-block;
+    }
+    .logo {
+      display: inline-block;
+      position: relative;
+      max-width: 100px;
+      top: auto;
+    }
+    .collapse {
+      text-align: center;
+    }
+    .navbar-nav {
+      margin-right: 0;
+      display: inline-block;
+      float: none !important;
+      a {
+        padding-top: 0;
+        padding-bottom: $px_ten;
+      }
+    }
+  }
+}
+
+// 1. Pushy styles
+@include pushy_overrides();
+
+// 2. Login Page
+.home {
+  position: relative;
+  color: $white;
+  min-height: 100vh;
+  @include font-size(14px);
+  background: $white url('../images/background.jpg') center/cover no-repeat;
+  .panel {
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    background: none;
+  }
+  .panel-body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .panel-heading {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    img {
+      @media #{$mobile} {
+        max-width: 180px;
+        margin-top: $px_thirty;
+      }
+    }
+  }
+  // Form Elements
+  #form_login {
+    label {
+      text-align: center;
+    }
+    .forgot_password {
+      color: $white;
+      display: inline-block;
+      @include font-size(12px);
+      text-decoration: underline;
+      @media #{$mobile} {
+        margin-bottom: $px_thirty;
+      }
+    }
+  }
+  footer {
+    text-align: center;
+    @include font-size(12px);
+    a {
+      color: $white;
+      text-decoration: underline;
+    }
+    @media #{$desktop__up} {
+      span::after {
+        content: "\00a0\00a0\00a0|\00a0\00a0\00a0";
+      }
+    }
+    @media #{$desktop} {
+      a {
+        display: block;
+        margin-top: $px_ten;
+      }
+    }
+  }
+  #button_login {
+    @extend .btn-block;
+    margin-top: $px_thirty;
+    margin-bottom: $px_thirty;
+    @include font-size(16px);
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+  }
+}
+
+// 3. Profile Page
+.profile {
+  min-height: 100vh;
+  h1 {
+    color: $color-primary;
+  }
+  .bootstrap-select {
+    width: 100% !important;
+    .dropdown-toggle {
+      color: $grey-tone !important;
+      border-color: $grey-dark !important;
+      background-color: $white !important;
+      font-weight: $font-weight-regular !important;
+    }
+  }
+  .form-group {
+    position: relative;
+  }
+  .site-main {
+    color: $color-primary;
+    @include font-size(14px);
+  }
+  #form_profile {
+    background: $white;
+    border-radius: 4px;
+    padding: $px_fifteen $px_fifteen 0;
+    box-shadow: 1px 1px 5px 2px rgba(0,0,0,0.125);
+    @media #{$phablet__up} {
+      padding: $px_thirty $px_thirty 0; //~ 30px
+    }
+    p:not(.help-block) {
+      font-weight: $font-weight-bold;
+    }
+    img {
+      width: 100%;
+      text-align: center;
+      @extend .img-circle;
+      @media #{$phablet} {
+        width: 100px;
+      }
+    }
+    .third_column {
+      margin: $px_thirty 0;
+      text-align: right;
+      @media #{$phablet} {
+        margin: $px_fifteen 0;
+      }
+    }
+  }
+  .help-block {
+    margin-top: -$px_ten/2; //~ -5px
+    & + textarea + p {
+      margin-top: $px_ten;
+    }
+  }
+  .toggle_password {
+    position: absolute;
+    top: -3px;
+    right: $px_fifteen;
+    label {
+      display: inline;
+      margin-left: 3px;
+    }
+  }
+  .nav-tabs {
+    border: none;
+    list-style-type: none;
+    li {
+      a {
+        padding: 0;
+        border: none;
+        background: none;
+        color: $grey-darkest;
+        text-transform: uppercase;
+        font-weight: $font-weight-medium;
+        border-bottom: 3px solid transparent;
+        &:hover, &:focus {
+          color: $grey-darkest;
+          border-bottom: 3px solid transparent;
+        }
+      }
+      &.active a {
+        color: $brand-primary;
+        font-weight: $font-weight-bold;
+        border-bottom: 3px solid $color-primary;
+        &:hover, &:focus {
+          border: none;
+          color: inherit;
+          border-bottom: 3px solid $color-primary;
+        }
+      }
+      &:not(:last-child) {
+        margin-right: $px_fifteen;
+      }
+    }
+  }
+  .tab-pane {
+    > .row {
+      margin-bottom: $px_fifteen;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    fieldset {
+      @include fieldset_colored();
+    }
+    @media #{$phablet__up} {
+      &#tab_practice fieldset {
+        margin-top: 9px;
+      }
+      &#tab_invisalign fieldset {
+        margin-top: $px_thirty;
+      }
+    }
+  }
+  #btn_save {
+    margin-left: $px_thirty;
+    @include font-size(16px);
+    text-transform: uppercase;
+  }
+  #btn_cancel {
+    @include font-size(16px);
+    text-transform: uppercase;
+  }
+  @media #{$phablet} {
+    h1 {
+      @include font-size(16px);
+    }
+    label,
+    .help-block,
+    .form-group:first-child {
+      text-align: center;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    textarea {
+      @include input_text_center();
+    }
+    .tab-listing {
+      text-align: center;
+      margin: $px_fifteen 0 $px_thirty;
+    }
+  }
+}
+
+// 4. Cases Page
+.cases {
+  position: relative;
+  min-height: 100vh;
+  .site-main {
+    > .row {
+      margin-top: $px_thirty;
+      margin-bottom: $px_thirty;
+      @media #{$phablet} {
+        margin-bottom: $px_ten;
+      }
+    }
+    h1 {
+      margin: 0; //~ 20px 0
+      padding: 0;
+      line-height: 36px;
+      display: inline-block;
+      color: $color-primary;
+    }
+    form {
+      @extend .form-inline;
+      .archived_cases {
+        input {
+          margin: 0;
+          vertical-align: middle;
+        }
+        label {
+          margin: 0;
+          line-height: 36px;
+          color: $grey-tone;
+          display: inline-block;
+          vertical-align: middle;
+          @include font-size(14px);
+          font-weight: $font-weight-regular;
+        }
+        @media #{$phablet} {
+          label {
+            @include font-size(12px);
+          }
+        }
+      }
+      .search_cases {
+        position: relative;
+        display: block;
+        input {
+          width: 100%;
+          height: 36px;
+          border-radius: 23px;
+          padding-right: $px_thirty*1.5;
+          @include input_text_color($silver-dark);
+        }
+        span {
+          position: absolute;
+          top: 0;
+          right: $px_thirty;
+          z-index: 1000;
+          width: auto;
+        }
+        button {
+          border: none;
+          line-height: 36px;
+        }
+      }
+      .new_case {
+        padding-top: 0;
+        padding-bottom: 0;
+        line-height: 32px;
+        border-radius: 23px;
+        @include font-size(16px);
+        @media #{$phablet} {
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          display: inline-block;
+          .fa {
+            margin: 6px 0 0 -3.5px;
+            @include font-size(20px);
+          }
+          span {
+            display: none;
+          }
+        }
+      }
+      @media #{$phablet} {
+        .new_cases,
+        .search_cases {
+          margin-bottom: $px_ten;
+        }
+      }
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      @include clearfix();
+    }
+    li {
+      list-style-type: none;
+    }
+    .panel {
+      position: relative;
+      box-shadow: none;
+      border-radius: 4px;
+      border-color: $grey-dark;
+    }
+    .panel-heading {
+      padding-bottom: 0;
+      span {
+        line-height: normal;
+        @include font-size(12px);
+        font-weight: $font-weight-medium;
+      }
+      .case_date {
+        color: $silver-dark;
+      }
+      .case_status {
+        color: $grey-tone;
+        margin-left: $px_thirty;
+      }
+      @media #{$phablet} {
+        .case_date {
+          float: left;
+          line-height: $px_fifteen;
+          vertical-align: text-top;
+        }
+        .case_status {
+          float: right;
+          color: $grey-tone;
+          vertical-align: text-top;
+          margin-left: $px_thirty;
+          line-height: $px_fifteen;
+        }
+      }
+    }
+    .panel-body {
+      width: 100%;
+      display: table;
+      color: $silver-dark;
+      .patient_img {
+        width: 85px;
+        display: table-cell;
+        vertical-align: middle;
+        img {
+          @extend .img-circle;
+        }
+      }
+      .patient_info {
+        width: calc(100% - 85px);
+        display: table-cell;
+        vertical-align: middle;
+      }
+      span {
+        line-height: normal;
+      }
+      .patient_name {
+        margin-right: $px_fifteen;
+        @include font-size(24px);
+      }
+      .patient_sex {
+        @include font-size(14px);
+        margin-right: $px_ten;
+        font-weight: $font-weight-medium;
+      }
+      .patient_age {
+        @include font-size(14px);
+        font-weight: $font-weight-medium;
+      }
+      @media #{$tablet} {
+        color: $silver-dark;
+        .patient_info {
+          padding-left: $px_fifteen;
+        }
+        .patient_name {
+          display: block;
+          margin-left: 0;
+          @include font-size(18px);
+        }
+        .patient_sex {
+          @include font-size(14px);
+        }
+        .patient_age {
+          @include font-size(14px);
+        }
+      }
+      @media #{$phablet} {
+        color: $silver-dark;
+        .patient_img {
+          width: 70px;
+        }
+        .patient_info {
+          width: calc(100% - 70px);
+        }
+        .patient_info {
+          padding-left: $px_fifteen;
+        }
+        .patient_name {
+          display: block;
+          margin-left: 0;
+          @include font-size(16px);
+        }
+        .patient_sex {
+          @include font-size(12px);
+        }
+        .patient_age {
+          @include font-size(12px);
+        }
+      }
+    }
+    .panel-footer {
+      border: none;
+      background: transparent;
+      .btn_delete {
+        @include font-size(14px);
+        text-transform: uppercase;
+      }
+      .icon-group {
+        float: right;
+        a {
+          line-height: 0;
+          @include font-size(24px);
+          margin-left: $px_fifteen;
+        }
+      }
+      @media #{$phablet} {
+        border-top: 1px solid $grey-dark;
+        a {
+          line-height: 0;
+          @include font-size(18px);
+        }
+        .icon-group {
+          float: right;
+          a {
+            @include font-size(16px);
+            margin-left: $px_thirty;
+          }
+        }
+      }
+    }
+    .active .panel {
+      border-color: $color-primary;
+      .case_date,
+      .patient_name {
+        color: $color-primary;
+      }
+      .case_status,
+      .patient_age,
+      .patient_sex {
+        color: $grey-tone;
+      }
+      .panel-footer {
+        .active {
+          position: relative;
+          color: $color-primary;
+          box-shadow: none !important;
+          &:hover {
+            color: darken($color-primary, 20%);
+          }
+          &::before {
+            position: absolute;
+            top: -2.5px;
+            left: -5px;
+            content: '';
+            width: $px_fifteen;
+            height: $px_fifteen;
+            border-radius: 50%;
+            background-color: $red;
+            border: 2px solid $white;
+            @media #{$phablet} {
+              top: 0;
+              left: -5px;
+              width: $px_ten;
+              height: $px_ten;
+            }
+          }
+        }
+      }
+    }
+    .archive .panel {
+      border-color: $greyish;
+      background: none;
+      border-style: dashed;
+      .btn_delete {
+        @include font-size(16px);
+      }
+      .case_date {
+        color: $grey-darkest;
+      }
+      .case_status {
+        color: $grey-darkest;
+      }
+      .panel-body {
+        color: $grey-darkest;
+        img {
+          opacity: 0.7;
+        }
+      }
+      .panel-footer {
+        a {
+          color: $greyish;
+        }
+      }
+    }
+    @media #{$phablet__up} {
+      .panel-footer {
+        height: 0;
+        padding: 0;
+      }
+      .btn_delete {
+        position: absolute;
+        z-index: 1000;
+        top: $px_fifteen;
+        right: $px_fifteen;
+      }
+      .icon-group {
+        position: absolute;
+        z-index: 1000;
+        bottom: $px_fifteen;
+        right: $px_fifteen;
+      }
+    }
+  }
+  .site-widget {
+    @extend .hidden-xs;
+    h2 {
+      color: $grey-tone;
+      line-height: 36px;
+      @include font-size(18px);
+      margin: $px_thirty 0 $px_thirty;
+      font-weight: $font-weight-medium;
+    }
+    form {
+      text-align: right;
+      textarea {
+        @include input_text_color($grey-dark);
+      }
+      #btn_addnote {
+        @include font-size(16px);
+        text-transform: uppercase;
+        margin: $px_ten 0 $px_thirty;
+      }
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      list-style-type: none;
+    }
+    .panel {
+      background: none;
+      box-shadow: none;
+      @include font-size(11px);
+      border: 1px solid $silver-dark;
+    }
+    .panel-body {
+      margin: 0;
+      border: none;
+      box-shadow: none;
+      background: none;
+      color: $grey-tone;
+      padding: $px_ten $px_ten 0;
+      font-weight: $font-weight-medium;
+      p {
+        margin-bottom: 0;
+      }
+    }
+    .panel-footer {
+      @include clearfix();
+      border: none;
+      background: none;
+      padding: $px_ten/2 $px_ten;
+      .note_info {
+        float: left;
+        line-height: 20px;
+        color: $color-primary;
+        vertical-align: text-top;
+        font-weight: $font-weight-medium;
+      }
+      .delete_note {
+        float: right;
+        line-height: 20px;
+        @include font-size(14px);
+        vertical-align: text-top;
+      }
+    }
+  }
+  .view_notes {
+    @extend .visible-xs;
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    padding: $px_ten;
+    background: $white;
+    border-radius: 50%;
+    right: $px_fifteen;
+    bottom: $px_fifteen;
+    @include font-size(20px);
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2) !important;
+    &:hover {
+      box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2) !important;
+    }
+    &:active {
+      box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2) !important;
+    }
+    &:focus {
+      box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2) !important;
+    }
+  }
+}
+
+// 5. Miscellanous
+
+// Types
+.page-title {
+  margin: $px_thirty 0;
+  @include font-size(24px);
+  font-weight: $font-weight-regular;
+  @media #{$phablet} {
+    text-align: center;
+    margin: $px_fifteen 0;
+  }
+}
+
+// Site Footer
+.site-footer {
+  color: $black;
+  margin: $px_thirty 0;
+  @include font-size(12px);
+  span::after {
+    content: "\00a0\00a0\00a0|\00a0\00a0\00a0";
+  }
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+  @media #{$phablet} {
+    span::after {
+      content: ".";
+    }
+    a {
+      display: block;
+      margin-top: $px_ten;
+    }
+  }
+}
+
+// Page Modals
+#disclaimer {
+  @include modal_disclaimer();
+}
+#reset_password {
+  @include modal_resetpassword();
+}
+#upload_files {
+  @include modal_uploadfiles();
+}

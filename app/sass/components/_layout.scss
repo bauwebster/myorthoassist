@@ -1,0 +1,181 @@
+// Declaration of HTML, BODY
+html, body {
+  font-size: 100%;
+  font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // Pushy styles
+  overflow-x: hidden;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+// Declaration of Container
+.container {
+  @include container-fixed();
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+}
+
+// BODY declaration
+body {
+  background: $grey-light;
+}
+
+/*
+Table of Contents:
+1. Login Page
+2. Profile Page
+3. Cases Page
+4. Navigation
+*/
+
+// 1. Login Page
+.home {
+  .columns {
+    @include make-sm-column(6);
+    @include make-sm-column-offset(3);
+    @include make-md-column(4);
+    @include make-md-column-offset(4);
+  }
+  main {
+    @media #{$mobile__up} {
+      // --- Align this box vertically centered
+      // --- Source: https://css-tricks.com/centering-css-complete-guide/
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      // --- Align this box vertically centered
+    }
+  }
+  footer {
+    @media #{$mobile__up} {
+      // --- Align this box vertically centered
+      // --- Source: https://css-tricks.com/centering-css-complete-guide/
+      position: absolute;
+      bottom: 2%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      // --- Align this box vertically centered
+    }
+  }
+}
+
+// 2. Profile Page
+.profile {
+  .site-header {
+    @include make-sm-column(12);
+  }
+  .site-main {
+    @include make-sm-column(12);
+  }
+  .site-footer {
+    @include make-sm-column(12);
+  }
+  .first_column {
+    @include make-sm-column(2);
+  }
+  .second_column {
+    @include make-sm-column(10);
+  }
+  .third_column {
+    @include make-sm-column(12);
+  }
+  #tab_personal {
+    @include make-xs-column(12);
+    @include make-sm-column(6);
+  }
+  #tab_practice {
+    @include make-xs-column(12);
+    @include make-sm-column(6);
+  }
+  #tab_invisalign {
+    @include make-xs-column(12);
+    @include make-sm-column(6);
+    @include make-sm-column-offset(0);
+  }
+	@media #{$phablet} {
+    .device-big {
+  		display: none;
+    }
+    .device-small {
+  		display: inline-block;
+    }
+	}
+	@media #{$phablet__up} {
+    .device-big,
+    .tab-content > .tab-pane {
+  		display: block;
+    }
+    .device-small {
+  		display: none;
+    }
+		.tab-content > .tab-pane {
+      display: block;
+    }
+	}
+}
+
+// 3. Cases Page
+.cases {
+  .site-main {
+    @include make-sm-column(8);
+  }
+  .site-widget {
+    @include make-sm-column(4);
+  }
+  .site-footer {
+    @include make-sm-column(12);
+  }
+  .cases_bar {
+    header {
+      @extend .hidden-xs;
+      @extend .hidden-sm;
+      @include make-md-column(2);
+    }
+    form {
+      @include make-xs-column(12);
+      @include make-sm-column(12);
+      @include make-md-column(10);
+    }
+    .new_cases {
+      @include make-xs-column(2);
+      @include make-sm-column(3);
+      @include make-md-column(3);
+    }
+    .archived_cases {
+      @include make-xs-column(12);
+      @include make-sm-column(5);
+      @include make-md-column(5);
+      @extend .text-right;
+    }
+    .search_cases {
+      @include make-xs-column(10);
+      @include make-sm-column(4);
+      @include make-md-column(4);
+      @extend .pull-right;
+    }
+  }
+}
+
+// 4. Navigation
+#primary_menu {
+  .mobile {
+    @extend .visible-xs;
+    @extend .visible-sm;
+  }
+  .desktop {
+    @extend .hidden-xs;
+    @extend .hidden-sm;
+  }
+}

@@ -1,0 +1,191 @@
+include ../_includes/navigation
+main.push.container-fluid(role="main")
+  .row   
+    section.site-main
+      .row.cases_bar
+        header
+          h1.page-title Cases
+        form(role="form")   
+          .row
+            .form-group.new_cases
+              a.new_case.btn_out_pri(href="", data-toggle="modal", data-target="#upload_files")
+                i.fa.fa-plus(aria-hidden="true")
+                span New Case
+            .input-group.search_cases
+              input#input_search(type='text', placeholder='Search...')
+              span.input-group-btn
+                button.btn_sec(type='submit')
+                  i.fa.fa-search(aria-hidden="true")
+            .form-group.archived_cases
+              input#input_archive(type="checkbox")
+              label(for="input_archive") Show Archived Cases
+      ul
+        li.active
+          .panel
+            .panel-heading
+              span.case_date Today, 5:32 PM
+              span.case_status Status: Active
+            .panel-body         
+              .patient_img     
+                img(src="../images/user_isabella.png", alt="Isabella Strong")
+              .patient_info
+                span.patient_name Isabella Strong
+                span.patient_sex (Female)
+                span.patient_age 10y, 9m     
+            .panel-footer
+              .icon-group
+                a.btn_comment.btn_pri.active(href="", title="Comment")
+                  i.fa.fa-comments(aria-hidden="true")
+                a.btn_edit.btn_sec(href="", title="Edit File")
+                  i.fa.fa-clipboard(aria-hidden="true")
+                a.btn_gallery.btn_sec(href="", title="Edit Image")
+                  i.fa.fa-picture-o(aria-hidden="true")
+              a.btn_delete.btn_sec(href="", title="Delete Case")
+                i.fa.fa-archive(aria-hidden="true")
+        li.active
+          .panel
+            .panel-heading
+              span.case_date 30 March
+              span.case_status Status: Active
+            .panel-body         
+              .patient_img     
+                img(src="../images/user_macy.png", alt="Macy Pham")
+              .patient_info
+                span.patient_name Macy Pham
+                span.patient_sex (Female)
+                span.patient_age 10y, 9m       
+            .panel-footer
+              .icon-group
+                a.btn_comment.btn_sec(href="", title="Comment")
+                  i.fa.fa-comments(aria-hidden="true")
+                a.btn_edit.btn_pri.active(href="", title="Edit File")
+                  i.fa.fa-clipboard(aria-hidden="true")
+                a.btn_gallery.btn_pri.active(href="", title="Edit Image")
+                  i.fa.fa-picture-o(aria-hidden="true")
+              a.btn_delete.btn_sec(href="", title="Delete Case")
+                i.fa.fa-archive(aria-hidden="true")
+        li.archive
+          .panel
+            .panel-heading
+              span.case_date 2 March
+              span.case_status Status: Closed (ARCHIVED)
+            .panel-body         
+              .patient_img     
+                img(src="../images/user_donald.png", alt="Donald Trump")
+              .patient_info
+                span.patient_name Donald Trump
+                span.patient_sex (Male)
+                span.patient_age 69y, 0m       
+            .panel-footer
+              .icon-group
+                a.disabled.btn_comment.btn_sec(href="", title="Comment")
+                  i.fa.fa-comments(aria-hidden="true")
+                a.disabled.btn_edit.btn_sec(href="", title="Edit File")
+                  i.fa.fa-clipboard(aria-hidden="true")
+                a.disabled.btn_gallery.btn_sec(href="", title="Edit Image")
+                  i.fa.fa-picture-o(aria-hidden="true")
+              a.btn_delete.btn_sec(href="", title="Unarchive Case") Unarchive
+        li
+          .panel
+            .panel-heading
+              span.case_date 26 February
+              span.case_status Status: Active
+            .panel-body         
+              .patient_img     
+                img(src="../images/user_james.png", alt="James Comey")
+              .patient_info
+                span.patient_name James Comey
+                span.patient_sex (Male)
+                span.patient_age 56y, 3m        
+            .panel-footer
+              .icon-group
+                a.btn_comment.btn_sec(href="", title="Comment")
+                  i.fa.fa-comments(aria-hidden="true")
+                a.btn_edit.btn_sec(href="", title="Edit File")
+                  i.fa.fa-clipboard(aria-hidden="true")
+                a.btn_gallery.btn_sec(href="", title="Edit Image")
+                  i.fa.fa-picture-o(aria-hidden="true")
+              a.btn_delete.btn_sec(href="", title="Delete Case")
+                i.fa.fa-archive(aria-hidden="true")
+        li
+          .panel
+            .panel-heading
+              span.case_date 12 February
+              span.case_status Status: Active
+            .panel-body         
+              .patient_img     
+                img(src="../images/user_wolf.png", alt="Wolf Blitzer")
+              .patient_info
+                span.patient_name Wolf Blitzer
+                span.patient_sex (Male)
+                span.patient_age 69y, 0m          
+            .panel-footer
+              .icon-group
+                a.btn_comment.btn_sec(href="", title="Comment")
+                  i.fa.fa-comments(aria-hidden="true")
+                a.btn_edit.btn_sec(href="", title="Edit File")
+                  i.fa.fa-clipboard(aria-hidden="true")
+                a.btn_gallery.btn_sec(href="", title="Edit Image")
+                  i.fa.fa-picture-o(aria-hidden="true")
+              a.btn_delete.btn_sec(href="", title="Delete Case")
+                i.fa.fa-archive(aria-hidden="true")
+    aside.site-widget
+      h2 My Notes
+      form(role="form")
+        textarea(name="note", cols="30", rows="5", placeholder="Write a note..." required)
+        button#btn_addnote.btn_pri(type="submit", role="button") Create Note
+      ul
+        li
+          .panel
+            .panel-body
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae at odio nesciunt, deleniti possimus pariatur architecto asperiores. Omnis, molestias recusandae. Ab voluptate placeat quos eaque hic a beatae aliquam omnis.
+            .panel-footer
+              span.note_info 4 April 2016, 4:32 pm
+              a.delete_note.btn_sec(href="")
+                i.fa.fa-trash(aria-hidden="true")
+        li
+          .panel
+            .panel-body
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae at odio nesciunt, deleniti possimus pariatur architecto asperiores. Omnis, molestias recusandae. Ab voluptate placeat quos eaque hic a beatae aliquam omnis.
+            .panel-footer
+              span.note_info 4 April 2016, 4:32 pm
+              a.delete_note.btn_sec(href="")
+                i.fa.fa-trash(aria-hidden="true")
+        li
+          .panel
+            .panel-body
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae at odio nesciunt, deleniti possimus pariatur architecto asperiores. Omnis, molestias recusandae. Ab voluptate placeat quos eaque hic a beatae aliquam omnis.
+            .panel-footer
+              span.note_info 4 April 2016, 4:32 pm
+              a.delete_note.btn_sec(href="")
+                i.fa.fa-trash(aria-hidden="true")
+        li
+          .panel
+            .panel-body
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae at odio nesciunt, deleniti possimus pariatur architecto asperiores. Omnis, molestias recusandae. Ab voluptate placeat quos eaque hic a beatae aliquam omnis.
+            .panel-footer
+              span.note_info 4 April 2016, 4:32 pm
+              a.delete_note.btn_sec(href="")
+                i.fa.fa-trash(aria-hidden="true")
+        li
+          .panel
+            .panel-body
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae at odio nesciunt, deleniti possimus pariatur architecto asperiores. Omnis, molestias recusandae. Ab voluptate placeat quos eaque hic a beatae aliquam omnis.
+            .panel-footer
+              span.note_info 4 April 2016, 4:32 pm
+              a.delete_note.btn_sec(href="")
+                i.fa.fa-trash(aria-hidden="true")
+        li
+          .panel
+            .panel-body
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae at odio nesciunt, deleniti possimus pariatur architecto asperiores. Omnis, molestias recusandae. Ab voluptate placeat quos eaque hic a beatae aliquam omnis.
+            .panel-footer
+              span.note_info 4 April 2016, 4:32 pm
+              a.delete_note.btn_sec(href="")
+                i.fa.fa-trash(aria-hidden="true")
+    a.btn_pri.view_notes(href="")
+      i.fa.fa-sticky-note(aria-hidden="true")
+  .row
+    include ../_includes/footer
+include ../_includes/modal_disclaimer
+include ../_includes/modal_upload

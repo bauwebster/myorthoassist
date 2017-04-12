@@ -1,0 +1,83 @@
+// 1. Media Queries
+
+$mobile: "only screen and (max-width: 480px)";
+$phablet: "only screen and (max-width: 768px)";
+$tablet: "only screen and (max-width: 992px)";
+$desktop: "only screen and (max-width: 1200px)";
+$mobile__up: "only screen and (min-width: 480px)";
+$phablet__up: "only screen and (min-width: 768px)";
+$tablet__up: "only screen and (min-width: 992px)";
+$desktop__up: "only screen and (min-width: 1200px)";
+
+// Useful mixins: http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/.
+
+// 2. REM Font Sizes.
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: calculateRem($size);
+  font-size: $size;
+}
+
+// 3. Variables
+
+// Font-sizes.
+
+$font-size-small: 12px;
+$font-size-regular: 16px;
+$font-size-large: 24px;
+
+// Font-weights.
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 600;
+$font-weight-black: 900;
+
+// Colors.
+
+$red: #ff0100;
+$black: #000;
+$white: #fff;
+$green: #2bca7f;
+$greyish: #9db0c0;
+$grey-tone: #333;
+$grey-darkest: #b9c7d3;
+$grey-dark: #d7d7d7;
+$grey: #efefef;
+$grey-light: #dae1e9;
+$grey-lightest: #f8fbfd;
+$silver: #fffefc;
+$silverish: #9db0bf;
+$silver-light: #d7d8da;
+$silver-dark: #9ca1b2;
+$blue: #2073b5;
+
+$color-primary: $blue;
+
+// 4. Selection Color in Browser - https://css-tricks.com/almanac/selectors/s/selection/
+
+*::-moz-selection { color: $white; background-color: $black; }
+*::selection { color: $white; background-color: $black; }
+
+// 5. Font Awesome Icon Insertion
+
+@mixin icon-before($content) {
+  &::before {
+    content: $content;
+    font-family: "fontawesome";
+  }
+}
+
+// 6. Margin values
+$px_thirty: 30px;
+$px_twentyfive: 25px;
+$px_twenty: 20px;
+$px_fifteen: 15px;
+$px_ten: 10px;
+$px_five: 5px;

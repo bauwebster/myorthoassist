@@ -1,0 +1,24 @@
+main.container(role="main")
+  .row
+    .columns
+      .panel
+        .panel-heading
+          img(src="images/logo.png", alt="MyOrthoAssist", title="My Ortho Assist App")
+        .panel-body
+          form#form_login(role="form")
+            .form-group
+              label(for="patient_email") Email
+              input.input_email#patient_email(type="email", name="email", required)
+            .form-group
+              label(for="patient_password") Password
+              input.input_password#patient_password(type="password", name="password", required)
+            .form-group.text-center
+              button#button_login.btn_out_sec(type="submit", name="submit") Login
+              a.forgot_password(href="", data-toggle="modal", data-target="#reset_password", title="Reset your password") Forgot Password?
+footer.container
+  .row
+    .columns
+      span All rights reserved &copy; 2017 MyOrthoAssist
+      a(href="", data-toggle="modal", data-target="#disclaimer", title="Terms and conditions") Terms & Conditions
+include ../_includes/modal_disclaimer
+include ../_includes/modal_resetpassword

@@ -1,0 +1,113 @@
+include ../_includes/navigation
+main.push.container-fluid(role="main")
+  .row   
+    header.site-header
+      h1.page-title My Profile
+  .row
+    section.site-main
+      form#form_profile(role="form")
+        .row
+          .first_column
+            .form-group
+              p Profile Photo (Optional)
+              img(src="../images/user_profile.png", alt="Steve Chang", title="Steve Chang")
+          .second_column
+            .tab-listing      
+              ul.nav.nav-tabs.device-small(role='tablist')
+                li.active(role='presentation')
+                  a(href='#tab_personal', aria-controls='personal', role='tab', data-toggle='tab', title="Personal") Personal                  
+                li(role='presentation')
+                  a(href='#tab_practice', aria-controls='practice', role='tab', data-toggle='tab', title="Practice") Practice  
+                li(role='presentation')
+                  a(href='#tab_invisalign', aria-controls='invisalign', role='tab', data-toggle='tab', title="Invisalign") Invisalign
+            .row.tab-content
+              #tab_personal.tab-pane.active(role='tabpanel')
+                .form-group
+                  label(for="first_name") First Name
+                  input#first_name(type="text", name="first_name", placeholder="Steve")
+                .form-group
+                  label(for="last_name") Last Name
+                  input#last_name(type="text", name="last_name", placeholder="Chang")
+                .form-group
+                  label(for="email") Email
+                  input#email(type="email", name="email", placeholder="steve.chang@gmail.com")
+                .row
+                  .form-group.col-sm-6
+                    label(for="personal_phone") Personal Phone
+                    input#personal_phone(type="text", name="personal_phone", placeholder="(209) 555-5555")
+                .form-group
+                  label(for="about_person") About Yourself (Optional)
+                  p.help-block Please tell us a bit about yourself and anything you think might be helpful for your Orthodontist to know.
+                  textarea#about_person(name="about_person", cols="30", rows="10", placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi in quos modi quis vero commodi nobis animi corporis. Labore voluptatem, ipsa odio tenetur. Reiciendis, sed, temporibus. Doloremque eligendi consectetur voluptatum.")
+                  p.help-block Please tell us a bit about your past dental experience, courses, and comfort level. This will help in providing the best advice possible. This section can be updated anytime.
+                  textarea#about_history(name="about_history", cols="30", rows="10", placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi in quos modi quis vero commodi nobis animi corporis. Labore voluptatem, ipsa odio tenetur. Reiciendis, sed, temporibus. Doloremque eligendi consectetur voluptatum.")
+                .row
+                  .form-group.col-sm-6
+                    label(for="set_password") Password              
+                    input#set_password(type="password", name="set_password", placeholder="default", value="default")                            
+                    .toggle_password
+                      input#toggle_password(type="checkbox")
+                      label(for="toggle_password") Show
+                .row
+                  .form-group.col-sm-6
+                    label(for="new_password") New Password
+                    input#new_password(type="password", name="new_password", placeholder="")
+                .row
+                  .form-group.col-sm-6
+                    label(for="confirm_password") Re-type Password
+                    input#confirm_password(type="password", name="confirm_password", placeholder="")
+              #tab_practice.tab-pane(role='tabpanel')
+                fieldset
+                  legend Practice Address
+                  .form-group
+                    label(for="street") Street
+                    input#street(type="text", name="street", placeholder="461 King Street")
+                  .form-group
+                    label(for="city") City
+                    input#city(type="text", name="city", placeholder="Toronto")
+                  .form-group
+                    label(for="state") State/Province
+                    select#state.selectpicker(name="state")
+                      option(value='AB') Alberta
+                      option(value='BC') British Columbia
+                      option(value='MB') Manitoba
+                      option(value='NB') New Brunswick
+                      option(value='NL') Newfoundland and Labrador
+                      option(value='NS') Nova Scotia
+                      option(value='ON') Ontario
+                      option(value='PE') Prince Edward Island
+                      option(value='QC') Quebec
+                      option(value='SK') Saskatchewan
+                      option(value='NT') Northwest Territories
+                      option(value='NU') Nunavut
+                      option(value='YT') Yukon
+                  .form-group
+                    label(for="country") Country
+                    select#country.selectpicker(name="country")
+                      option(value="CAN") Canada
+                  .form-group
+                    label(for="zip") ZIP/Postal Code
+                    input#zip(type="text", name="zip", placeholder="M5V 1K5")
+                  .form-group
+                    label(for="phone") Phone
+                    input#phone(type="text", name="phone", placeholder="(209) 555-5555")
+                  .form-group
+                    label(for="website") Website
+                    input#website(type="text", name="website", placeholder="http://www.somewebsite.com")
+              #tab_invisalign.tab-pane(role='tabpanel')
+                fieldset
+                  legend Invisalign (Optional)
+                  .form-group
+                    label(for="username") Username
+                    input#username(type="text", name="username", placeholder="Username001")
+                  //- .form-group
+                  .form-group
+                    label(for="password") Password
+                    input#password(type="password", name="password", placeholder="passwordXYZ")
+        .row
+          .third_column
+            button#btn_cancel.btn_sec(type='button', role='button') Cancel
+            button#btn_save.btn_pri(type='submit', role='button') Save
+  .row
+    include ../_includes/footer
+include ../_includes/modal_disclaimer

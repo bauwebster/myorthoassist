@@ -1,0 +1,148 @@
+/*
+  Table of Contents:
+  0. HYPERLINKS
+  1. FORMS
+  2. BUTTONS
+*/
+
+// *** HYPERLINKS
+// Hyperlinks state
+a {
+  &:link {
+    text-decoration: none;
+  }
+}
+
+// *** FORMS
+// Labels state
+label {
+  display: block;
+}
+// Help block state
+.help-block {
+  color: $grey-tone;
+  @include font-size(12px);
+}
+// Inputs state
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  @extend .form-control;
+}
+// Input placeholder text layout state
+@mixin input_text_center() {
+  &::-webkit-input-placeholder {
+   text-align: center;
+  }
+  &:-moz-placeholder {
+   text-align: center;
+  }
+  &::-moz-placeholder {
+   text-align: center;
+  }
+  &:-ms-input-placeholder {
+   text-align: center;
+  }
+}
+// Input placeholder text color state
+@mixin input_text_color($color) {
+  &::-webkit-input-placeholder {
+   color: $color;
+  }
+  &:-moz-placeholder {
+   color: $color;
+  }
+  &::-moz-placeholder {
+   color: $color;
+  }
+  &:-ms-input-placeholder {
+   color: $color;
+  }
+}
+// Textarea state
+textarea {
+  resize: none;
+}
+// .form-group state
+.form-group {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// *** BUTTONS
+// Button Outline state
+.btn-outline {
+  color: inherit;
+  border-width: 2px;
+  transition: all .5s;
+  text-transform: uppercase;
+  background-color: transparent;
+  font-weight: $font-weight-bold;
+  .fa {
+    margin-right: $px_ten/2;
+  }
+}
+.btn-primary {
+  color: $color-primary;
+  &:hover {
+    color: $white;
+    background-color: $color-primary;
+  }
+}
+.btn-default {
+  color: $silver-dark;
+  &:hover {
+    color: $color-primary;
+    background-color: $white;
+  }
+}
+// Button Standard state
+.btn-standard {
+  padding: 0;
+  border: none;
+  line-height: normal;
+  background-image: none;
+  background-color: transparent;
+  box-shadow: none !important;
+}
+// Button declaration
+.btn_out_pri {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-outline;
+}
+.btn_out_sec {
+  @extend .btn;
+  @extend .btn-default;
+  @extend .btn-outline;
+}
+.btn_pri {
+  @extend .btn;
+  @extend .btn-standard;
+  color: $color-primary;
+  &:hover {
+    color: darken($color-primary, 20%);
+  }
+  &:active {
+    color: darken($color-primary, 20%);
+  }
+  &:focus {
+    color: darken($color-primary, 20%);
+  }
+}
+.btn_sec {
+  @extend .btn;
+  @extend .btn-standard;
+  color: $silver-dark;
+  &:hover {
+    color: darken($silver-dark, 20%);
+  }
+  &:active {
+    color: darken($silver-dark, 20%);
+  }
+  &:focus {
+    color: darken($silver-dark, 20%);
+  }
+}
