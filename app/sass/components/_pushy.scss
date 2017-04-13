@@ -67,8 +67,9 @@ $menu_width: 250px !default;
   #container,
   .push {
     -webkit-transform: translate3d( unquote('-' + $menu_width) ,0,0);
-    -ms-transform: translate3d( unquote('-' + $menu_width) ,0,0);
+    -ms-transform: translate3d( unquote('-' + $menu_width ) ,0,0);
     transform: translate3d( unquote('-' + $menu_width) ,0,0);
+    margin-right: -15px!important;
   }
 }
 
@@ -135,7 +136,7 @@ $menu_width: 250px !default;
 /* Submenu Appearance */
 .pushy-submenu {
   ul {
-    padding-left: 15px;
+    padding-left: 0px;
     transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
 
     .pushy-link {
