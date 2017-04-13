@@ -9,11 +9,13 @@
     font-weight: $font-weight-regular;
   }
   .modal-body {
-    background: $grey;
+    border: none;
+    background: none;
+    // background: $grey;
     margin: $px_fifteen;
     color: $color-primary;
     @include font-size(14px);
-    border: 1px solid $grey-dark;
+    // border: 1px solid $grey-dark;
     font-weight: $font-weight-bold;
     @include tab-styles();
     .nav-tabs {
@@ -88,12 +90,6 @@
       color: $color-primary;
     }
   }
-  #misc_photos .row:first-of-type {
-    margin-bottom: $px_twenty;
-  }
-  #misc_photos .well {
-    min-height: 200px;
-  }
   .date_singular {
     @include clearfix();
     color: $grey-tone;
@@ -105,6 +101,30 @@
       border: 1px solid $grey-dark;
       border-top: none;
     }
+  }
+  // Misc Photos
+  #misc_photos .row:first-of-type {
+    margin-bottom: $px_twenty;
+  }
+  #misc_photos .well {
+    min-height: 200px;
+  }
+  // Intra Oral
+  #intra_oral .date {
+    width: 100%;
+    input {
+      @include font-size(12px);
+    }
+  }
+  #intra_oral .row {
+    margin-bottom: $px_fifteen;
+  }
+  #intra_oral .first_column .well,
+  #intra_oral .third_column .well {
+    min-height: 80px;
+  }
+  #intra_oral .second_column .well {
+    min-height: 200px;
   }
   // Documents banner
   #documents .well {

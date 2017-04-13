@@ -19,6 +19,7 @@ $(document).ready(function() {
   // 2. Modal Windows
   $('.select-date').datetimepicker({
     defaultDate: "04/04/2017",
+    format: 'DD/MM/YYYY',
     icons: {
       time: 'fa fa-clock-o',
       date: 'fa fa-calendar',
