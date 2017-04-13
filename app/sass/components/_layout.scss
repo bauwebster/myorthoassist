@@ -76,7 +76,7 @@ Table of Contents:
   .site-header {
     @include make-sm-column(12);
   }
-  .site-main {
+  .main-content {
     @include make-sm-column(12);
   }
   .site-footer {
@@ -128,16 +128,16 @@ Table of Contents:
 
 // 3. Cases Page
 .cases {
-  .site-main {
+  .main-content {
     @include make-sm-column(8);
   }
-  .site-widget {
+  .sidebar {
     @include make-sm-column(4);
   }
   .site-footer {
     @include make-sm-column(12);
   }
-  .cases_bar {
+  .main-content {
     header {
       @extend .hidden-xs;
       @extend .hidden-sm;
@@ -148,7 +148,7 @@ Table of Contents:
       @include make-sm-column(12);
       @include make-md-column(10);
     }
-    .new_cases {
+    .new_case_button {
       @include make-xs-column(2);
       @include make-sm-column(3);
       @include make-md-column(3);

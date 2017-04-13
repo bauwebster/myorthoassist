@@ -1,13 +1,13 @@
 include ../_includes/navigation
 main.push.container-fluid(role="main")
   .row   
-    section.site-main
-      .row.cases_bar
+    section.main-content
+      .row
         header
           h1.page-title Cases
         form(role="form")   
           .row
-            .form-group.new_cases
+            .form-group.new_case_button
               a.new_case.btn_out_pri(href="", data-toggle="modal", data-target="#upload_files")
                 i.fa.fa-plus(aria-hidden="true")
                 span New Case
@@ -19,168 +19,172 @@ main.push.container-fluid(role="main")
             .form-group.archived_cases
               input#input_archive(type="checkbox")
               label(for="input_archive") Show Archived Cases
-      ul
-        li.active
+      ul.case_list
+        li.case.new
           .panel
-            .panel-heading
-              span.case_date Today, 5:32 PM
-              span.case_status Status: Active
-            .panel-body         
-              .patient_img     
-                img(src="../images/user_isabella.png", alt="Isabella Strong")
-              .patient_info
-                span.patient_name Isabella Strong
-                span.patient_sex (Female)
-                span.patient_age 10y, 9m     
-            .panel-footer
-              .icon-group
-                a.btn_comment.btn_pri.active(href="", title="Comment")
-                  i.fa.fa-comments(aria-hidden="true")
-                a.btn_edit.btn_sec(href="", title="Edit File")
-                  i.fa.fa-clipboard(aria-hidden="true")
-                a.btn_gallery.btn_sec(href="", title="Edit Image")
-                  i.fa.fa-picture-o(aria-hidden="true")
-              a.btn_delete.btn_sec(href="", title="Delete Case")
-                i.fa.fa-archive(aria-hidden="true")
-        li.active
+            a(href="case.html", title="Go to Case")
+              .panel-heading
+                span.case_date Today, 5:32 PM
+                span.case_status Status: Active
+              .panel-body
+                .case_patient_img     
+                  img(src="../images/user_isabella.png", alt="Isabella Strong")
+                .case_patient_info
+                  span.case_patient_name Isabella Strong
+                  span.case_patient_sex (Female)
+                  span.case_patient_age 10y, 9m     
+              .panel-footer
+                .icon-group
+                  a.btn_conversation.btn_pri.active(href="", title="Go To Conversation")
+                    i.fa.fa-comments(aria-hidden="true")
+                  a.btn_treatment.btn_sec(href="", title="Go To Treatment")
+                    i.fa.fa-clipboard(aria-hidden="true")
+                  a.btn_media.btn_sec(href="", title="Go To Media Library")
+                    i.fa.fa-picture-o(aria-hidden="true")
+                a.btn_archive.btn_sec(href="", title="Archive Case")
+                  i.fa.fa-archive(aria-hidden="true")
+        li.case.new
           .panel
-            .panel-heading
-              span.case_date 30 March
-              span.case_status Status: Active
-            .panel-body         
-              .patient_img     
-                img(src="../images/user_macy.png", alt="Macy Pham")
-              .patient_info
-                span.patient_name Macy Pham
-                span.patient_sex (Female)
-                span.patient_age 10y, 9m       
-            .panel-footer
-              .icon-group
-                a.btn_comment.btn_sec(href="", title="Comment")
-                  i.fa.fa-comments(aria-hidden="true")
-                a.btn_edit.btn_pri.active(href="", title="Edit File")
-                  i.fa.fa-clipboard(aria-hidden="true")
-                a.btn_gallery.btn_pri.active(href="", title="Edit Image")
-                  i.fa.fa-picture-o(aria-hidden="true")
-              a.btn_delete.btn_sec(href="", title="Delete Case")
-                i.fa.fa-archive(aria-hidden="true")
-        li.archive
+            a(href="case.html", title="Go to Case")
+              .panel-heading
+                span.case_date 30 March
+                span.case_status Status: Active
+              .panel-body         
+                .case_patient_img     
+                  img(src="../images/user_macy.png", alt="Macy Pham")
+                .case_patient_info
+                  span.case_patient_name Macy Pham
+                  span.case_patient_sex (Female)
+                  span.case_patient_age 10y, 9m       
+              .panel-footer
+                .icon-group
+                  a.btn_conversation.btn_sec(href="", title="Go To Conversation")
+                    i.fa.fa-comments(aria-hidden="true")
+                  a.btn_treatment.btn_pri.active(href="", title="Go To Treatment")
+                    i.fa.fa-clipboard(aria-hidden="true")
+                  a.btn_media.btn_pri.active(href="", title="Go To Media Library")
+                    i.fa.fa-picture-o(aria-hidden="true")
+                a.btn_archive.btn_sec(href="", title="Archive Case")
+                  i.fa.fa-archive(aria-hidden="true")
+        li.case.archive
           .panel
             .panel-heading
               span.case_date 2 March
               span.case_status Status: Closed (ARCHIVED)
             .panel-body         
-              .patient_img     
+              .case_patient_img     
                 img(src="../images/user_donald.png", alt="Donald Trump")
-              .patient_info
-                span.patient_name Donald Trump
-                span.patient_sex (Male)
-                span.patient_age 69y, 0m       
+              .case_patient_info
+                span.case_patient_name Donald Trump
+                span.case_patient_sex (Male)
+                span.case_patient_age 69y, 0m       
             .panel-footer
               .icon-group
-                a.disabled.btn_comment.btn_sec(href="", title="Comment")
+                a.disabled.btn_conversation.btn_sec(href="", title="Go To Conversation")
                   i.fa.fa-comments(aria-hidden="true")
-                a.disabled.btn_edit.btn_sec(href="", title="Edit File")
+                a.disabled.btn_treatment.btn_sec(href="", title="Go To Treatment")
                   i.fa.fa-clipboard(aria-hidden="true")
-                a.disabled.btn_gallery.btn_sec(href="", title="Edit Image")
+                a.disabled.btn_media.btn_sec(href="", title="Go To Media Library")
                   i.fa.fa-picture-o(aria-hidden="true")
-              a.btn_delete.btn_sec(href="", title="Unarchive Case") Unarchive
-        li
+              a.btn_archive.btn_sec(href="", title="Unarchive Case") Unarchive
+        li.case
           .panel
-            .panel-heading
-              span.case_date 26 February
-              span.case_status Status: Active
-            .panel-body         
-              .patient_img     
-                img(src="../images/user_james.png", alt="James Comey")
-              .patient_info
-                span.patient_name James Comey
-                span.patient_sex (Male)
-                span.patient_age 56y, 3m        
-            .panel-footer
-              .icon-group
-                a.btn_comment.btn_sec(href="", title="Comment")
-                  i.fa.fa-comments(aria-hidden="true")
-                a.btn_edit.btn_sec(href="", title="Edit File")
-                  i.fa.fa-clipboard(aria-hidden="true")
-                a.btn_gallery.btn_sec(href="", title="Edit Image")
-                  i.fa.fa-picture-o(aria-hidden="true")
-              a.btn_delete.btn_sec(href="", title="Delete Case")
-                i.fa.fa-archive(aria-hidden="true")
-        li
+            a(href="case.html", title="Go to Case")
+              .panel-heading
+                span.case_date 26 February
+                span.case_status Status: Active
+              .panel-body         
+                .case_patient_img     
+                  img(src="../images/user_james.png", alt="James Comey")
+                .case_patient_info
+                  span.case_patient_name James Comey
+                  span.case_patient_sex (Male)
+                  span.case_patient_age 56y, 3m        
+              .panel-footer
+                .icon-group
+                  a.btn_conversation.btn_sec(href="", title="Go To Conversation")
+                    i.fa.fa-comments(aria-hidden="true")
+                  a.btn_treatment.btn_sec(href="", title="Go To Treatment")
+                    i.fa.fa-clipboard(aria-hidden="true")
+                  a.btn_media.btn_sec(href="", title="Go To Media Library")
+                    i.fa.fa-picture-o(aria-hidden="true")
+                a.btn_archive.btn_sec(href="", title="Archive Case")
+                  i.fa.fa-archive(aria-hidden="true")
+        li.case
           .panel
-            .panel-heading
-              span.case_date 12 February
-              span.case_status Status: Active
-            .panel-body         
-              .patient_img     
-                img(src="../images/user_wolf.png", alt="Wolf Blitzer")
-              .patient_info
-                span.patient_name Wolf Blitzer
-                span.patient_sex (Male)
-                span.patient_age 69y, 0m          
-            .panel-footer
-              .icon-group
-                a.btn_comment.btn_sec(href="", title="Comment")
-                  i.fa.fa-comments(aria-hidden="true")
-                a.btn_edit.btn_sec(href="", title="Edit File")
-                  i.fa.fa-clipboard(aria-hidden="true")
-                a.btn_gallery.btn_sec(href="", title="Edit Image")
-                  i.fa.fa-picture-o(aria-hidden="true")
-              a.btn_delete.btn_sec(href="", title="Delete Case")
-                i.fa.fa-archive(aria-hidden="true")
-    aside.site-widget
+            a(href="case.html", title="Go to Case")
+              .panel-heading
+                span.case_date 12 February
+                span.case_status Status: Active
+              .panel-body         
+                .case_patient_img     
+                  img(src="../images/user_wolf.png", alt="Wolf Blitzer")
+                .case_patient_info
+                  span.case_patient_name Wolf Blitzer
+                  span.case_patient_sex (Male)
+                  span.case_patient_age 69y, 0m          
+              .panel-footer
+                .icon-group
+                  a.btn_conversation.btn_sec(href="", title="Go To Conversation")
+                    i.fa.fa-comments(aria-hidden="true")
+                  a.btn_treatment.btn_sec(href="", title="Go To Treatment")
+                    i.fa.fa-clipboard(aria-hidden="true")
+                  a.btn_media.btn_sec(href="", title="Go To Media Library")
+                    i.fa.fa-picture-o(aria-hidden="true")
+                a.btn_archive.btn_sec(href="", title="Archive Case")
+                  i.fa.fa-archive(aria-hidden="true")
+    aside.sidebar
       h2 My Notes
       form(role="form")
         textarea(name="note", cols="30", rows="5", placeholder="Write a note..." required)
         button#btn_addnote.btn_pri(type="submit", role="button") Create Note
-      ul
-        li
+      ul.notes
+        li.note
           .panel
             .panel-body
               p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae at odio nesciunt, deleniti possimus pariatur architecto asperiores. Omnis, molestias recusandae. Ab voluptate placeat quos eaque hic a beatae aliquam omnis.
             .panel-footer
-              span.note_info 4 April 2016, 4:32 pm
+              span.time_stamp 4 April 2016, 4:32 pm
               a.delete_note.btn_sec(href="")
                 i.fa.fa-trash(aria-hidden="true")
-        li
+        li.note
           .panel
             .panel-body
               p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae at odio nesciunt, deleniti possimus pariatur architecto asperiores. Omnis, molestias recusandae. Ab voluptate placeat quos eaque hic a beatae aliquam omnis.
             .panel-footer
-              span.note_info 4 April 2016, 4:32 pm
+              span.time_stamp 4 April 2016, 4:32 pm
               a.delete_note.btn_sec(href="")
                 i.fa.fa-trash(aria-hidden="true")
-        li
+        li.note
           .panel
             .panel-body
               p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae at odio nesciunt, deleniti possimus pariatur architecto asperiores. Omnis, molestias recusandae. Ab voluptate placeat quos eaque hic a beatae aliquam omnis.
             .panel-footer
-              span.note_info 4 April 2016, 4:32 pm
+              span.time_stamp 4 April 2016, 4:32 pm
               a.delete_note.btn_sec(href="")
                 i.fa.fa-trash(aria-hidden="true")
-        li
+        li.note
           .panel
             .panel-body
               p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae at odio nesciunt, deleniti possimus pariatur architecto asperiores. Omnis, molestias recusandae. Ab voluptate placeat quos eaque hic a beatae aliquam omnis.
             .panel-footer
-              span.note_info 4 April 2016, 4:32 pm
+              span.time_stamp 4 April 2016, 4:32 pm
               a.delete_note.btn_sec(href="")
                 i.fa.fa-trash(aria-hidden="true")
-        li
+        li.note
           .panel
             .panel-body
               p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae at odio nesciunt, deleniti possimus pariatur architecto asperiores. Omnis, molestias recusandae. Ab voluptate placeat quos eaque hic a beatae aliquam omnis.
             .panel-footer
-              span.note_info 4 April 2016, 4:32 pm
+              span.time_stamp 4 April 2016, 4:32 pm
               a.delete_note.btn_sec(href="")
                 i.fa.fa-trash(aria-hidden="true")
-        li
+        li.note
           .panel
             .panel-body
               p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae at odio nesciunt, deleniti possimus pariatur architecto asperiores. Omnis, molestias recusandae. Ab voluptate placeat quos eaque hic a beatae aliquam omnis.
             .panel-footer
-              span.note_info 4 April 2016, 4:32 pm
+              span.time_stamp 4 April 2016, 4:32 pm
               a.delete_note.btn_sec(href="")
                 i.fa.fa-trash(aria-hidden="true")
     a.btn_pri.view_notes(href="")

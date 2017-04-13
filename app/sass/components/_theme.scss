@@ -172,7 +172,7 @@
   .form-group {
     position: relative;
   }
-  .site-main {
+  .main-content {
     color: $color-primary;
     @include font-size(14px);
   }
@@ -273,7 +273,7 @@
 .cases {
   position: relative;
   min-height: 100vh;
-  .site-main {
+  .main-content {
     > .row {
       margin-top: $px_thirty;
       margin-bottom: $px_thirty;
@@ -372,6 +372,13 @@
       box-shadow: none;
       border-radius: 4px;
       border-color: $grey-dark;
+      > a {
+        display: block;
+        border-radius: 4px;
+        &:hover {
+          background-color:$grey;
+        }
+      }
     }
     .panel-heading {
       padding-bottom: 0;
@@ -406,7 +413,7 @@
       width: 100%;
       display: table;
       color: $silver-dark;
-      .patient_img {
+      .case_patient_img {
         width: 85px;
         display: table-cell;
         vertical-align: middle;
@@ -414,7 +421,7 @@
           @extend .img-circle;
         }
       }
-      .patient_info {
+      .case_patient_info {
         width: calc(100% - 85px);
         display: table-cell;
         vertical-align: middle;
@@ -422,56 +429,56 @@
       span {
         line-height: normal;
       }
-      .patient_name {
+      .case_patient_name {
         margin-right: $px_fifteen;
         @include font-size(24px);
       }
-      .patient_sex {
+      .case_patient_sex {
         @include font-size(14px);
         margin-right: $px_ten;
         font-weight: $font-weight-medium;
       }
-      .patient_age {
+      .case_patient_age {
         @include font-size(14px);
         font-weight: $font-weight-medium;
       }
       @media #{$tablet} {
         color: $silver-dark;
-        .patient_info {
+        .case_patient_info {
           padding-left: $px_fifteen;
         }
-        .patient_name {
+        .case_patient_name {
           display: block;
           margin-left: 0;
           @include font-size(18px);
         }
-        .patient_sex {
+        .case_patient_sex {
           @include font-size(14px);
         }
-        .patient_age {
+        .case_patient_age {
           @include font-size(14px);
         }
       }
       @media #{$phablet} {
         color: $silver-dark;
-        .patient_img {
+        .case_patient_img {
           width: 70px;
         }
-        .patient_info {
+        .case_patient_info {
           width: calc(100% - 70px);
         }
-        .patient_info {
+        .case_patient_info {
           padding-left: $px_fifteen;
         }
-        .patient_name {
+        .case_patient_name {
           display: block;
           margin-left: 0;
           @include font-size(16px);
         }
-        .patient_sex {
+        .case_patient_sex {
           @include font-size(12px);
         }
-        .patient_age {
+        .case_patient_age {
           @include font-size(12px);
         }
       }
@@ -479,7 +486,7 @@
     .panel-footer {
       border: none;
       background: transparent;
-      .btn_delete {
+      .btn_archive {
         @include font-size(14px);
         text-transform: uppercase;
       }
@@ -506,15 +513,15 @@
         }
       }
     }
-    .active .panel {
+    .new .panel {
       border-color: $color-primary;
       .case_date,
-      .patient_name {
+      .case_patient_name {
         color: $color-primary;
       }
       .case_status,
-      .patient_age,
-      .patient_sex {
+      .case_patient_age,
+      .case_patient_sex {
         color: $grey-tone;
       }
       .panel-footer {
@@ -549,7 +556,7 @@
       border-color: $greyish;
       background: none;
       border-style: dashed;
-      .btn_delete {
+      .btn_archive {
         @include font-size(16px);
       }
       .case_date {
@@ -575,7 +582,7 @@
         height: 0;
         padding: 0;
       }
-      .btn_delete {
+      .btn_archive {
         position: absolute;
         z-index: 1000;
         top: $px_fifteen;
@@ -589,7 +596,7 @@
       }
     }
   }
-  .site-widget {
+  .sidebar {
     @extend .hidden-xs;
     h2 {
       color: $grey-tone;
@@ -639,7 +646,7 @@
       border: none;
       background: none;
       padding: $px_ten/2 $px_ten;
-      .note_info {
+      .time_stamp {
         float: left;
         line-height: 20px;
         color: $color-primary;
