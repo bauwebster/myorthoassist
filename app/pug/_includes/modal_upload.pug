@@ -31,10 +31,12 @@
                       i.fa.fa-info-circle(aria-hidden="true")
                     .panel-body
                       img(src="images/helper_facial_profile.png", alt="Facial profile") 
-                    .panel-footer
-                      span 04/04/2017
-                      a(href="")
-                        i.fa.fa-calendar(aria-hidden="true")                
+                    .panel-footer                    
+                      .form-group
+                        .select-date.input-group.date
+                          input(type='text')
+                          span.input-group-addon
+                            i.fa.fa-calendar(aria-hidden="true")
                 .col-sm-4
                   .panel
                     .panel-heading
@@ -43,9 +45,11 @@
                     .panel-body
                       img(src="images/helper_facial_front.png", alt="Facial front") 
                     .panel-footer
-                      span 04/04/2017
-                      a(href="")
-                        i.fa.fa-calendar(aria-hidden="true")   
+                      .form-group
+                        .select-date.input-group.date
+                          input(type='text')
+                          span.input-group-addon
+                            i.fa.fa-calendar(aria-hidden="true")
                 .col-sm-4
                   .panel
                     .panel-heading
@@ -54,9 +58,11 @@
                     .panel-body
                       img(src="images/helper_facial_front_smiling.png", alt="Facial front smiling") 
                     .panel-footer
-                      span 04/04/2017
-                      a(href="")
-                        i.fa.fa-calendar(aria-hidden="true")  
+                      .form-group
+                        .select-date.input-group.date
+                          input(type='text')
+                          span.input-group-addon
+                            i.fa.fa-calendar(aria-hidden="true")
               .row
                 .col-sm-4
                   .panel
@@ -66,9 +72,11 @@
                     .panel-body
                       img(src="images/helper_occlusal_upper.png", alt="Occlusal upper")  
                     .panel-footer
-                      span 04/04/2017
-                      a(href="")
-                        i.fa.fa-calendar(aria-hidden="true")                
+                      .form-group
+                        .select-date.input-group.date
+                          input(type='text')
+                          span.input-group-addon
+                            i.fa.fa-calendar(aria-hidden="true")              
                 .col-sm-4
                   .panel
                     .panel-heading
@@ -76,9 +84,11 @@
                       i.fa.fa-info-circle(aria-hidden="true")
                     .panel-body 
                     .panel-footer
-                      span 04/04/2017
-                      a(href="")
-                        i.fa.fa-calendar(aria-hidden="true")   
+                      .form-group
+                        .select-date.input-group.date
+                          input(type='text')
+                          span.input-group-addon
+                            i.fa.fa-calendar(aria-hidden="true")
                 .col-sm-4
                   .panel
                     .panel-heading
@@ -87,9 +97,11 @@
                     .panel-body
                       img(src="images/helper_occlusal_lower.png", alt="Occlusal lower") 
                     .panel-footer
-                      span 04/04/2017
-                      a(href="")
-                        i.fa.fa-calendar(aria-hidden="true")  
+                      .form-group
+                        .select-date.input-group.date
+                          input(type='text')
+                          span.input-group-addon
+                            i.fa.fa-calendar(aria-hidden="true")
               .row
                 .col-sm-4
                   .panel
@@ -99,9 +111,11 @@
                     .panel-body
                       img(src="images/helper_intra_oral_right.png", alt="Intra-oral right")  
                     .panel-footer
-                      span 04/04/2017
-                      a(href="")
-                        i.fa.fa-calendar(aria-hidden="true")                
+                      .form-group
+                        .select-date.input-group.date
+                          input(type='text')
+                          span.input-group-addon
+                            i.fa.fa-calendar(aria-hidden="true")         
                 .col-sm-4
                   .panel
                     .panel-heading
@@ -110,9 +124,11 @@
                     .panel-body
                       img(src="images/helper_intra_oral_center.png", alt="Intra-oral center")   
                     .panel-footer
-                      span 04/04/2017
-                      a(href="")
-                        i.fa.fa-calendar(aria-hidden="true")   
+                      .form-group
+                        .select-date.input-group.date
+                          input(type='text')
+                          span.input-group-addon
+                            i.fa.fa-calendar(aria-hidden="true") 
                 .col-sm-4
                   .panel
                     .panel-heading
@@ -121,19 +137,86 @@
                     .panel-body
                       img(src="images/helper_intra_oral_left.png", alt="Intra-oral left")   
                     .panel-footer
-                      span 04/04/2017
-                      a(href="")
-                        i.fa.fa-calendar(aria-hidden="true")  
+                      .form-group
+                        .select-date.input-group.date
+                          input(type='text')
+                          span.input-group-addon
+                            i.fa.fa-calendar(aria-hidden="true")
             #panorex.tab-pane(role='tabpanel')
               p.how_to Drag & Drop Your Images in the Blocks Below 
               .well
-                p Panorex 
-                 i.fa.fa-info-circle(aria-hidden="true")
+                p Panorex
+                  i.fa.fa-info-circle(aria-hidden="true")
+              .form-group.date_singular
+                .select-date.input-group.date
+                  input(type='text')
+                  span.input-group-addon
+                    i.fa.fa-calendar(aria-hidden="true")
             #lateral_cef.tab-pane(role='tabpanel')
-              p.how_to Drag & Drop Your Images in Respective Blocks Below 
+              p.how_to Drag & Drop Your Images in Respective Blocks Below
+              .well
+                p Lateral Cephalogram
+                  i.fa.fa-info-circle(aria-hidden="true")
+              .form-group.date_singular
+                .select-date.input-group.date
+                  input(type='text')
+                  span.input-group-addon
+                    i.fa.fa-calendar(aria-hidden="true")
             #intra_oral.tab-pane(role='tabpanel')
               p.how_to Drag & Drop Your Image Below
             #misc_photos.tab-pane(role='tabpanel')
               p.how_to Drag & Drop Your Image Below
+              .row
+                .col-sm-4
+                  .well
+                  .form-group.date_singular
+                    .select-date.input-group.date
+                      input(type='text')
+                      span.input-group-addon
+                        i.fa.fa-calendar(aria-hidden="true")
+                .col-sm-4
+                  .well
+                  .form-group.date_singular
+                    .select-date.input-group.date
+                      input(type='text')
+                      span.input-group-addon
+                        i.fa.fa-calendar(aria-hidden="true")
+                .col-sm-4
+                  .well
+                  .form-group.date_singular
+                    .select-date.input-group.date
+                      input(type='text')
+                      span.input-group-addon
+                        i.fa.fa-calendar(aria-hidden="true")
+              .row
+                .col-sm-4
+                  .well
+                  .form-group.date_singular.clearfix
+                    .select-date.input-group.date
+                      input(type='text')
+                      span.input-group-addon
+                        i.fa.fa-calendar(aria-hidden="true")
+                .col-sm-4
+                  .well
+                  .form-group.date_singular
+                    .select-date.input-group.date
+                      input(type='text')
+                      span.input-group-addon
+                        i.fa.fa-calendar(aria-hidden="true")
+                .col-sm-4
+                  .well
+                  .form-group.date_singular
+                    .select-date.input-group.date
+                      input(type='text')
+                      span.input-group-addon
+                        i.fa.fa-calendar(aria-hidden="true")
             #documents.tab-pane(role='tabpanel')
-              p.how_to Drag & Drop Your Images in Respective Blocks Below 
+              p.how_to Drag & Drop Your Images in Respective Blocks Below
+              .well
+                p PDF's or MS Word Documents
+                  i.fa.fa-info-circle(aria-hidden="true")
+              .form-group.date_singular
+                .select-date.input-group.date
+                  input(type='text')
+                  span.input-group-addon
+                    i.fa.fa-calendar(aria-hidden="true")

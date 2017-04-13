@@ -29,25 +29,13 @@
     margin: $px_twenty 0 $px_twenty;
     font-weight: $font-weight-regular;
   }
-  .well {
-    color: $greyish-tone;
-    border-radius: 0;
-    box-shadow: none;
-    @include font-size(11px);
-    font-weight: $font-weight-regular;
-    .fa {
-      color: $color-primary;
-    }
-  }
   .panel {
+    box-shadow: none;
     border-color: $grey-dark;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
     background-color: transparent;
   }
   .panel-heading {
+    border-radius: 0;
     color: $greyish-tone;
     @include font-size(11px);
     background-color: $silvery;
@@ -61,20 +49,68 @@
     background-color: $silvery;
   }
   .panel-footer {
-    @include clearfix();
-    @include font-size(14px);
+    padding: 0;
     color: $grey-tone;
-    background-color: $white;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
+    @include clearfix();
+    // overflow: hidden;
+    // border: none;
+    @include font-size(14px);
+    border-top: 1px solid $grey-dark;
     font-weight: $font-weight-regular;
-    span {
-      @extend .pull-left;
+  }
+  // Datepicker styles
+  .date {
+    width: 100%;
+    * {
+      border: none;
     }
-    a {
+  }
+  .input-group-addon {
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    padding: 0px;
+    right: $px_twenty;
+    line-height: 34px;
+    background-color: transparent;
+  }
+  // Well styles
+  .well {
+    color: $greyish-tone;
+    border-radius: 0;
+    box-shadow: none;
+    min-height: 375px;
+    margin-bottom: 0;
+    @include font-size(11px);
+    font-weight: $font-weight-regular;
+    .fa {
+      margin-left: 5px;
+      color: $color-primary;
+    }
+  }
+  #misc_photos .row:first-of-type {
+    margin-bottom: $px_twenty;
+  }
+  #misc_photos .well {
+    min-height: 200px;
+  }
+  .date_singular {
+    @include clearfix();
+    color: $grey-tone;
+    font-weight: $font-weight-regular;
+    > div {
+      width: 200px;
+      border-radius: 2px;
       @extend .pull-right;
-      color: $grey-tone;
+      border: 1px solid $grey-dark;
+      border-top: none;
     }
+  }
+  // Documents banner
+  #documents .well {
+    background: url("../images/helper_documents.png") no-repeat $silvery;
+    background-size: 96px 130px;
+    background-position: center;
   }
 }
 

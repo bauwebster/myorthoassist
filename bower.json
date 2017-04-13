@@ -20,6 +20,7 @@
     "jquery": "^1.11.3",
     "html5shiv": "^3.7.3",
     "bootstrap-select": "^1.12.2",
-    "pushy": "^1.1.0"
+    "pushy": "^1.1.0",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.47"
   }
 }
