@@ -678,6 +678,220 @@
   }
 }
 
+// 5. Case Page
+.case {
+  .site-main {
+    background-color: $white;
+  }
+  .parent-tab {
+    .fa {
+      margin-right: 5px;
+    }
+  }
+  .content {
+    @include tab-styles-override();
+    > ul {
+      margin-top: -50px;
+    }
+  }
+  .sidebar {
+    max-height: 600px;
+    overflow-y: scroll;
+    h2 {
+      padding: 0;
+      color: $grey-tone;
+      margin: $px_fifteen 0;
+      @include font-size(14px);
+      font-weight: $font-weight-medium;
+    }
+    span {
+      display: block;
+      color: $grey-tone;
+      text-align: right;
+      margin: $px_ten 0 0;
+      padding-bottom: $px_ten;
+      @include font-size(11px);
+      font-weight: $font-weight-regular;
+      border-bottom: 1px solid $grey-dark;
+    }
+    // Gallery layout overrides
+    .gallery_ortho_set .gallery-row {
+      margin-left: -5px;
+      margin-right: -5px;
+    }
+    .gallery_ortho_set .gallery-item {
+      padding-left: $px_five;
+      padding-right: $px_five;
+      padding-bottom: $px_ten;
+    }
+    .gallery_panorex .gallery-item,
+    .gallery_lateral_cephalogram .gallery-item {
+      width: 100%;
+    }
+    .recent_full_mouth_series {
+      img {
+        width: 100%;
+      }
+      span {
+        border: none;
+      }
+      .row {
+        margin-left: -2px;
+        margin-right: -2px;
+        > div {
+          padding-left: 2px;
+          padding-right: 2px;
+          padding-bottom: 4px;
+        }
+      }
+      .first,
+      .third {
+        margin-top: 19px;
+      }
+      .space {
+        margin-bottom: $px_thirty;
+      }
+    }
+  }
+}
+// Content styles
+.orthodontist_notes {
+  position: relative;
+  background-color: $blueish;
+  border: 1px solid $grey-dark;
+  @media #{$phablet} {
+    border-bottom: none;
+  }
+  @media #{$phablet__up} {
+    border-right: none;
+  }
+  span {
+    @extend .label;
+    @extend .label-primary;
+  }
+  .fa {
+    color: $color-primary;
+  }
+}
+.your_notes {
+  position: relative;
+  background-color: $greenish;
+  border: 1px solid $grey-dark;
+  span {
+    @extend .label;
+    @extend .label-default;
+  }
+  .fa {
+    color: $green-dark;
+  }
+}
+.row_notes {
+  h3 {
+    margin-top: $px_thirty+$px_twenty;
+    color: $grey-tone;
+    @include font-size(14px);
+    font-weight: $font-weight-medium;
+  }
+  p {
+    margin-bottom: 0;
+    color: $grey-tone;
+    @include font-size(12px);
+    font-weight: $font-weight-regular;
+  }
+  .labels {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    @include font-size(12px);
+    padding: $px_ten $px_fifteen;
+    font-weight: $font-weight-medium;
+    border-bottom-right-radius: 4px;
+  }
+  #accordion {
+    margin: $px_thirty -15px $px_twenty;
+  }
+  .fa {
+    margin-right: $px_five;
+  }
+  .panel {
+    box-shadow: none;
+    border-radius: 0;
+    background-color: transparent;
+    border-bottom: 1px solid $blueing;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-top: 0 !important;
+    &:first-child {
+      border-top: 1px solid $blueing;
+    }
+  }
+  .your_notes .panel {
+    border-bottom: 1px solid $green-dark;
+    &:first-child {
+      border-top: 1px solid $green-dark;
+    }
+  }
+  .panel-heading {
+    border-color: $blueing;
+    background-color: transparent;
+  }
+  .panel-title {
+    @include font-size(14px);
+    font-weight: $font-weight-medium;
+  }
+  .panel-body {
+    padding-top: 0;
+    border: none !important;
+  }
+}
+.tab-pane#media {
+  @include tab-styles();
+  > ul {
+    margin-top: $px_fifteen;
+  }
+  .bootstrap-select {
+    margin: $px_fifteen 0;
+  }
+  .bootstrap-select button {
+    color: $grey-tone;
+    @include font-size(14px);
+    font-weight: $font-weight-regular;
+  }
+}
+.tab-pane#diagnosis {
+  form {
+    @extend .form-inline;
+    margin-top: $px_thirty;
+    margin-bottom: $px_thirty+$px_ten;
+  }
+  label {
+    display: inline-block;
+    margin-right: $px_five;
+    font-weight: $font-weight-regular;
+  }
+  input {
+    max-width: 100px;
+     border-radius: 4px;
+    font-weight: $font-weight-medium;
+  }
+  .form-group {
+    position: relative;
+    margin-right: $px_twenty*2;
+  }
+  .help-block {
+    position: absolute;
+    width: 100%;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    bottom: -$px_twenty;
+    @include font-size(10px);
+  }
+}
+
 // 5. Miscellanous
 
 // Types

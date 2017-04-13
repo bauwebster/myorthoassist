@@ -11,11 +11,11 @@ $grid-float-breakpoint: 0 !default;
 $grid-float-breakpoint-max: 0 !default;
 
 // Modal setting
-$modal-title-padding: 15px 15px 0 !default;
-$modal-backdrop-bg: $black !default;
-$modal-backdrop-opacity: 0.5 !default;
-$modal-header-border-color: transparent !default;
-$modal-footer-border-color: transparent !default;
+// $modal-title-padding: 15px 15px 0 !default;
+// $modal-backdrop-bg: $black !default;
+// $modal-backdrop-opacity: 0.5 !default;
+// $modal-header-border-color: transparent !default;
+// $modal-footer-border-color: transparent !default;
 
 // Input setting
 $input-border: $grey-dark !default;
@@ -61,3 +61,9 @@ $nav-tabs-active-link-hover-border-color: $color-primary !default;
 // Well setting
 $well-bg: $silvery !default;
 $well-border: $grey-dark !default;
+
+// Label setting
+$label-default-bg: $green-dark !default;
+$label-primary-bg: $color-primary !default;
+$label-color: $white !default;
+$label-link-hover-color: $white !default;

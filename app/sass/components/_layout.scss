@@ -177,3 +177,50 @@ Table of Contents:
     @extend .hidden-xs;
   }
 }
+
+// 5. Case Page
+.case {
+  .site-header {
+    @include make-sm-column(12);
+  }
+  .site-main {
+    @include make-sm-column(12);
+  }
+  .site-footer {
+    @include make-sm-column(12);
+  }
+  // Content
+  .content {
+    @include make-sm-column(9);
+  }
+  .orthodontist_notes {
+    @include make-sm-column(6);
+  }
+  .your_notes {
+    @include make-sm-column(6);
+  }
+  // Sidebar
+  .sidebar {
+    @extend .hidden-xs;
+    @include make-sm-column(3);
+  }
+  .recent_ortho_set {
+    @include make-sm-column(12);
+  }
+  .recent_panorex {
+    @include make-sm-column(12);
+  }
+  .recent_lateral_cephalogram {
+    @include make-sm-column(12);
+  }
+  .recent_full_mouth_series {
+    @include make-sm-column(12);
+  }
+  // Gallery
+  .gallery-row {
+    @include make-row();
+  }
+  .gallery_ortho_set .gallery-item {
+    @include make-xs-column(4);
+  }
+}

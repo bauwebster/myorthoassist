@@ -21,6 +21,7 @@
     "html5shiv": "^3.7.3",
     "bootstrap-select": "^1.12.2",
     "pushy": "^1.1.0",
-    "eonasdan-bootstrap-datetimepicker": "^4.17.47"
+    "eonasdan-bootstrap-datetimepicker": "^4.17.47",
+    "swipebox": "^1.4.4"
   }
 }

@@ -1,6 +1,6 @@
 @mixin modal_uploadfiles() {
   .modal-dialog {
-    @extend .modal-lg;
+    // @extend .modal-lg;
   }
   .modal-title {
     text-align: center;
@@ -287,20 +287,62 @@
   }
   .nav-tabs li.active a {
     color: $brand-primary;
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-medium;
     border-bottom: 3px solid $color-primary;
   }
   .nav-tabs li.active a:hover {
     border: none;
-    color: inherit;
+    color: $color-primary;
     border-bottom: 3px solid $color-primary;
   }
   .nav-tabs li.active a:focus {
     border: none;
-    color: inherit;
+    color: $color-primary;
     border-bottom: 3px solid $color-primary;
   }
   .nav-tabs li:not(:last-child) {
     margin-right: $px_fifteen;
+  }
+}
+
+@mixin tab-styles-override() {
+  .nav-tabs {
+    border: none;
+    list-style-type: none;
+  }
+  .nav-tabs li {
+    margin: 0;
+  }
+  .nav-tabs li a {
+    margin: 0;
+    border: none;
+    color: $greyishy;
+    text-transform: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    font-weight: $font-weight-regular;
+    background-color: $grey-darkest;
+    padding: $px_fifteen $px_twentyfive;
+  }
+  .nav-tabs li a:hover {
+    border: none;
+    color: $greyishy;
+  }
+  .nav-tabs li a:focus {
+    border: none;
+    color: $greyishy;
+  }
+  .nav-tabs li.active a {
+    border: none;
+    color: $brand-primary;
+    background-color: $white;
+  }
+  .nav-tabs li.active a:hover {
+    border: none;
+    color: $color-primary;
+  }
+  .nav-tabs li.active a:focus {
+    border: none;
+    color: $color-primary;
   }
 }

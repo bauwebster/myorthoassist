@@ -3,7 +3,8 @@ $(document).ready(function() {
   /*
     Table of content:
     1. Profile page
-    2. Miscellanous
+    2. Modal Windows
+    3. Lightbox
   */
 
   // 1. Profile page.
@@ -27,5 +28,8 @@ $(document).ready(function() {
       down: 'fa fa-arrow-down'
     }
   });
+
+  // 3. Lightbox
+  $('.swipebox').swipebox();
 
 });
