@@ -69,7 +69,6 @@ $menu_width: 250px !default;
     -webkit-transform: translate3d( unquote('-' + $menu_width) ,0,0);
     -ms-transform: translate3d( unquote('-' + $menu_width ) ,0,0);
     transform: translate3d( unquote('-' + $menu_width) ,0,0);
-    margin-right: -15px!important;
   }
 }
 
