@@ -11,10 +11,10 @@ nav.navbar.navbar-default.push
         img.logo(src="../images/logo.png", alt="MyOrthoAssist logo", style="width:140px;")
     #primary_menu.collapse.navbar-collapse
       ul.nav.navbar-nav.navbar-right
-        li
+        li(class=(bodyClass === 'cases' ? 'active' : ''))
           a(href='cases.html', title="Cases") Cases
-        li
-          a(href='', title="Resources") Resources
+        li.notice(class=(bodyClass === 'resources' ? 'active' : ''))
+          a(href='resources.html', title="Resources") Resources
         li.mobile
           a.menu-btn(href='#', role='button', title="Account")
             | Account 
@@ -24,13 +24,12 @@ nav.navbar.navbar-default.push
             | Account 
             i.fa.fa-caret-down(aria-hidden="true")
           ul.dropdown-menu
+            li(class=(bodyClass === 'profile' ? 'active' : ''))
+              a(href='profile.html') My Profile
+            li(class=(bodyClass === 'orthodontist' ? 'active' : ''))
+              a(href='orthodontist.html') My Orthodontist
             li
-              a(href='') My Profile
-            li
-              a(href='') My Orthodontist
-            li.divider(role='separator')
-            li
-              a(href='') Logout
+              a(href='login.html') Logout
     .navbar-icon
       a(href="", title="Steve Chang")
         img(src="../images/user_profile.png", alt="Steve Chang")     

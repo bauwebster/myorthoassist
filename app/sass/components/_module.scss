@@ -255,6 +255,18 @@
       padding: 0;
       border-top: 1px solid darken($color-primary, 4%);
     }
+    .active {
+      border-left: 3px solid $white;
+    }
+    .active a {
+      color: $white;
+      box-shadow: inset 0 0 15px 3px rgba(0, 0, 0, 0.2);
+      border-top: 1px solid rgba(0, 0, 0, 0.2);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    .active a:hover {
+      color: darken($white, 20%);
+    }
     @media #{$phablet} {
       h1 {
         @include font-size(20px);

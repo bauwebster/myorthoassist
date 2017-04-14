@@ -40,6 +40,35 @@
   .fa {
     margin-left: 4px;
   }
+  .active {
+    a {
+      border-bottom: 3px solid $white;
+    }
+  }
+  .dropdown .active {
+    a {
+      border-bottom: none;
+    }
+  }
+  .notice {
+    position: relative;
+    a::before {
+      position: absolute;
+      top: 27px;
+      left: $px_five;
+      content: '';
+      width: $px_ten;
+      height: $px_ten;
+      border-radius: 50%;
+      background-color: $red;
+      @media #{$phablet} {
+        top: 0;
+        left: 8px;
+        width: 7px;
+        height: 7px;
+      }
+    }
+  }
   @media #{$phablet__up} {
     .collapse {
       margin-right: $px_thirty+$px_fifteen; //~ 45px
@@ -65,9 +94,11 @@
       top: auto;
     }
     .collapse {
+      font-size: 0;
       text-align: center;
     }
     .navbar-nav {
+      @include font-size(14px);
       margin-right: 0;
       display: inline-block;
       float: none !important;
@@ -680,10 +711,17 @@
 
 // 5. Case Page
 .case {
+  .site-header {
+    padding-bottom: 80px;
+  }
   .site-main {
     background-color: $white;
   }
   .parent-tab {
+    a {
+      line-height: 0;
+      @include font-size(16px);
+    }
     .fa {
       margin-right: 5px;
     }
@@ -691,7 +729,7 @@
   .content {
     @include tab-styles-override();
     > ul {
-      margin-top: -50px;
+      margin-top: -46px;
     }
   }
   .sidebar {
@@ -753,6 +791,53 @@
       }
     }
   }
+  .breadcrumb {
+    margin-bottom: 0;
+  }
+  .form_register_case {
+    @extend .form-inline;
+    label {
+      display: block;
+      @include font-size(14px);
+      font-weight: $font-weight-regular;
+    }
+    figcaption {
+      margin-bottom: $px_ten;
+      @include font-size(14px);
+    }
+    .form-group,
+    input[type="text"] {
+      width: 100%;
+    }
+    .gutter .form-group {
+      margin-top: $px_ten;
+    }
+    .bootstrap-select {
+      width: 100% !important;
+    }
+    .bootstrap-select .dropdown-toggle {
+      color: $grey-tone;
+      font-weight: $font-weight-regular;
+    }
+    .btn_out_pri {
+      border-radius: 23px;
+    }
+    .help-block {
+      color: $color-primary;
+    }
+    .date input[type="text"] {
+      width: 100%;
+    }
+    .date .input-group-addon {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      padding: 0;
+      border: none;
+      background: none;
+      line-height: 34px;
+    }
+  }
 }
 // Content styles
 .orthodontist_notes {
@@ -764,6 +849,9 @@
   }
   @media #{$phablet__up} {
     border-right: none;
+    p {
+      min-height: 90px;
+    }
   }
   span {
     @extend .label;
@@ -783,6 +871,11 @@
   }
   .fa {
     color: $green-dark;
+  }
+  @media #{$phablet__up} {
+    #note_details {
+      min-height: 90px;
+    }
   }
 }
 .row_notes {
@@ -808,7 +901,7 @@
     font-weight: $font-weight-medium;
     border-bottom-right-radius: 4px;
   }
-  #accordion {
+  .panel-group {
     margin: $px_thirty -15px $px_twenty;
   }
   .fa {
@@ -834,6 +927,7 @@
     }
   }
   .panel-heading {
+    padding: $px_fifteen;
     border-color: $blueing;
     background-color: transparent;
   }
@@ -844,6 +938,7 @@
   .panel-body {
     padding-top: 0;
     border: none !important;
+    @include font-size(11px);
   }
 }
 .tab-pane#media {
@@ -867,13 +962,15 @@
     margin-bottom: $px_thirty+$px_ten;
   }
   label {
+    @include font-size(14px);
     display: inline-block;
     margin-right: $px_five;
     font-weight: $font-weight-regular;
   }
   input {
+    @include font-size(14px);
     max-width: 100px;
-     border-radius: 4px;
+    border-radius: 4px;
     font-weight: $font-weight-medium;
   }
   .form-group {
@@ -889,6 +986,119 @@
     text-align: right;
     bottom: -$px_twenty;
     @include font-size(10px);
+  }
+  .btn-group {
+    display: block;
+    text-align: right;
+    margin-top: $px_fifteen;
+    margin-bottom: $px_fifteen;
+  }
+  .btn_pri {
+    margin-left: $px_thirty;
+    @include font-size(16px);
+    text-transform: uppercase;
+  }
+  .btn_sec {
+    @include font-size(16px);
+    text-transform: uppercase;
+  }
+}
+.tab-pane#conversation {
+  .print_conversation {
+    margin: $px_fifteen 0;
+    display: block;
+    text-align: right;
+    @include font-size(10px);
+    font-weight: $font-weight-bold;
+    .fa {
+      margin-right: $px_five;
+    }
+  }
+  .form_conversation_submit {
+    .fa {
+      margin-right: $px_five;
+    }
+    input {
+      padding-right: 145px;
+    }
+    button {
+      text-transform: uppercase;
+    }
+    .input-group {
+      position: relative;
+      width: 100%;
+    }
+    .input-group-btn {
+      position: absolute;
+      top: 0;
+      right: 15px;
+      width: auto;
+      line-height: 34px;
+    }
+  }
+  .chat_window {
+    padding: $px_fifteen;
+    max-height: 400px;
+    overflow-y: scroll;
+  }
+  .panel {
+    display: block;
+    border: none;
+    box-shadow: none;
+    background: none;
+    max-width: 400px;
+    @media #{$tablet__up} {
+      max-width: calc(100% - 15%);
+    }
+  }
+  .panel-body {
+    @include font-size(12px);
+  }
+  .panel-footer {
+    border: none;
+    box-shadow: none;
+    background: none;
+    border-radius: 10px;
+  }
+  .timestamp {
+    color: $silverish;
+    @include font-size(10px);
+  }
+  .conversation_received {
+    @extend .pull-left;
+    .panel-body {
+      color: $grey-tone;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 6px;
+      background-color: $silver-mode;
+    }
+    .panel-footer {
+      padding-top: $px_five;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  .conversation_sent {
+    @extend .pull-right;
+    .fa {
+      color: $green-mode;
+      margin-right: $px_five;
+    }
+    .panel-body {
+      color: $white;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 0;
+      background-color: $green-mode;
+    }
+    .panel-footer {
+      padding-top: $px_five;
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }
 

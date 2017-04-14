@@ -11,11 +11,11 @@ $grid-float-breakpoint: 0 !default;
 $grid-float-breakpoint-max: 0 !default;
 
 // Modal setting
-// $modal-title-padding: 15px 15px 0 !default;
-// $modal-backdrop-bg: $black !default;
-// $modal-backdrop-opacity: 0.5 !default;
-// $modal-header-border-color: transparent !default;
-// $modal-footer-border-color: transparent !default;
+$modal-title-padding: 15px 15px 0 !default;
+$modal-backdrop-bg: $black !default;
+$modal-backdrop-opacity: 0.5 !default;
+$modal-header-border-color: transparent !default;
+$modal-footer-border-color: transparent !default;
 
 // Input setting
 $input-border: $grey-dark !default;
@@ -35,7 +35,7 @@ $navbar-default-link-color: $white !default;
 $navbar-default-link-hover-color: darken($white, 20%) !default;
 $navbar-default-link-hover-bg: transparent !default;
 $navbar-default-brand-color: $white !default;
-$navbar-default-link-active-color: darken($white, 20%) !default;
+$navbar-default-link-active-color: $white !default;
 $navbar-default-link-active-bg: transparent !default;
 $navbar-default-brand-hover-color: darken($white, 20%) !default;
 $navbar-default-brand-hover-bg: transparent !default;
@@ -67,3 +67,24 @@ $label-default-bg: $green-dark !default;
 $label-primary-bg: $color-primary !default;
 $label-color: $white !default;
 $label-link-hover-color: $white !default;
+
+// Dropdown setting
+// $dropdown-bg: $color-primary !default;
+// $dropdown-border: darken($color-primary, 5%) !default;
+// $dropdown-fallback-border: $color-primary !default;
+// $dropdown-divider-bg: darken($color-primary, 10%) !default;
+// $dropdown-link-color: $white !default;
+// $dropdown-link-hover-color: darken($white, 20%) !default;
+// $dropdown-link-hover-bg: lighten($color-primary, 5%) !default;
+// $dropdown-link-active-color: $white !default;
+// $dropdown-link-active-bg: darken($color-primary, 10%) !default;
+// $dropdown-header-color: darken($white, 5%) !default;
+// $dropdown-caret-color: $white !default;
+
+// Breadcrumb setting
+$breadcrumb-padding-vertical: $px_ten !default;
+$breadcrumb-padding-horizontal: 0 !default;
+$breadcrumb-bg: transparent !default;
+$breadcrumb-color: $color-primary !default;
+$breadcrumb-active-color: $color-primary !default;
+// $breadcrumb-separator: "/" !default;

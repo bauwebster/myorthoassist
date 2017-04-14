@@ -146,3 +146,12 @@ textarea {
     color: darken($silver-dark, 20%);
   }
 }
+
+// *** BREADCRUMBS
+.breadcrumb {
+  @include font-size(12px);
+  text-transform: uppercase;
+  .fa {
+    margin-right: $px_five;
+  }
+}
