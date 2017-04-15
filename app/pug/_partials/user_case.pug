@@ -13,7 +13,7 @@ main.push.container-fluid(role="main")
             .form-group
               figure
                 figcaption Patient Photo
-                img(src="http://placehold.it/98x98", alt="Patient picture")            
+                img(src="images/patient_picture.png", alt="Patient picture")            
           .col-sm-6
             .row
               .col-sm-6
@@ -24,7 +24,9 @@ main.push.container-fluid(role="main")
                 .form-group
                   label(for="") Gender 
                   select.selectpicker(name="sex")
-                    option(value="active") Female
+                    option(value="male") Male
+                    option(value="female") Female
+                    option(value="other") Other
               .col-sm-3
                 .form-group
                   label(for="") Birthdate      

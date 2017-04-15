@@ -32,6 +32,16 @@ textarea {
   @extend .form-control;
   box-shadow: none;
 }
+.bootstrap-select.btn-group {
+  .dropdown-toggle {
+    box-shadow: none !important;
+  }
+  &.open {
+    .dropdown-toggle {
+      box-shadow: none !important;
+    }
+  }
+}
 // Input placeholder text layout state
 @mixin input_text_center() {
   &::-webkit-input-placeholder {
@@ -165,6 +175,7 @@ textarea {
 .breadcrumb {
   @include font-size(12px);
   text-transform: uppercase;
+  font-weight: $font-weight-medium;
   .fa {
     margin-right: $px_five;
   }

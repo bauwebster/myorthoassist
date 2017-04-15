@@ -227,9 +227,6 @@
       border-color: $grey-dark !important;
       background-color: $white !important;
       font-weight: $font-weight-regular !important;
-      &:active {
-        box-shadow: none;
-      }
     }
   }
   .form-group {
@@ -872,6 +869,8 @@
     .bootstrap-select .dropdown-toggle {
       color: $grey-tone;
       font-weight: $font-weight-regular;
+      border-color: $grey-dark !important;
+      background-color: $white !important;
     }
     .btn_out_pri {
       border-radius: 23px;
