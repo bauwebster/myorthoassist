@@ -780,12 +780,16 @@
   .content {
     @include tab-styles-override();
     > ul {
-      margin-top: -46px;
+      margin-top: -44px;
+    }
+    > .tab-content {
+      min-height: 600px;
     }
   }
   .sidebar {
     max-height: 600px;
     overflow-y: scroll;
+    background-color: $blue-light;
     h2 {
       padding: 0;
       color: $grey-tone;
@@ -841,12 +845,18 @@
         margin-bottom: $px_thirty;
       }
     }
+    @media #{$phablet__up} {
+      border-left: 1px solid $blue-dark;
+    }
   }
   .breadcrumb {
     margin-bottom: 0;
   }
   .form_register_case {
     @extend .form-inline;
+    input, select {
+      height: 30px;
+    }
     label {
       display: block;
       @include font-size(14px);
@@ -863,6 +873,10 @@
     .gutter .form-group {
       margin-top: $px_ten;
     }
+    .additional_info {
+      color: $color-primary;
+      @extend .help-block;
+    }
     .bootstrap-select {
       width: 100% !important;
     }
@@ -871,12 +885,13 @@
       font-weight: $font-weight-regular;
       border-color: $grey-dark !important;
       background-color: $white !important;
+      height: $px_thirty;
+      line-height: 28px;
+      padding-top: 0;
+      padding-bottom: 0;
     }
     .btn_out_pri {
       border-radius: 23px;
-    }
-    .help-block {
-      color: $color-primary;
     }
     .date input[type="text"] {
       width: 100%;
@@ -888,7 +903,7 @@
       padding: 0;
       border: none;
       background: none;
-      line-height: 34px;
+      line-height: 30px;
     }
   }
 }
@@ -903,7 +918,7 @@
   @media #{$phablet__up} {
     border-right: none;
     p {
-      min-height: 90px;
+      height: 46px;
     }
   }
   span {
@@ -927,24 +942,27 @@
   }
   @media #{$phablet__up} {
     #note_details {
-      min-height: 90px;
+      height: 46px;
     }
   }
 }
 .row_notes {
   h3 {
+    line-height: normal;
     margin-top: $px_thirty+$px_twenty;
     color: $grey-tone;
     @include font-size(14px);
     font-weight: $font-weight-medium;
   }
   p {
+    line-height: normal;
     margin-bottom: 0;
     color: $grey-tone;
     @include font-size(12px);
     font-weight: $font-weight-regular;
   }
   .labels {
+    line-height: normal;
     position: absolute;
     top: 0;
     left: 0;
@@ -985,10 +1003,12 @@
     background-color: transparent;
   }
   .panel-title {
+    line-height: normal;
     @include font-size(14px);
     font-weight: $font-weight-medium;
   }
   .panel-body {
+    line-height: normal;
     padding-top: 0;
     border: none !important;
     @include font-size(11px);
@@ -1010,9 +1030,10 @@
 }
 .tab-pane#diagnosis {
   form {
+    color: $grey-tone;
     @extend .form-inline;
-    margin-top: $px_thirty;
-    margin-bottom: $px_thirty+$px_ten;
+    padding-top: $px_thirty;
+    padding-bottom: $px_thirty+$px_ten;
   }
   label {
     @include font-size(14px);
@@ -1022,29 +1043,36 @@
   }
   input {
     @include font-size(14px);
-    max-width: 100px;
+    width: 100% !important;
     border-radius: 4px;
+    height: 30px;
+    line-height: 30px;
     font-weight: $font-weight-medium;
   }
   .form-group {
     position: relative;
-    margin-right: $px_twenty*2;
   }
-  .help-block {
+  .additional_info {
     position: absolute;
     width: 100%;
-    right: 0;
+    left: $px_fifteen;
+    right: $px_fifteen;
     margin: 0;
     padding: 0;
     text-align: right;
-    bottom: -$px_twenty;
+    bottom: -18px;
+    line-height: 1;
     @include font-size(10px);
   }
   .btn-group {
+    line-height: normal;
     display: block;
     text-align: right;
-    margin-top: $px_fifteen;
-    margin-bottom: $px_fifteen;
+    margin-top: $px_thirty;
+    margin-bottom: $px_thirty+$px_five;
+    button {
+      line-height: normal;
+    }
   }
   .btn_pri {
     margin-left: $px_thirty;
@@ -1052,29 +1080,81 @@
     text-transform: uppercase;
   }
   .btn_sec {
+    @extend .btn_sec_light;
     @include font-size(16px);
     text-transform: uppercase;
+  }
+  .notes_modals {
+    text-align: center;
+    a {
+      display: inline-block;
+      width: 57px;
+      height: 57px;
+      border-radius: 50%;
+      text-align: center;
+      @include font-size(32px);
+    }
+    .fa {
+      margin-top: 11px;
+    }
+    span {
+      color: inherit;
+      display: block;
+      margin-top: 8px;
+      @include font-size(12px);
+      font-weight: $font-weight-medium;
+    }
+  }
+  .btn_od_notes {
+    color: $color-primary;
+    background-color: $blueish;
+    border: 1px solid $color-primary;
+    & + span {
+      color: $color-primary;
+    }
+  }
+  .btn_yo_notes {
+    color: $green-dark;
+    background-color: $greenish;
+    border: 1px solid $green-dark;
+    & + span {
+      color: $green-dark;
+    }
   }
 }
 .tab-pane#conversation {
   .print_conversation {
-    margin: $px_fifteen 0;
-    display: block;
     text-align: right;
-    @include font-size(10px);
-    font-weight: $font-weight-bold;
+    a {
+      line-height: 1;
+      padding: $px_fifteen 0;
+      display: inline-block;
+      @include font-size(12px);
+      font-weight: $font-weight-bold;
+    }
     .fa {
       margin-right: $px_five;
     }
   }
   .form_conversation_submit {
+    margin-left: -15px;
+    margin-right: -15px;
+    @include clearfix();
+    box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, 0.1);
     .fa {
-      margin-right: $px_five;
+      margin-right: $px_twenty;
     }
     input {
-      padding-right: 145px;
+      padding-left: $px_thirty;
+      border: none;
+      height: 80px;
+      line-height: 80px;
+      border-radius: 0;
+      padding-right: 45px;
+      @include input_text_color($silver-dark);
     }
     button {
+      @include font-size(16px);
       text-transform: uppercase;
     }
     .input-group {
@@ -1086,12 +1166,15 @@
       top: 0;
       right: 15px;
       width: auto;
-      line-height: 34px;
+      line-height: 80px;
+      background-color: $white;
+      padding-left: $px_thirty;
+      padding-right: $px_thirty;
     }
   }
   .chat_window {
     padding: $px_fifteen;
-    max-height: 400px;
+    max-height: 478px;
     overflow-y: scroll;
   }
   .panel {
@@ -1105,7 +1188,8 @@
     }
   }
   .panel-body {
-    @include font-size(12px);
+    @include font-size(14px);
+    font-weight: $font-weight-medium;
   }
   .panel-footer {
     border: none;
@@ -1115,14 +1199,14 @@
   }
   .timestamp {
     color: $silverish;
-    @include font-size(10px);
+    @include font-size(12px);
   }
   .conversation_received {
     @extend .pull-left;
     .panel-body {
-      color: $grey-tone;
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
+      color: $greyishy;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 6px;
       background-color: $silver-mode;
@@ -1131,6 +1215,7 @@
       padding-top: $px_five;
       padding-left: 0;
       padding-right: 0;
+      color: $silver-dark;
     }
   }
   .conversation_sent {
@@ -1151,6 +1236,124 @@
       padding-top: $px_five;
       padding-left: 0;
       padding-right: 0;
+    }
+  }
+}
+// Mobile styles
+@media #{$phablet} {
+  .site-header {
+    padding-bottom: $px_fifteen !important;
+  }
+  .form_register_case {
+    .patient_photo {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+    }
+    #patient_name {
+      color: $color-primary;
+      padding: 0;
+      border: none;
+      box-shadow: none;
+      background-color: transparent;
+      @include font-size(16px);
+      &::-webkit-input-placeholder {
+       color: $color-primary;
+      }
+      &:-moz-placeholder {
+       color: $color-primary;
+      }
+      &::-moz-placeholder {
+       color: $color-primary;
+      }
+      &:-ms-input-placeholder {
+       color: $color-primary;
+      }
+    }
+  }
+  .parent-tab {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: $white;
+    border: 1px solid $grey-dark !important;
+    li {
+      width: 33%;
+      a {
+        height: 70px;
+        display: block;
+        text-align: center;
+        font-size: 10px !important;
+        color: $silver-dark !important;
+        padding: $px_ten $px_fifteen 0 !important;
+        background-color: transparent !important;
+      }
+      span {
+        display: block;
+        line-height: 1;
+        margin-top: $px_five;
+      }
+      .fa {
+        @include font-size(25px);
+      }
+    }
+    .active {
+      a {
+        color: $color-primary !important;
+        background-color: transparent !important;
+      }
+    }
+  }
+  // Conversation
+  .chat_window {
+    padding: $px_fifteen 0 !important;
+  }
+  .form_conversation_submit {
+    position: fixed;
+    left: 0;
+    bottom: 72px;
+    right: 0;
+    background-color: $white;
+    border-top: 1px solid $grey-dark;
+    text-align: center !important;
+    .btn_pri span {
+      display: none;
+    }
+    input {
+      height: 50px !important;
+      line-height: 50px !important;
+    }
+    .input-group-btn {
+      padding-right: 0 !important;
+      line-height: 50px !important;
+    }
+  }
+  // Diagnosis
+  #diagnosis .additional_info {
+    text-align: left !important;
+    margin-bottom: $px_fifteen;
+  }
+  #diagnosis .btn-group {
+    position: fixed;
+    left: 0;
+    bottom: 72px;
+    right: 0;
+    background-color: $white;
+    border-top: 1px solid $grey-dark;
+    margin: 0 !important;
+    padding: 0;
+    line-height: 50px !important;
+    text-align: center !important;
+    button {
+      font-size: 14px !important;
+    }
+  }
+  .form_register_notes {
+    padding-bottom: 0 !important;
+    .form-group {
+      margin-bottom: 35px;
     }
   }
 }
@@ -1200,4 +1403,12 @@
 }
 #upload_files {
   @include modal_uploadfiles();
+}
+#modal_your_notes {
+  @include modal_notes_overrides();
+  @include modal_yo();
+}
+#modal_orthodontist_notes {
+  @include modal_notes_overrides();
+  @include modal_od();
 }

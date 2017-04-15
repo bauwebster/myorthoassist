@@ -221,6 +221,115 @@
   }
 }
 
+@mixin modal_notes_overrides() {
+  .moda-content {
+    background-color: transparent;
+  }
+  .modal-header {
+    padding: 0;
+    height: 0;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+  }
+  .modal-body {
+    padding: 0;
+    > div {
+      border: none;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+  }
+  h3 {
+    margin: 0 0 $px_ten;
+    line-height: normal;
+    padding-top: $px_thirty+$px_twenty;
+    color: $grey-tone;
+    @include font-size(14px);
+    font-weight: $font-weight-medium;
+  }
+  p {
+    line-height: normal;
+    margin-bottom: 0;
+    color: $grey-tone;
+    @include font-size(12px);
+    font-weight: $font-weight-regular;
+  }
+  .labels {
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    @include font-size(12px);
+    padding: $px_ten $px_fifteen;
+    font-weight: $font-weight-medium;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 4px;
+  }
+  .panel-group {
+    margin: $px_thirty -15px 0;
+  }
+  .fa {
+    margin-right: $px_five;
+  }
+  .panel-heading {
+    padding: $px_fifteen;
+    border-color: $blueing;
+    background-color: transparent;
+  }
+  .panel-title {
+    line-height: normal;
+    @include font-size(14px);
+    font-weight: $font-weight-medium;
+  }
+  .panel-body {
+    line-height: normal;
+    padding: 0;
+    border: none !important;
+    @include font-size(11px);
+  }
+}
+
+@mixin modal_od() {
+  .orthodontist_notes {
+    display: block !important;
+    .panel {
+      box-shadow: none;
+      border-radius: 0;
+      background-color: transparent;
+      border-bottom: 1px solid $blueing;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      margin-top: 0 !important;
+      &:first-child {
+        border-top: 1px solid $blueing;
+      }
+    }
+  }
+}
+
+@mixin modal_yo() {
+  .your_notes {
+    display: block !important;
+    .panel {
+      box-shadow: none;
+      border-radius: 0;
+      background-color: transparent;
+      border-bottom: 1px solid $green-dark;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      margin-top: 0 !important;
+      &:first-child {
+        border-top: 1px solid $green-dark;
+      }
+    }
+  }
+}
+
 @mixin fieldset_colored() {
   position: relative;
   border-radius: 2px;
@@ -357,9 +466,10 @@
     text-transform: none;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
-    font-weight: $font-weight-regular;
+    font-weight: $font-weight-medium;
     background-color: $grey-darkest;
     padding: $px_fifteen $px_twentyfive;
+    @include font-size(14px);
   }
   .nav-tabs li a:hover {
     border: none;

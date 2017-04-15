@@ -9,56 +9,56 @@ main.push.container-fluid(role="main")
             | Cases
       form.form_register_case(action="", role="form")
         .row
-          .col-sm-2
+          .first_column
             .form-group
               figure
                 figcaption Patient Photo
-                img(src="images/patient_picture.png", alt="Patient picture")            
-          .col-sm-6
+                img.patient_photo(src="images/patient_picture.png", alt="Patient picture")            
+          .second_column
             .row
-              .col-sm-6
+              .col-sm-6.sc_first
                 .form-group
-                  label(for="") Patient Name
-                  input(type="text", placeholder="Isabella Strong")
-              .col-sm-3
+                  label(for="patient_name") Patient Name
+                  input#patient_name(type="text", placeholder="Isabella Strong", name="patient_name")
+              .col-sm-3.sc_second
                 .form-group
-                  label(for="") Gender 
-                  select.selectpicker(name="sex")
+                  label(for="patient_gender") Gender 
+                  select#patient_gender.selectpicker(name="patient_gender")
                     option(value="male") Male
                     option(value="female") Female
                     option(value="other") Other
-              .col-sm-3
+              .col-sm-3.sc_third
                 .form-group
-                  label(for="") Birthdate      
+                  label(for="patient_dob") Birthdate      
                   .select-date.input-group.date
-                    input(type='text')
+                    input#patient_dob(type='text', name="patient_dob")
                     span.input-group-addon
                       i.fa.fa-calendar(aria-hidden="true")
             .row.gutter
-              .col-sm-3
+              .col-sm-3.sc_fourth
                 .form-group
-                  label(for="") Status
-                  select.selectpicker(name="status")
+                  label(for="patient_status") Status
+                  select#patient_status.selectpicker(name="patient_status")
                     option(value="active") Active   
-              .col-sm-3
+              .col-sm-3.sc_fifth
                 .form-group
-                  label(for="") Case Start Date          
+                  label(for="patient_register_date") Case Start Date          
                   .select-date.input-group.date
-                    input(type='text')
+                    input#patient_register_date(type='text', name="patient_register_date")
                     span.input-group-addon
                       i.fa.fa-calendar(aria-hidden="true")             
-              .col-sm-3
+              .col-sm-3.sc_sixth
                 .form-group
-                  label(for="") Case Type 
-                  select.selectpicker(name="case_type")
+                  label(for="patient_case_type") Case Type 
+                  select#patient_case_type.selectpicker(name="patient_case_type")
                     option(value="active") Invisalign
               .col-sm-3
-          .col-sm-4
+          .third_column
             .form-group
-              a.btn_out_pri(href="")
+              a.btn_out_pri(href="", data-toggle="modal", data-target="#upload_files")
                 i.fa.fa-plus(aria-hidden="true")
                 | Add Images
-            p.help-block or Documents (PDF, DOC)
+            p.additional_info or Documents (PDF, DOC)
     section.site-main
       .row
         .content
@@ -66,20 +66,21 @@ main.push.container-fluid(role="main")
             li.active(role='presentation')
               a(href='#conversation', aria-controls='home', role='tab', data-toggle='tab')
                 i.fa.fa-comments(aria-hidden="true")
-                | Conversation
+                span Conversation
             li(role='presentation')
               a(href='#diagnosis', aria-controls='profile', role='tab', data-toggle='tab')
                 i.fa.fa-clipboard(aria-hidden="true")
-                | Diagnosis & Treatment
+                span Diagnosis & Treatment
             li(role='presentation')
               a(href='#media', aria-controls='messages', role='tab', data-toggle='tab')
                 i.fa.fa-picture-o(aria-hidden="true")
-                | Media Library              
+                span Media Library              
           .tab-content
-            #conversation.tab-pane.active(role='tabpanel')
-              a.print_conversation(href="")
-                i.fa.fa-print(aria-hidden="true")
-                | Print Conversations
+            #conversation.tab-pane.active(role='tabpanel')              
+              .print_conversation
+                a(href="")
+                  i.fa.fa-print(aria-hidden="true")
+                  | Print Conversations
               .chat_window
                 .panel.conversation_received
                   .panel-body Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit deleniti id cum ab aliquam commodi quasi, magnam iusto amet officiis sed itaque eos dolorum accusamus ipsam necessitatibus. Id, dolorem saepe.
@@ -105,29 +106,30 @@ main.push.container-fluid(role="main")
                     span.timestamp 5 April 2016, 5:32 PM
               form.form_conversation_submit(action="")
                 .input-group
-                  input(type='text', placeholder='Write a message')
+                  input(type='text', placeholder='Write a message...')
                   span.input-group-btn
                     button.btn_pri(type='submit')
                       i.fa.fa-paper-plane(aria-hidden="true")
-                      | Send Message
+                      span Send Message
             #diagnosis.tab-pane(role='tabpanel')
-              form(action="", role="form")
-                .form-group
-                  label(for="upper_wire") Upper Wire:
-                  input#upper_wire(type="text", name="upper_wire", placeholder="19x25 Demo")
-                  p.help-block 4 April 2016
-                .form-group
-                  label(for="lower_wire") Lower Wire:
-                  input#lower_wire(type="text", name="lower_wire")
-                  p.help-block.hidden 4 April 2016
-                .form-group
-                  label(for="right_elastic") Right Elastic:
-                  input#right_elastic(type="text", name="right_elastic")
-                  p.help-block.hidden 4 April 2016
-                .form-group
-                  label(for="left_elastic") Left Elastic:
-                  input#left_elastic(type="text", name="left_elastic")
-                  p.help-block.hidden 4 April 2016
+              form.form_register_notes(action="", role="form")
+                .row
+                  .form-group
+                    label(for="upper_wire") Upper Wire:
+                    input#upper_wire(type="text", name="upper_wire", placeholder="19x25 Demo")
+                    p.additional_info 4 April 2016
+                  .form-group
+                    label(for="lower_wire") Lower Wire:
+                    input#lower_wire(type="text", name="lower_wire")
+                    p.additional_info.hidden 4 April 2016
+                  .form-group
+                    label(for="right_elastic") Right Elastic:
+                    input#right_elastic(type="text", name="right_elastic")
+                    p.additional_info.hidden 4 April 2016
+                  .form-group
+                    label(for="left_elastic") Left Elastic:
+                    input#left_elastic(type="text", name="left_elastic")
+                    p.additional_info.hidden 4 April 2016
               .row-fluid.row_notes
                 .orthodontist_notes
                   span.labels Orthodontist's Notes
@@ -229,6 +231,15 @@ main.push.container-fluid(role="main")
                       #collapse_your_treatment_plan.panel-collapse.collapse(role='tabpanel', aria-labelledby='your_treatment_plan')
                         .panel-body
                           | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+              .row.notes_modals
+                .col-xs-6
+                  a.btn_od_notes(href="", data-toggle="modal", data-target="#modal_orthodontist_notes", title="Orthodontist's Notes")
+                    i.fa.fa-file-text(aria-hidden="true")
+                  span Orthodontist's Notes
+                .col-xs-6                  
+                  a.btn_yo_notes(href="", data-toggle="modal", data-target="#modal_your_notes", title="Your Notes")
+                    i.fa.fa-file-text(aria-hidden="true")
+                  span Your Notes
               .row
                 .col-sm-12
                   .btn-group(role='group')
@@ -377,3 +388,5 @@ main.push.container-fluid(role="main")
     include ../_includes/footer
 include ../_includes/modal_disclaimer
 include ../_includes/modal_upload
+include ../_includes/modal_your_notes
+include ../_includes/modal_orthodontist_notes

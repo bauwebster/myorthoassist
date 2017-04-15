@@ -2,12 +2,13 @@ $(document).ready(function() {
 
   /*
     Table of content:
-    1. Profile page
+    1A. Profile page
+    1B. Case Page
     2. Modal Windows
     3. Lightbox
   */
 
-  // 1. Profile page
+  // 1A. Profile page
   // Toggle password
   $('.toggle_password input').click(function() {
     if ($('#set_password').attr('type') == 'password') {
@@ -16,6 +17,13 @@ $(document).ready(function() {
       $('#set_password').attr('type', 'password');
     }
   });
+
+  // 1B. Case page
+  // Notes modals for mobile
+  var $od_notes = $('.orthodontist_notes').clone(true, true);
+  var $yo_notes = $('.your_notes').clone(true, true);
+  $('#modal_orthodontist_notes .modal-body').html($od_notes);
+  $('#modal_your_notes .modal-body').html($yo_notes);
 
   // 2. Modal Windows
   $('.select-date').datetimepicker({

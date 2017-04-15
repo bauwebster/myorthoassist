@@ -200,6 +200,46 @@ Table of Contents:
   .your_notes {
     @include make-sm-column(6);
   }
+  // Conversation tab
+  .first_column {
+    @include make-xs-column(3);
+    @include make-sm-column(2);
+    figcaption {
+      @extend .hidden-xs;
+    }
+  }
+  .second_column {
+    @include make-xs-column(9);
+    @include make-sm-column(6);
+    label {
+      @extend .hidden-xs;
+    }
+  }
+  .third_column {
+    @extend .hidden-xs;
+    @include make-sm-column(4);
+  }
+  .sc_second,
+  .sc_third,
+  .sc_fourth,
+  .sc_fifth,
+  .sc_sixth, {
+    @extend .hidden-xs;
+  }
+  // Diagnosis tab
+  .form_register_notes {
+    .form-group {
+      @include make-xs-column(6);
+      @include make-sm-column(3);
+    }
+  }
+  .orthodontist_notes,
+  .your_notes {
+    @extend .hidden-xs;
+  }
+  .notes_modals {
+    @extend .visible-xs;
+  }
   // Sidebar
   .sidebar {
     @extend .hidden-xs;
