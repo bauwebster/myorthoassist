@@ -2,6 +2,7 @@ include ../_includes/navigation
 main.push.container-fluid(role="main")
   .row
     h1.page-title My Profile
+  //- .row
   .row
     section.site-main
       form#form_profile(role="form")
@@ -11,6 +12,8 @@ main.push.container-fluid(role="main")
               figure
                 figcaption Profile Photo (Optional)
                 img(src="../images/user_profile.png", alt="Steve Chang", title="Steve Chang")
+            //- .form-group
+          //- .first_column
           .second_column
             .tab-listing      
               ul.nav.nav-tabs.device-small(role='tablist')
@@ -20,27 +23,35 @@ main.push.container-fluid(role="main")
                   a(href='#tab_practice', aria-controls='practice', role='tab', data-toggle='tab', title="Practice") Practice  
                 li(role='presentation')
                   a(href='#tab_invisalign', aria-controls='invisalign', role='tab', data-toggle='tab', title="Invisalign") Invisalign
+              //- ul | .nav | .nav-tabs | .device-small
+            //- .tab-listing 
             .row.tab-content
               #tab_personal.tab-pane.active(role='tabpanel')
                 .form-group
                   label(for="first_name") First Name
                   input#first_name(type="text", name="first_name", placeholder="Steve")
+                //- .form-group
                 .form-group
                   label(for="last_name") Last Name
                   input#last_name(type="text", name="last_name", placeholder="Chang")
+                //- .form-group
                 .form-group
                   label(for="email") Email
                   input#email(type="email", name="email", placeholder="steve.chang@gmail.com")
+                //- .form-group
                 .row
                   .form-group.col-sm-6
                     label(for="personal_phone") Personal Phone
                     input#personal_phone(type="text", name="personal_phone", placeholder="(209) 555-5555")
+                  //- .form-group | .col-sm-6
+                //- .row
                 .form-group
                   label(for="about") About Yourself (Optional)
                   p.additional_info Please tell us a bit about yourself and anything you think might be helpful for your Orthodontist to know.
                   textarea#about(name="about", rows="5", placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi in quos modi quis vero commodi nobis animi corporis. Labore voluptatem, ipsa odio tenetur. Reiciendis, sed, temporibus. Doloremque eligendi consectetur voluptatum.")
                   p.additional_info Please tell us a bit about your past dental experience, courses, and comfort level. This will help in providing the best advice possible. This section can be updated anytime.
                   textarea#about_experiences(name="about_experiences", rows="5", placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi in quos modi quis vero commodi nobis animi corporis. Labore voluptatem, ipsa odio tenetur. Reiciendis, sed, temporibus. Doloremque eligendi consectetur voluptatum.")
+                //- .form-group
                 .row
                   .form-group.col-sm-6
                     label(for="set_password") Password              
@@ -48,23 +59,33 @@ main.push.container-fluid(role="main")
                     .toggle_password
                       input#toggle_password(type="checkbox")
                       label(for="toggle_password") Show
+                    //- .toggle_password
+                  //- .form-group | .col-sm-6
+                //- .row
                 .row
                   .form-group.col-sm-6
                     label(for="new_password") New Password
                     input#new_password(type="password", name="new_password", placeholder="")
+                  //- .form-group | .col-sm-6
+                //- .row
                 .row
                   .form-group.col-sm-6
                     label(for="confirm_password") Re-type Password
                     input#confirm_password(type="password", name="confirm_password", placeholder="")
+                  //- .form-group | .col-sm-6
+                //- .row
+              //- #tab_personal | .tab-pane | .active
               #tab_practice.tab-pane(role='tabpanel')
                 fieldset
                   legend Practice Address
                   .form-group
                     label(for="street") Street
                     input#street(type="text", name="street", placeholder="461 King Street")
+                  // .form-group
                   .form-group
                     label(for="city") City
                     input#city(type="text", name="city", placeholder="Toronto")
+                  // .form-group
                   .form-group
                     label(for="state") State/Province
                     select#state.selectpicker(name="state")
@@ -81,19 +102,26 @@ main.push.container-fluid(role="main")
                       option(value='NT') Northwest Territories
                       option(value='NU') Nunavut
                       option(value='YT') Yukon
+                  // .form-group
                   .form-group
                     label(for="country") Country
                     select#country.selectpicker(name="country")
                       option(value="CAN") Canada
+                  // .form-group
                   .form-group
                     label(for="zip") ZIP/Postal Code
                     input#zip(type="text", name="zip", placeholder="M5V 1K5")
+                  // .form-group
                   .form-group
                     label(for="phone") Phone
                     input#phone(type="text", name="phone", placeholder="(209) 555-5555")
+                  // .form-group
                   .form-group
                     label(for="website") Website
                     input#website(type="text", name="website", placeholder="http://www.somewebsite.com")
+                  // .form-group
+                //- fieldset
+              //- #tab_practice | .tab-pane
               #tab_invisalign.tab-pane(role='tabpanel')
                 fieldset
                   legend Invisalign (Optional)
@@ -104,10 +132,22 @@ main.push.container-fluid(role="main")
                   .form-group
                     label(for="invisalign_password") Password
                     input#invisalign_password(type="password", name="invisalign_password", placeholder="passwordXYZ")
+                  //- .form-group
+                //- fieldset
+              //- #tab_invisalign | .tab-pane
+            //- .row | .tab-content
+          //- .second_column
+        //- .row
         .row
           .third_column
             button#btn_cancel.btn_sec(type='button', role='button') Cancel
             button#btn_save.btn_pri(type='submit', role='button') Save
+          //- .third_column
+        //- .row
+      //- form | #form_profile
+    //- section | .site-main
+  //- .row
   .row
     include ../_includes/footer
+//- main | .push | .container-fluid
 include ../_includes/modal_disclaimer
