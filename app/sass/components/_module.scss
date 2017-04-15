@@ -135,19 +135,25 @@
 }
 
 @mixin modal_disclaimer() {
+  .modal-header {
+    padding: $px_twentyfive $px_thirty 0;
+  }
   .modal-title {
+    line-height: 1;
     text-align: center;
     color: $color-primary;
     @include font-size(20px);
     text-transform: uppercase;
+    font-weight: $font-weight-medium;
   }
   .modal-body {
+    line-height: 1.25;
     background: $grey;
     color: $color-primary;
     @include font-size(12px);
     border: 1px solid $grey-dark;
-    font-weight: $font-weight-bold;
-    margin: $px_fifteen $px_fifteen 0;
+    font-weight: $font-weight-medium;
+    margin: $px_twenty $px_thirty 0;
     p {
       margin-bottom: 0;
     }
@@ -157,11 +163,17 @@
     }
   }
   .modal-footer {
+    padding: 0;
+    margin: $px_thirty;
     @include clearfix();
     a {
+      line-height: 1;
       @include font-size(16px);
       text-transform: uppercase;
     }
+  }
+  #btn_agree {
+    @extend .pull-right;
   }
   #btn_disagree {
     @extend .pull-left;
@@ -193,16 +205,18 @@
       margin-top: $px_ten;
       color: $color-primary;
       @include font-size(14px);
+      font-weight: $font-weight-regular;
     }
-    span span {
+    span a {
       display: inline;
       font-weight: $font-weight-medium;
     }
   }
   #reset_email {
-    min-width: 150px;
+    min-width: 175px;
     border-radius: 23px;
     @include font-size(16px);
+    font-weight: $font-weight-medium;
   }
 }
 

@@ -1,11 +1,12 @@
 /*
   Table of Contents:
-  0. HYPERLINKS
-  1. FORMS
-  2. BUTTONS
+  0. Hyperlinks
+  1. Forms
+  2. Buttons
+  3. Breadcrumbs
 */
 
-// *** HYPERLINKS
+// 0. Hyperlinks
 // Hyperlinks state
 a {
   &:link {
@@ -13,7 +14,7 @@ a {
   }
 }
 
-// *** FORMS
+// 1. Forms
 // Labels state
 label {
   display: block;
@@ -71,7 +72,7 @@ textarea {
   }
 }
 
-// *** BUTTONS
+// 2. Buttons
 // Button Outline state
 .btn-outline {
   color: inherit;
@@ -147,7 +148,7 @@ textarea {
   }
 }
 
-// *** BREADCRUMBS
+// 3. Breadcrumbs
 .breadcrumb {
   @include font-size(12px);
   text-transform: uppercase;

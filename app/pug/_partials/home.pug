@@ -4,21 +4,34 @@ main.container(role="main")
       .panel
         .panel-heading
           img(src="images/logo.png", alt="MyOrthoAssist", title="My Ortho Assist App")
+        //- .panel-heading
         .panel-body
           form#form_login(role="form")
             .form-group
               label(for="user_email") Email
               input#user_email(type="email", name="email", required)
+            //- .form-group
             .form-group
               label(for="user_password") Password
               input#user_password(type="password", name="password", required)
+            //- .form-group
             .form-group
               button#button_login.btn_out_sec(type="submit", name="submit") Login
               a.forgot_password(href="", data-toggle="modal", data-target="#reset_password", title="Reset your password") Forgot Password?
+            //- .form-group
+          //- form | #form_login
+        //- .panel-body
+      //- .panel
+    //- .columns
+  //- .row
+//- main | .container
 footer.container
   .row
     .columns
       span All rights reserved &copy; 2017 MyOrthoAssist
       a(href="", data-toggle="modal", data-target="#disclaimer", title="Terms and conditions") Terms & Conditions
+    //- .columns
+  //- .row
+//- footer | .container
 include ../_includes/modal_disclaimer
 include ../_includes/modal_resetpassword
