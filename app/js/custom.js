@@ -8,18 +8,17 @@ $(document).ready(function() {
   */
 
   // 1. Profile page.
-  // A. Show/Hide password on Profile page.
-  $(".toggle_password input").click(function() {
-    if ($("#set_password").attr("type") == "password") {
-      $("#set_password").attr("type", "text");
+  $('.toggle_password input').click(function() {
+    if ($('#set_password').attr('type') == 'password') {
+      $('#set_password').attr('type', 'text');
     } else {
-      $("#set_password").attr("type", "password");
+      $('#set_password').attr('type', 'password');
     }
   });
 
   // 2. Modal Windows
   $('.select-date').datetimepicker({
-    defaultDate: "04/04/2017",
+    defaultDate: '04/04/2017',
     format: 'DD/MM/YYYY',
     icons: {
       time: 'fa fa-clock-o',
