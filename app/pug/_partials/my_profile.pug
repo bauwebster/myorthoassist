@@ -1,16 +1,16 @@
 include ../_includes/navigation
 main.push.container-fluid(role="main")
-  .row   
-    header.site-header
-      h1.page-title My Profile
+  .row
+    h1.page-title My Profile
   .row
     section.site-main
       form#form_profile(role="form")
         .row
           .first_column
             .form-group
-              p Profile Photo (Optional)
-              img(src="../images/user_profile.png", alt="Steve Chang", title="Steve Chang")
+              figure
+                figcaption Profile Photo (Optional)
+                img(src="../images/user_profile.png", alt="Steve Chang", title="Steve Chang")
           .second_column
             .tab-listing      
               ul.nav.nav-tabs.device-small(role='tablist')
@@ -36,11 +36,11 @@ main.push.container-fluid(role="main")
                     label(for="personal_phone") Personal Phone
                     input#personal_phone(type="text", name="personal_phone", placeholder="(209) 555-5555")
                 .form-group
-                  label(for="about_person") About Yourself (Optional)
-                  p.help-block Please tell us a bit about yourself and anything you think might be helpful for your Orthodontist to know.
-                  textarea#about_person(name="about_person", cols="30", rows="10", placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi in quos modi quis vero commodi nobis animi corporis. Labore voluptatem, ipsa odio tenetur. Reiciendis, sed, temporibus. Doloremque eligendi consectetur voluptatum.")
-                  p.help-block Please tell us a bit about your past dental experience, courses, and comfort level. This will help in providing the best advice possible. This section can be updated anytime.
-                  textarea#about_history(name="about_history", cols="30", rows="10", placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi in quos modi quis vero commodi nobis animi corporis. Labore voluptatem, ipsa odio tenetur. Reiciendis, sed, temporibus. Doloremque eligendi consectetur voluptatum.")
+                  label(for="about") About Yourself (Optional)
+                  p.additional_info Please tell us a bit about yourself and anything you think might be helpful for your Orthodontist to know.
+                  textarea#about(name="about", rows="5", placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi in quos modi quis vero commodi nobis animi corporis. Labore voluptatem, ipsa odio tenetur. Reiciendis, sed, temporibus. Doloremque eligendi consectetur voluptatum.")
+                  p.additional_info Please tell us a bit about your past dental experience, courses, and comfort level. This will help in providing the best advice possible. This section can be updated anytime.
+                  textarea#about_experiences(name="about_experiences", rows="5", placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi in quos modi quis vero commodi nobis animi corporis. Labore voluptatem, ipsa odio tenetur. Reiciendis, sed, temporibus. Doloremque eligendi consectetur voluptatum.")
                 .row
                   .form-group.col-sm-6
                     label(for="set_password") Password              
@@ -98,12 +98,12 @@ main.push.container-fluid(role="main")
                 fieldset
                   legend Invisalign (Optional)
                   .form-group
-                    label(for="username") Username
-                    input#username(type="text", name="username", placeholder="Username001")
+                    label(for="invisalign_username") Username
+                    input#invisalign_username(type="text", name="invisalign_username", placeholder="Username001")
                   //- .form-group
                   .form-group
-                    label(for="password") Password
-                    input#password(type="password", name="password", placeholder="passwordXYZ")
+                    label(for="invisalign_password") Password
+                    input#invisalign_password(type="password", name="invisalign_password", placeholder="passwordXYZ")
         .row
           .third_column
             button#btn_cancel.btn_sec(type='button', role='button') Cancel

@@ -147,6 +147,18 @@ textarea {
     color: darken($silver-dark, 20%);
   }
 }
+.btn_sec_light {
+  color: $grey-darkest;
+  &:hover {
+    color: darken($grey-darkest, 20%);
+  }
+  &:active {
+    color: darken($grey-darkest, 20%);
+  }
+  &:focus {
+    color: darken($grey-darkest, 20%);
+  }
+}
 
 // 3. Breadcrumbs
 .breadcrumb {

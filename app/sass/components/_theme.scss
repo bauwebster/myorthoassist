@@ -217,6 +217,9 @@
       border-color: $grey-dark !important;
       background-color: $white !important;
       font-weight: $font-weight-regular !important;
+      &:active {
+        box-shadow: none;
+      }
     }
   }
   .form-group {
@@ -230,12 +233,22 @@
     background: $white;
     border-radius: 4px;
     padding: $px_fifteen $px_fifteen 0;
-    box-shadow: 1px 1px 5px 2px rgba(0,0,0,0.125);
+    // box-shadow: 1px 1px 5px 2px rgba(0,0,0,0.125);
     @media #{$phablet__up} {
       padding: $px_thirty $px_thirty 0; //~ 30px
     }
-    p:not(.help-block) {
-      font-weight: $font-weight-bold;
+    label {
+      font-weight: $font-weight-medium;
+      @media #{$phablet} {
+        @include font-size(12px);
+      }
+    }
+    figcaption {
+      margin-bottom: $px_fifteen;
+      font-weight: $font-weight-medium;
+      @media #{$phablet} {
+        @include font-size(12px);
+      }
     }
     img {
       width: 100%;
@@ -249,13 +262,14 @@
       margin: $px_thirty 0;
       text-align: right;
       @media #{$phablet} {
-        margin: $px_fifteen 0;
+        margin: $px_twenty 0;
       }
     }
   }
-  .help-block {
-    margin-top: -$px_ten/2; //~ -5px
-    & + textarea + p {
+  .additional_info {
+    @extend .help-block;
+    margin-top: -$px_five;
+    &:last-of-type {
       margin-top: $px_ten;
     }
   }
@@ -287,14 +301,22 @@
       }
     }
   }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    box-shadow: none;
+  }
   #btn_save {
     margin-left: $px_thirty;
     @include font-size(16px);
     text-transform: uppercase;
   }
   #btn_cancel {
+    color: $grey-darkest;
     @include font-size(16px);
     text-transform: uppercase;
+    @extend .btn_sec_light;
   }
   @include tab-styles();
   @media #{$phablet} {
@@ -1136,7 +1158,7 @@
 
 // Site Footer
 .site-footer {
-  color: $black;
+  color: $grey-tone;
   margin: $px_thirty 0;
   @include font-size(12px);
   span::after {

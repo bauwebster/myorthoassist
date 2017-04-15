@@ -7,7 +7,8 @@ $(document).ready(function() {
     3. Lightbox
   */
 
-  // 1. Profile page.
+  // 1. Profile page
+  // Toggle password
   $('.toggle_password input').click(function() {
     if ($('#set_password').attr('type') == 'password') {
       $('#set_password').attr('type', 'text');

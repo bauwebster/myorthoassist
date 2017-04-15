@@ -177,6 +177,7 @@
   }
   #btn_disagree {
     @extend .pull-left;
+    @extend .btn_sec_light;
   }
 }
 
@@ -235,7 +236,14 @@
     color: $color-primary;
     display: inline-block;
     @include font-size(14px);
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-medium;
+    @media #{$phablet} {
+      @include font-size(12px);
+    }
+  }
+  label {
+    color: $grey-tone;
+    font-weight: $font-weight-regular !important;
   }
 }
 
@@ -302,6 +310,9 @@
     text-transform: uppercase;
     font-weight: $font-weight-medium;
     border-bottom: 3px solid transparent;
+    @media #{$phablet} {
+      @include font-size(12px);
+    }
   }
   .nav-tabs li a:hover {
     color: $grey-darkest;
