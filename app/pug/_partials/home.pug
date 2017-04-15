@@ -7,12 +7,12 @@ main.container(role="main")
         .panel-body
           form#form_login(role="form")
             .form-group
-              label(for="patient_email") Email
-              input.input_email#patient_email(type="email", name="email", required)
+              label(for="user_email") Email
+              input#user_email(type="email", name="email", required)
             .form-group
-              label(for="patient_password") Password
-              input.input_password#patient_password(type="password", name="password", required)
-            .form-group.text-center
+              label(for="user_password") Password
+              input#user_password(type="password", name="password", required)
+            .form-group
               button#button_login.btn_out_sec(type="submit", name="submit") Login
               a.forgot_password(href="", data-toggle="modal", data-target="#reset_password", title="Reset your password") Forgot Password?
 footer.container
