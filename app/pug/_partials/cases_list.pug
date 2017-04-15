@@ -3,35 +3,42 @@ main.push.container-fluid(role="main")
   .row   
     section.site-main
       .row.cases_bar
-        header
-          h1.page-title Cases
+        h1.page-title Cases
         form(role="form")   
           .row
             .form-group.new_cases
               a.new_case.btn_out_pri(href="", data-toggle="modal", data-target="#upload_files")
                 i.fa.fa-plus(aria-hidden="true")
                 span New Case
+            //- .form-group
             .input-group.search_cases
               input#input_search(type='text', placeholder='Search...')
               span.input-group-btn
                 button.btn_sec(type='submit')
                   i.fa.fa-search(aria-hidden="true")
+            //- //- .form-group
             .form-group.archived_cases
               input#input_archive(type="checkbox")
               label(for="input_archive") Show Archived Cases
+            //- .form-group
+          //- .row
+        //- form
+      //- .cases_bar | .row
       ul
         li.active
           .panel
             .panel-heading
               span.case_date Today, 5:32 PM
               span.case_status Status: Active
+            //- .panel-heading
             .panel-body         
               .patient_img     
                 img(src="../images/user_isabella.png", alt="Isabella Strong")
               .patient_info
                 span.patient_name Isabella Strong
                 span.patient_sex (Female)
-                span.patient_age 10y, 9m     
+                span.patient_age 10y, 9m 
+            //- .panel-body      
             .panel-footer
               .icon-group
                 a.btn_comment.btn_pri.active(href="", title="Comment")
@@ -40,8 +47,12 @@ main.push.container-fluid(role="main")
                   i.fa.fa-clipboard(aria-hidden="true")
                 a.btn_gallery.btn_sec(href="", title="Edit Image")
                   i.fa.fa-picture-o(aria-hidden="true")
+              //- .icon-group
               a.btn_delete.btn_sec(href="", title="Delete Case")
                 i.fa.fa-archive(aria-hidden="true")
+            //- .panel-footer
+          //- .panel
+        //- li
         li.active
           .panel
             .panel-heading
@@ -134,15 +145,20 @@ main.push.container-fluid(role="main")
       form(role="form")
         textarea(name="note", cols="30", rows="5", placeholder="Write a note..." required)
         button#btn_addnote.btn_pri(type="submit", role="button") Create Note
+      //- form
       ul
         li
           .panel
             .panel-body
               p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae at odio nesciunt, deleniti possimus pariatur architecto asperiores. Omnis, molestias recusandae. Ab voluptate placeat quos eaque hic a beatae aliquam omnis.
+            //- .panel-body
             .panel-footer
               span.note_info 4 April 2016, 4:32 pm
               a.delete_note.btn_sec(href="")
                 i.fa.fa-trash(aria-hidden="true")
+            //- .panel-footer
+          //- .panel
+        //- li
         li
           .panel
             .panel-body
@@ -185,7 +201,10 @@ main.push.container-fluid(role="main")
                 i.fa.fa-trash(aria-hidden="true")
     a.btn_pri.view_notes(href="")
       i.fa.fa-sticky-note(aria-hidden="true")
+    //- .view_notes
   .row
     include ../_includes/footer
+  //- .row
+//- main | .push | .container-fluid
 include ../_includes/modal_disclaimer
 include ../_includes/modal_upload

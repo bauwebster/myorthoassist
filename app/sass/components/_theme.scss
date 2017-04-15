@@ -18,6 +18,17 @@
   .navbar-brand {
     position: relative;
   }
+  .navbar-nav {
+    li > a {
+      padding-top: 33px;
+      padding-bottom: 27px;
+      border-bottom: 3px solid transparent;
+    }
+    font-weight: $font-weight-medium;
+    li.active > a {
+      border-bottom: 3px solid $white;
+    }
+  }
   .logo {
     position: absolute;
     top: 16px;
@@ -41,21 +52,20 @@
   .fa {
     margin-left: 4px;
   }
-  .active {
-    a {
-      border-bottom: 3px solid $white;
-    }
-  }
-  .dropdown .active {
-    a {
+  .dropdown {
+    .active a {
       border-bottom: none;
+    }
+    .dropdown-menu a {
+      border-bottom: none !important;
+      padding: 3px 20px !important;
     }
   }
   .notice {
     position: relative;
     a::before {
       position: absolute;
-      top: 27px;
+      top: 31px;
       left: $px_five;
       content: '';
       width: $px_ten;
@@ -103,7 +113,7 @@
       margin-right: 0;
       display: inline-block;
       float: none !important;
-      a {
+      > li > a {
         padding-top: 0;
         padding-bottom: $px_ten;
       }
@@ -301,12 +311,6 @@
       }
     }
   }
-  input[type="text"],
-  input[type="email"],
-  input[type="password"],
-  textarea {
-    box-shadow: none;
-  }
   #btn_save {
     margin-left: $px_thirty;
     @include font-size(16px);
@@ -350,11 +354,12 @@
       margin-top: $px_thirty;
       margin-bottom: $px_thirty;
       @media #{$phablet} {
-        margin-bottom: $px_ten;
+        margin-top: $px_twenty;
+        margin-bottom: $px_five;
       }
     }
     h1 {
-      margin: 0; //~ 20px 0
+      margin: 0;
       padding: 0;
       line-height: 36px;
       display: inline-block;
@@ -405,11 +410,15 @@
         }
       }
       .new_case {
+        min-width: auto;
         padding-top: 0;
         padding-bottom: 0;
         line-height: 32px;
         border-radius: 23px;
         @include font-size(16px);
+        @media #{$desktop__up} {
+          min-width: 170px;
+        }
         @media #{$phablet} {
           width: 36px;
           height: 36px;
@@ -427,7 +436,7 @@
       @media #{$phablet} {
         .new_cases,
         .search_cases {
-          margin-bottom: $px_ten;
+          margin-bottom: $px_five;
         }
       }
     }
@@ -449,7 +458,7 @@
       padding-bottom: 0;
       span {
         line-height: normal;
-        @include font-size(12px);
+        @include font-size(11px);
         font-weight: $font-weight-medium;
       }
       .case_date {
@@ -497,6 +506,7 @@
       .patient_name {
         margin-right: $px_fifteen;
         @include font-size(24px);
+        font-weight: $font-weight-regular;
       }
       .patient_sex {
         @include font-size(14px);
@@ -621,17 +631,14 @@
       border-color: $greyish;
       background: none;
       border-style: dashed;
-      .btn_delete {
-        @include font-size(16px);
-      }
       .case_date {
-        color: $grey-darkest;
+        color: $greyish;
       }
       .case_status {
-        color: $grey-darkest;
+        color: $greyish;
       }
       .panel-body {
-        color: $grey-darkest;
+        color: $greyish;
         img {
           opacity: 0.7;
         }
@@ -639,6 +646,10 @@
       .panel-footer {
         a {
           color: $greyish;
+        }
+        .btn_delete {
+          @include font-size(14px);
+          color: $greyishness;
         }
       }
     }
@@ -668,17 +679,18 @@
       line-height: 36px;
       @include font-size(18px);
       margin: $px_thirty 0 $px_thirty;
-      font-weight: $font-weight-medium;
+      font-weight: $font-weight-regular;
     }
     form {
       text-align: right;
       textarea {
-        @include input_text_color($grey-dark);
+        @include input_text_color($silver-dark);
       }
       #btn_addnote {
         @include font-size(16px);
         text-transform: uppercase;
         margin: $px_ten 0 $px_thirty;
+        font-weight: $font-weight-medium;
       }
     }
     ul {
@@ -691,7 +703,6 @@
     .panel {
       background: none;
       box-shadow: none;
-      @include font-size(11px);
       border: 1px solid $silver-dark;
     }
     .panel-body {
@@ -700,8 +711,9 @@
       box-shadow: none;
       background: none;
       color: $grey-tone;
+      @include font-size(12px);
       padding: $px_ten $px_ten 0;
-      font-weight: $font-weight-medium;
+      font-weight: $font-weight-regular;
       p {
         margin-bottom: 0;
       }
@@ -716,6 +728,7 @@
         line-height: 20px;
         color: $color-primary;
         vertical-align: text-top;
+        @include font-size(10px);
         font-weight: $font-weight-medium;
       }
       .delete_note {

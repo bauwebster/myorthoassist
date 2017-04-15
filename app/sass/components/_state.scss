@@ -30,6 +30,7 @@ input[type="email"],
 input[type="password"],
 textarea {
   @extend .form-control;
+  box-shadow: none;
 }
 // Input placeholder text layout state
 @mixin input_text_center() {

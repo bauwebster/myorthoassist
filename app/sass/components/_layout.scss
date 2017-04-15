@@ -139,7 +139,7 @@ Table of Contents:
     @include make-sm-column(12);
   }
   .cases_bar {
-    header {
+    .page-title {
       @extend .hidden-xs;
       @extend .hidden-sm;
       @include make-md-column(2);
