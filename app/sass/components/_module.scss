@@ -1,6 +1,6 @@
 @mixin modal_uploadfiles() {
   .modal-dialog {
-    // @extend .modal-lg;
+    @extend .modal-lg;
   }
   .modal-title {
     text-align: center;
@@ -103,31 +103,31 @@
     }
   }
   // Misc Photos
-  #misc_photos .row:first-of-type {
+  #modal_misc_photos .row:first-of-type {
     margin-bottom: $px_twenty;
   }
-  #misc_photos .well {
+  #modal_misc_photos .well {
     min-height: 200px;
   }
   // Intra Oral
-  #intra_oral .date {
+  #modal_intra_oral .date {
     width: 100%;
     input {
       @include font-size(12px);
     }
   }
-  #intra_oral .row {
+  #modal_intra_oral .row {
     margin-bottom: $px_fifteen;
   }
-  #intra_oral .first_column .well,
-  #intra_oral .third_column .well {
+  #modal_intra_oral .mod_first_column .well,
+  #modal_intra_oral .mod_third_column .well {
     min-height: 80px;
   }
-  #intra_oral .second_column .well {
+  #modal_intra_oral .mod_second_column .well {
     min-height: 200px;
   }
   // Documents banner
-  #documents .well {
+  #modal_documents .well {
     background: url("../images/helper_documents.png") no-repeat $silvery;
     background-size: 96px 130px;
     background-position: center;

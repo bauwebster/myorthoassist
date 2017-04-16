@@ -9,19 +9,19 @@
         .text-center
           ul.nav.nav-tabs(role='tablist')
             li.active(role='presentation')
-              a(href='#ortho_set', aria-controls='home', role='tab', data-toggle='tab') Ortho Set
+              a(href='#modal_ortho_set', aria-controls='modal_ortho_set', role='tab', data-toggle='tab') Ortho Set
             li(role='presentation')
-              a(href='#panorex', aria-controls='profile', role='tab', data-toggle='tab') Panorex
+              a(href='#modal_panorex', aria-controls='modal_panorex', role='tab', data-toggle='tab') Panorex
             li(role='presentation')
-              a(href='#lateral_cef', aria-controls='messages', role='tab', data-toggle='tab') Lateral CEF
+              a(href='#modal_lateral_cef', aria-controls='modal_lateral_cef', role='tab', data-toggle='tab') Lateral CEF
             li(role='presentation')
-              a(href='#intra_oral', aria-controls='settings', role='tab', data-toggle='tab') Intra-Oral Radiographs
+              a(href='#modal_intra_oral', aria-controls='modal_intra_oral', role='tab', data-toggle='tab') Intra-Oral Radiographs
             li(role='presentation')
-              a(href='#misc_photos', aria-controls='settings', role='tab', data-toggle='tab') Misc Photos/Radiographs
+              a(href='#modal_misc_photos', aria-controls='modal_misc_photos', role='tab', data-toggle='tab') Misc Photos/Radiographs
             li(role='presentation')
-              a(href='#documents', aria-controls='settings', role='tab', data-toggle='tab') Documents
+              a(href='#modal_documents', aria-controls='modal_documents', role='tab', data-toggle='tab') Documents
           .tab-content
-            #ortho_set.tab-pane.active(role='tabpanel')
+            #modal_ortho_set.tab-pane.active(role='tabpanel')
               p.how_to Drag & Drop Your Document Below                             
               .row
                 .col-sm-4
@@ -142,7 +142,7 @@
                           input(type='text')
                           span.input-group-addon
                             i.fa.fa-calendar(aria-hidden="true")
-            #panorex.tab-pane(role='tabpanel')
+            #modal_panorex.tab-pane(role='tabpanel')
               p.how_to Drag & Drop Your Images in the Blocks Below 
               .well
                 p Panorex
@@ -152,7 +152,7 @@
                   input(type='text')
                   span.input-group-addon
                     i.fa.fa-calendar(aria-hidden="true")
-            #lateral_cef.tab-pane(role='tabpanel')
+            #modal_lateral_cef.tab-pane(role='tabpanel')
               p.how_to Drag & Drop Your Images in Respective Blocks Below
               .well
                 p Lateral Cephalogram
@@ -162,10 +162,10 @@
                   input(type='text')
                   span.input-group-addon
                     i.fa.fa-calendar(aria-hidden="true")
-            #intra_oral.tab-pane(role='tabpanel')
+            #modal_intra_oral.tab-pane(role='tabpanel')
               p.how_to Drag & Drop Your Image Below
               .row
-                .col-sm-4.first_column
+                .col-sm-4.mod_first_column
                   .row
                     .col-sm-6
                       .well
@@ -223,7 +223,7 @@
                           input(type='text')
                           span.input-group-addon
                             i.fa.fa-calendar(aria-hidden="true")      
-                .col-sm-4.second_column
+                .col-sm-4.mod_second_column
                   .row
                     .col-sm-6
                       .well
@@ -281,7 +281,7 @@
                           input(type='text')
                           span.input-group-addon
                             i.fa.fa-calendar(aria-hidden="true")      
-                .col-sm-4.third_column
+                .col-sm-4.mod_third_column
                   .row
                     .col-sm-6
                       .well
@@ -339,7 +339,7 @@
                           input(type='text')
                           span.input-group-addon
                             i.fa.fa-calendar(aria-hidden="true")      
-            #misc_photos.tab-pane(role='tabpanel')
+            #modal_misc_photos.tab-pane(role='tabpanel')
               p.how_to Drag & Drop Your Image Below
               .row
                 .col-sm-4
@@ -385,7 +385,7 @@
                       input(type='text')
                       span.input-group-addon
                         i.fa.fa-calendar(aria-hidden="true")
-            #documents.tab-pane(role='tabpanel')
+            #modal_documents.tab-pane(role='tabpanel')
               p.how_to Drag & Drop Your Images in Respective Blocks Below
               .well
                 p PDF's or MS Word Documents
