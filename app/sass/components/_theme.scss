@@ -679,7 +679,7 @@
     .panel-footer {
       border: none;
       background: transparent;
-      .btn_delete {
+      .btn_archive {
         @include font-size(14px);
         text-transform: uppercase;
       }
@@ -768,7 +768,7 @@
         a {
           color: $greyish;
         }
-        .btn_delete {
+        .btn_archive {
           @include font-size(14px);
           color: $greyishness;
         }
@@ -779,7 +779,7 @@
         height: 0;
         padding: 0;
       }
-      .btn_delete {
+      .btn_archive {
         position: absolute;
         z-index: 2;
         top: $px_fifteen;
@@ -1137,7 +1137,7 @@
     .panel-footer {
       border: none;
       background: transparent;
-      .btn_delete {
+      .btn_archive {
         @include font-size(14px);
         text-transform: uppercase;
       }
@@ -1226,7 +1226,7 @@
         a {
           color: $greyish;
         }
-        .btn_delete {
+        .btn_archive {
           @include font-size(14px);
           color: $greyishness;
         }
@@ -1237,7 +1237,7 @@
         height: 0;
         padding: 0;
       }
-      .btn_delete {
+      .btn_archive {
         position: absolute;
         z-index: 2;
         top: $px_fifteen;
