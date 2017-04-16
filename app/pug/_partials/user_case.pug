@@ -16,18 +16,18 @@ main.push.container-fluid(role="main")
                 img.patient_photo(src="images/patient_picture.png", alt="Patient picture")            
           .second_column
             .row
-              .col-sm-6.sc_first
+              .sc_first
                 .form-group
                   label(for="patient_name") Patient Name
                   input#patient_name(type="text", placeholder="Isabella Strong", name="patient_name")
-              .col-sm-3.sc_second
+              .sc_second
                 .form-group
                   label(for="patient_gender") Gender 
                   select#patient_gender.selectpicker(name="patient_gender")
                     option(value="male") Male
                     option(value="female") Female
                     option(value="other") Other
-              .col-sm-3.sc_third
+              .sc_third
                 .form-group
                   label(for="patient_dob") Birthdate      
                   .select-date.input-group.date
@@ -35,24 +35,23 @@ main.push.container-fluid(role="main")
                     span.input-group-addon
                       i.fa.fa-calendar(aria-hidden="true")
             .row.gutter
-              .col-sm-3.sc_fourth
+              .sc_fourth
                 .form-group
                   label(for="patient_status") Status
                   select#patient_status.selectpicker(name="patient_status")
                     option(value="active") Active   
-              .col-sm-3.sc_fifth
+              .sc_fifth
                 .form-group
                   label(for="patient_register_date") Case Start Date          
                   .select-date.input-group.date
                     input#patient_register_date(type='text', name="patient_register_date")
                     span.input-group-addon
                       i.fa.fa-calendar(aria-hidden="true")             
-              .col-sm-3.sc_sixth
+              .sc_sixth
                 .form-group
                   label(for="patient_case_type") Case Type 
                   select#patient_case_type.selectpicker(name="patient_case_type")
                     option(value="active") Invisalign
-              .col-sm-3
           .third_column
             .form-group
               a.btn_out_pri(href="", data-toggle="modal", data-target="#upload_files")
@@ -67,7 +66,7 @@ main.push.container-fluid(role="main")
               a(href='#conversation', aria-controls='home', role='tab', data-toggle='tab')
                 i.fa.fa-comments(aria-hidden="true")
                 span Conversation
-            li(role='presentation')
+            li.notice(role='presentation')
               a(href='#diagnosis', aria-controls='profile', role='tab', data-toggle='tab')
                 i.fa.fa-clipboard(aria-hidden="true")
                 span Diagnosis & Treatment

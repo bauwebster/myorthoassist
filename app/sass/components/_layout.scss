@@ -258,6 +258,7 @@ Table of Contents:
     @include make-sm-column(12);
   }
   .site-footer {
+    @extend .hidden-xs;
     @include make-sm-column(12);
   }
   // Content
@@ -274,19 +275,45 @@ Table of Contents:
   .first_column {
     @include make-xs-column(3);
     @include make-sm-column(2);
+    @include make-md-column(2);
+    @include make-lg-column(2);
     figcaption {
       @extend .hidden-xs;
     }
   }
   .second_column {
     @include make-xs-column(9);
-    @include make-sm-column(6);
+    @include make-sm-column(10);
+    @include make-md-column(8);
+    @include make-lg-column(7);
     label {
       @extend .hidden-xs;
     }
   }
   .third_column {
     @extend .hidden-xs;
+    @include make-sm-column(10);
+    @include make-sm-column-offset(2);
+    @include make-md-column(12);
+    @include make-lg-column(2);
+    @include make-lg-column-offset(1);
+  }
+  .sc_first {
+    @include make-sm-column(4);
+  }
+  .sc_second {
+    @include make-sm-column(4);
+  }
+  .sc_third {
+    @include make-sm-column(4);
+  }
+  .sc_fourth {
+    @include make-sm-column(4);
+  }
+  .sc_fifth {
+    @include make-sm-column(4);
+  }
+  .sc_sixth {
     @include make-sm-column(4);
   }
   .sc_second,

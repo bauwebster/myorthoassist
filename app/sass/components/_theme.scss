@@ -1319,6 +1319,39 @@
     .fa {
       margin-right: 5px;
     }
+    .notice {
+      .fa {
+        position: relative;
+      }
+      .fa::after {
+        position: absolute;
+        z-index: 1;
+        top: -5px;
+        left: -12px;
+        content: '';
+        width: $px_fifteen;
+        height: $px_fifteen;
+        border-radius: 50%;
+        background-color: $red;
+        border: 2px solid $grey-darkest;
+        @media #{$phablet} {
+          top: 0;
+          left: -5px;
+          width: $px_ten;
+          height: $px_ten;
+        }
+      }
+      &.active {
+        .fa::after {
+          border-color: $white;
+        }
+      }
+      @media #{$phablet} {
+        .fa::after {
+          border-color: $white;
+        }
+      }
+    }
   }
   .content {
     @include tab-styles-override();
@@ -1406,7 +1439,7 @@
       font-weight: $font-weight-regular;
     }
     figcaption {
-      margin-bottom: $px_ten;
+      margin-bottom: $px_five;
       @include font-size(14px);
     }
     .form-group,
@@ -1436,6 +1469,9 @@
     .btn_out_pri {
       border-radius: 23px;
     }
+    .date {
+      width: 100%;
+    }
     .date input[type="text"] {
       width: 100%;
     }
@@ -1447,6 +1483,15 @@
       border: none;
       background: none;
       line-height: 30px;
+    }
+    .third_column {
+      margin-top: 44px;
+      @media #{$desktop} {
+        margin-top: $px_fifteen;
+      }
+      .additional_info {
+        margin: $px_five 0 0;
+      }
     }
   }
 }
