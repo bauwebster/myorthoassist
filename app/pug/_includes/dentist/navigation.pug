@@ -1,4 +1,4 @@
-include pushy_navigation
+include ../pushy_navigation
 nav.navbar.navbar-default.push
   .container-fluid
     .navbar-header
@@ -8,7 +8,7 @@ nav.navbar.navbar-default.push
         span.icon-bar
         span.icon-bar
       a.navbar-brand(href='index.html', title="MyOrthoAssist")
-        img.logo(src="../images/logo.png", alt="MyOrthoAssist logo", style="width:140px;")
+        img.logo(src="images/logo.png", alt="MyOrthoAssist logo")
     #primary_menu.collapse.navbar-collapse
       ul.nav.navbar-nav.navbar-right
         li(class=(bodyClass === 'cases' ? 'active' : ''))
@@ -32,4 +32,4 @@ nav.navbar.navbar-default.push
               a(href='login.html') Logout
     .navbar-icon
       a(href="", title="Steve Chang")
-        img(src="../images/user_profile.png", alt="Steve Chang")     
+        img(src="images/user_profile.png", alt="Steve Chang")     

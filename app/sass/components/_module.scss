@@ -154,11 +154,12 @@
     border: 1px solid $grey-dark;
     font-weight: $font-weight-medium;
     margin: $px_twenty $px_thirty 0;
-    p {
-      margin-bottom: 0;
-    }
-    @media #{$mobile} {
+    @media #{$phablet} {
       max-height: 300px;
+      overflow-y: scroll;
+    }
+    @media #{$phablet__up} {
+      max-height: 500px;
       overflow-y: scroll;
     }
   }

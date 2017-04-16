@@ -9,12 +9,20 @@ $(document).ready(function() {
   */
 
   // 1A. Profile page
-  // Toggle password
-  $('.toggle_password input').click(function() {
-    if ($('#set_password').attr('type') == 'password') {
-      $('#set_password').attr('type', 'text');
+  // Toggle password for Orthodontist
+  $('.orthodontist_toggle_password input').click(function() {
+    if ($('#orthodontist_set_password').attr('type') == 'password') {
+      $('#orthodontist_set_password').attr('type', 'text');
     } else {
-      $('#set_password').attr('type', 'password');
+      $('#orthodontist_set_password').attr('type', 'password');
+    }
+  });
+  // Toggle password for Dentist
+  $('.dentist_toggle_password input').click(function() {
+    if ($('#dentist_set_password').attr('type') == 'password') {
+      $('#dentist_set_password').attr('type', 'text');
+    } else {
+      $('#dentist_set_password').attr('type', 'password');
     }
   });
 

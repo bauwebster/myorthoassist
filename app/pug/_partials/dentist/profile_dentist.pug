@@ -1,4 +1,4 @@
-include ../_includes/navigation
+include ../../_includes/dentist/navigation
 main.push.container-fluid(role="main")
   .row
     h1.page-title My Profile
@@ -11,7 +11,7 @@ main.push.container-fluid(role="main")
             .form-group
               figure
                 figcaption Profile Photo (Optional)
-                img(src="../images/user_profile.png", alt="Steve Chang", title="Steve Chang")
+                img.dentist_profile_photo(src="images/user_profile.png", alt="Steve Chang", title="Steve Chang")
             //- .form-group
           //- .first_column
           .second_column
@@ -28,35 +28,35 @@ main.push.container-fluid(role="main")
             .row.tab-content
               #tab_personal.tab-pane.active(role='tabpanel')
                 .form-group
-                  label(for="first_name") First Name
-                  input#first_name(type="text", name="first_name", placeholder="Steve")
+                  label(for="dentist_first_name") First Name
+                  input#dentist_first_name(type="text", name="dentist_first_name", placeholder="Steve")
                 //- .form-group
                 .form-group
-                  label(for="last_name") Last Name
-                  input#last_name(type="text", name="last_name", placeholder="Chang")
+                  label(for="dentist_last_name") Last Name
+                  input#dentist_last_name(type="text", name="dentist_last_name", placeholder="Chang")
                 //- .form-group
                 .form-group
-                  label(for="email") Email
-                  input#email(type="email", name="email", placeholder="steve.chang@gmail.com")
+                  label(for="dentist_email") Email
+                  input#dentist_email(type="email", name="dentist_email", placeholder="steve.chang@gmail.com")
                 //- .form-group
                 .row
                   .form-group.col-sm-6
-                    label(for="personal_phone") Personal Phone
-                    input#personal_phone(type="text", name="personal_phone", placeholder="(209) 555-5555")
+                    label(for="dentist_personal_phone") Personal Phone
+                    input#dentist_personal_phone(type="text", name="dentist_personal_phone", placeholder="(209) 555-5555")
                   //- .form-group | .col-sm-6
                 //- .row
                 .form-group
-                  label(for="about") About Yourself (Optional)
+                  label(for="dentist_about") About Yourself (Optional)
                   p.additional_info Please tell us a bit about yourself and anything you think might be helpful for your Orthodontist to know.
-                  textarea#about(name="about", rows="5", placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi in quos modi quis vero commodi nobis animi corporis. Labore voluptatem, ipsa odio tenetur. Reiciendis, sed, temporibus. Doloremque eligendi consectetur voluptatum.")
+                  textarea#dentist_about(name="dentist_about", rows="5", placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi in quos modi quis vero commodi nobis animi corporis. Labore voluptatem, ipsa odio tenetur. Reiciendis, sed, temporibus. Doloremque eligendi consectetur voluptatum.")
                   p.additional_info Please tell us a bit about your past dental experience, courses, and comfort level. This will help in providing the best advice possible. This section can be updated anytime.
-                  textarea#about_experiences(name="about_experiences", rows="5", placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi in quos modi quis vero commodi nobis animi corporis. Labore voluptatem, ipsa odio tenetur. Reiciendis, sed, temporibus. Doloremque eligendi consectetur voluptatum.")
+                  textarea#dentist_about_experiences(name="dentist_about_experiences", rows="5", placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi in quos modi quis vero commodi nobis animi corporis. Labore voluptatem, ipsa odio tenetur. Reiciendis, sed, temporibus. Doloremque eligendi consectetur voluptatum.")
                 //- .form-group
                 .row
                   .form-group.col-sm-6
-                    label(for="set_password") Password              
-                    input#set_password(type="password", name="set_password", placeholder="default", value="default")                            
-                    .toggle_password
+                    label(for="dentist_set_password") Password              
+                    input#dentist_set_password(type="password", name="dentist_set_password", placeholder="default", value="default")                            
+                    .dentist_toggle_password
                       input#toggle_password(type="checkbox")
                       label(for="toggle_password") Show
                     //- .toggle_password
@@ -64,14 +64,14 @@ main.push.container-fluid(role="main")
                 //- .row
                 .row
                   .form-group.col-sm-6
-                    label(for="new_password") New Password
-                    input#new_password(type="password", name="new_password", placeholder="")
+                    label(for="dentist_new_password") New Password
+                    input#dentist_new_password(type="password", name="dentist_new_password", placeholder="")
                   //- .form-group | .col-sm-6
                 //- .row
                 .row
                   .form-group.col-sm-6
-                    label(for="confirm_password") Re-type Password
-                    input#confirm_password(type="password", name="confirm_password", placeholder="")
+                    label(for="dentist_confirm_password") Re-type Password
+                    input#dentist_confirm_password(type="password", name="dentist_confirm_password", placeholder="")
                   //- .form-group | .col-sm-6
                 //- .row
               //- #tab_personal | .tab-pane | .active
@@ -79,16 +79,16 @@ main.push.container-fluid(role="main")
                 fieldset
                   legend Practice Address
                   .form-group
-                    label(for="practice_street") Street
-                    input#practice_street(type="text", name="street", placeholder="461 King Street")
+                    label(for="dentist_practice_street") Street
+                    input#dentist_practice_street(type="text", name="dentist_practice_street", placeholder="461 King Street")
                   // .form-group
                   .form-group
-                    label(for="practice_city") City
-                    input#practice_city(type="text", name="city", placeholder="Toronto")
+                    label(for="dentist_practice_city") City
+                    input#dentist_practice_city(type="text", name="dentist_practice_city", placeholder="Toronto")
                   // .form-group
                   .form-group
-                    label(for="practice_state") State/Province
-                    select#practice_state.selectpicker(name="state")
+                    label(for="dentist_practice_state") State/Province
+                    select#dentist_practice_state.selectpicker(name="dentist_practice_state")
                       option(value='AB') Alberta
                       option(value='BC') British Columbia
                       option(value='MB') Manitoba
@@ -104,21 +104,21 @@ main.push.container-fluid(role="main")
                       option(value='YT') Yukon
                   // .form-group
                   .form-group
-                    label(for="practice_country") Country
-                    select#practice_country.selectpicker(name="country")
+                    label(for="dentist_practice_country") Country
+                    select#dentist_practice_country.selectpicker(name="dentist_practice_country")
                       option(value="CAN") Canada
                   // .form-group
                   .form-group
-                    label(for="practice_zip") ZIP/Postal Code
-                    input#practice_zip(type="text", name="zip", placeholder="M5V 1K5")
+                    label(for="dentist_practice_zip") ZIP/Postal Code
+                    input#dentist_practice_zip(type="text", name="dentist_practice_zip", placeholder="M5V 1K5")
                   // .form-group
                   .form-group
-                    label(for="practice_phone") Phone
-                    input#practice_phone(type="text", name="phone", placeholder="(209) 555-5555")
+                    label(for="dentist_practice_phone") Phone
+                    input#dentist_practice_phone(type="text", name="dentist_practice_phone", placeholder="(209) 555-5555")
                   // .form-group
                   .form-group
-                    label(for="practice_website") Website
-                    input#practice_website(type="text", name="website", placeholder="http://www.somewebsite.com")
+                    label(for="dentist_practice_website") Website
+                    input#dentist_practice_website(type="text", name="dentist_practice_website", placeholder="http://www.somewebsite.com")
                   // .form-group
                 //- fieldset
               //- #tab_practice | .tab-pane
@@ -126,12 +126,12 @@ main.push.container-fluid(role="main")
                 fieldset
                   legend Invisalign (Optional)
                   .form-group
-                    label(for="invisalign_username") Username
-                    input#invisalign_username(type="text", name="invisalign_username", placeholder="Username001")
+                    label(for="dentist_invisalign_username") Username
+                    input#dentist_invisalign_username(type="text", name="dentist_invisalign_username", placeholder="Username001")
                   //- .form-group
                   .form-group
-                    label(for="invisalign_password") Password
-                    input#invisalign_password(type="password", name="invisalign_password", placeholder="passwordXYZ")
+                    label(for="dentist_invisalign_password") Password
+                    input#dentist_invisalign_password(type="password", name="dentist_invisalign_password", placeholder="passwordXYZ")
                   //- .form-group
                 //- fieldset
               //- #tab_invisalign | .tab-pane
@@ -139,7 +139,7 @@ main.push.container-fluid(role="main")
           //- .second_column
         //- .row
         .row
-          .third_column
+          .full_column
             button#btn_cancel.btn_sec(type='button', role='button') Cancel
             button#btn_save.btn_pri(type='submit', role='button') Save
           //- .third_column
@@ -148,6 +148,6 @@ main.push.container-fluid(role="main")
     //- section | .site-main
   //- .row
   .row
-    include ../_includes/footer
+    include ../../_includes/footer
 //- main | .push | .container-fluid
-include ../_includes/modal_disclaimer
+include ../../_includes/modal_disclaimer

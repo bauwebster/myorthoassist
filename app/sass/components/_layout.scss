@@ -89,7 +89,7 @@ Table of Contents:
   .second_column {
     @include make-sm-column(10);
   }
-  .third_column {
+  .full_column {
     @include make-sm-column(12);
   }
   #tab_personal {
@@ -125,6 +125,18 @@ Table of Contents:
       display: block;
     }
 	}
+}
+.profile-orthodontist {
+  .first_column {
+    @include make-sm-column(2);
+  }
+  .second_column {
+    @include make-sm-column(5);
+  }
+  .third_column {
+    @include make-sm-column(4);
+    @include make-sm-column-offset(1);
+  }
 }
 
 // 3. Cases Page

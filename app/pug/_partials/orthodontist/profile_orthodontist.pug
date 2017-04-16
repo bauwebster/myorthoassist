@@ -1,0 +1,85 @@
+include ../../_includes/orthodontist/navigation_orthodontist
+main.push.container-fluid(role="main")
+  .row
+    h1.page-title My Profile
+  //- .row
+  .row
+    section.site-main
+      form#form_profile(role="form")
+        .row
+          .first_column
+            .form-group
+              figure
+                figcaption Profile Photo (Optional)
+                img.orthodontist_profile_photo(src="images/user_orthodontist.png", alt="Megan Fox", title="Megan Fox")
+            //- .form-group
+          //- .first_column
+          .second_column
+            .form-group
+              label(for="orthodontist_first_name") First Name
+              input#orthodontist_first_name(type="text", name="orthodontist_first_name", placeholder="Megan")
+            //- .form-group
+            .form-group
+              label(for="orthodontist_last_name") Last Name
+              input#orthodontist_last_name(type="text", name="orthodontist_last_name", placeholder="Fox")
+            //- .form-group
+            .form-group
+              label(for="orthodontist_primary_email") Email
+              input#orthodontist_primary_email(type="email", name="orthodontist_primary_email", placeholder="megan.fox@gmail.com")
+            //- .form-group
+            .form-group
+              label(for="orthodontist_secondary_email") Secondary Email (Optional)
+              input#orthodontist_secondary_email(type="email", name="orthodontist_secondary_email", placeholder="")
+            //- .form-group
+            .row
+              .form-group.col-sm-6
+                label(for="orthodontist_primary_phone") Phone
+                input#orthodontist_primary_phone(type="text", name="orthodontist_primary_phone", placeholder="(209) 555-5555")
+              //- .form-group | .col-sm-6
+            //- .row
+            .row
+              .form-group.col-sm-6
+                label(for="orthodontist_secondary_phone") Mobile Phone (Optional)
+                input#orthodontist_secondary_phone(type="text", name="orthodontist_secondary_phone", placeholder="(209) 555-5555")
+              //- .form-group | .col-sm-6
+            //- .row
+            .form-group
+              label(for="orthodontist_about") About Yourself (Optional)
+              p.additional_info Tell us about your background, comfort level, your philosophies...
+              textarea#orthodontist_about(name="orthodontist_about", rows="5", placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi in quos modi quis vero commodi nobis animi corporis. Labore voluptatem, ipsa odio tenetur. Reiciendis, sed, temporibus. Doloremque eligendi consectetur voluptatum.")
+              p.additional_info Please tell us a bit about your past dental experience, courses, and comfort level. This will help in providing the best advice possible. This section can be updated anytime.
+              textarea#orthodontist_about_experiences(name="orthodontist_about_experiences", rows="5", placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi in quos modi quis vero commodi nobis animi corporis. Labore voluptatem, ipsa odio tenetur. Reiciendis, sed, temporibus. Doloremque eligendi consectetur voluptatum.")
+            //- .form-group
+          //- .second_column
+          .third_column
+            .form-group
+              label(for="orthodontist_set_password") Password              
+              input#orthodontist_set_password(type="password", name="orthodontist_set_password", placeholder="default", value="default")                            
+              .orthodontist_toggle_password
+                input#toggle_password(type="checkbox")
+                label(for="toggle_password") Show
+              //- .orthodontist_set_password
+            //- .form-group
+            .form-group
+              label(for="new_password") New Password
+              input#new_password(type="password", name="new_password", placeholder="")
+            //- .form-group
+            .form-group
+              label(for="confirm_password") Re-type Password
+              input#confirm_password(type="password", name="confirm_password", placeholder="")
+            //- .form-group
+          //- .third_column
+        //- .row
+        .row
+          .full_column
+            button#btn_cancel.btn_sec(type='button', role='button') Cancel
+            button#btn_save.btn_pri(type='submit', role='button') Save
+          //- .third_column
+        //- .row
+      //- form | #form_profile
+    //- section | .site-main
+  //- .row
+  .row
+    include ../../_includes/footer
+//- main | .push | .container-fluid
+include ../../_includes/modal_disclaimer
