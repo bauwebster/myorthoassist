@@ -240,6 +240,8 @@
       border: none;
       border-radius: 4px;
       overflow: hidden;
+      height: auto;
+      max-height: 100%;
     }
   }
   h3 {
@@ -257,6 +259,46 @@
     @include font-size(12px);
     font-weight: $font-weight-regular;
   }
+  .btn-group {
+    line-height: 1;
+    display: block;
+  }
+  .toggle_yo_notes {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+    color: inherit;
+    a {
+      display: inline-block;
+      padding-top: $px_ten;
+      margin-right: $px_fifteen;
+      color: $green-dark;
+      text-transform: uppercase;
+      @include font-size(10px);
+      font-weight: $font-weight-medium;
+      &:hover {
+        color: darken($green-dark, 5%);
+      }
+    }
+  }
+  .toggle_od_notes {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+    color: inherit;
+    a {
+      display: inline-block;
+      padding-top: $px_ten;
+      margin-right: $px_fifteen;
+      color: $color-primary;
+      text-transform: uppercase;
+      @include font-size(10px);
+      font-weight: $font-weight-medium;
+      &:hover {
+        color: darken($color-primary, 5%);
+      }
+    }
+  }
   .labels {
     line-height: normal;
     position: absolute;
@@ -270,7 +312,7 @@
     border-top-left-radius: 4px;
   }
   .panel-group {
-    margin: $px_thirty -15px 0;
+    margin: $px_fifteen -15px 0;
   }
   .fa {
     margin-right: $px_five;
@@ -286,8 +328,8 @@
     font-weight: $font-weight-medium;
   }
   .panel-body {
+    padding: 0 $px_fifteen $px_fifteen;
     line-height: normal;
-    padding: 0;
     border: none !important;
     @include font-size(11px);
   }
