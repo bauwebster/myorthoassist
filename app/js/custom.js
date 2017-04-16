@@ -4,6 +4,7 @@ $(document).ready(function() {
     Table of content:
     1A. Profile page
     1B. Case Page
+    1C. Cases Page
     2. Modal Windows
     3. Lightbox
   */
@@ -32,6 +33,41 @@ $(document).ready(function() {
   var $yo_notes = $('.your_notes').clone(true, true);
   $('#modal_orthodontist_notes .modal-body').html($od_notes);
   $('#modal_your_notes .modal-body').html($yo_notes);
+
+  // 1C. Cases page
+  // Typeahead
+  var substringMatcher = function(strs) {
+    return function findMatches(q, cb) {
+      var matches, substringRegex;
+      matches = [];
+      substrRegex = new RegExp(q, 'i');
+      $.each(strs, function(i, str) {
+        if (substrRegex.test(str)) {
+          matches.push(str);
+        }
+      });
+      cb(matches);
+    };
+  };
+  var states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
+    'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii',
+    'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana',
+    'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota',
+    'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire',
+    'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota',
+    'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island',
+    'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
+    'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
+  ];
+  $('.cases #input_search, .cases-orthodontist #input_search').typeahead({
+    hint: true,
+    highlight: true,
+    minLength: 1
+  },
+  {
+    name: 'states',
+    source: substringMatcher(states)
+  });
 
   // 2. Modal Windows
   $('.select-date').datetimepicker({
