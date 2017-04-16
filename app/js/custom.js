@@ -103,4 +103,9 @@ $(document).ready(function() {
   // 4. Autogrow Textareas
   $('.auto_grow').autogrow({vertical: true, horizontal: false});
 
+  // 5. Popovers
+  $('.modal_popover').popover({
+    placement: 'top'
+  });
+
 });
