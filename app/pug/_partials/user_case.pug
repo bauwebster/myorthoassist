@@ -26,7 +26,6 @@ main.push.container-fluid(role="main")
                   select#patient_gender.selectpicker(name="patient_gender")
                     option(value="male") Male
                     option(value="female") Female
-                    option(value="other") Other
               .sc_third
                 .form-group
                   label(for="patient_dob") Birthdate      
@@ -40,6 +39,7 @@ main.push.container-fluid(role="main")
                   label(for="patient_status") Status
                   select#patient_status.selectpicker(name="patient_status")
                     option(value="active") Active   
+                    option(value="deactivate") Deactivate   
               .sc_fifth
                 .form-group
                   label(for="patient_register_date") Case Start Date          
@@ -51,7 +51,15 @@ main.push.container-fluid(role="main")
                 .form-group
                   label(for="patient_case_type") Case Type 
                   select#patient_case_type.selectpicker(name="patient_case_type")
-                    option(value="active") Invisalign
+                    option(value="invisalign") Invisalign
+                    option(value="full_fixed") Full fixed
+                    option(value="upper_only_fixed") Upper only fixed
+                    option(value="lower_only_fixed") Lower only fixed
+                    option(value="pre_prosthodontic") Pre-prosthodontic
+                    option(value="early_interceptive") Early interceptive
+                    option(value="observation") Observation
+                    option(value="retention") Retention
+                    option(value="other") Other
           .third_column
             .form-group
               a.btn_out_pri(href="", data-toggle="modal", data-target="#upload_files")
@@ -117,13 +125,13 @@ main.push.container-fluid(role="main")
                     label(for="upper_wire") Upper Wire:
                     input#upper_wire(type="text", name="upper_wire", placeholder="19x25 Demo")
                     p.additional_info 4 April 2016
+                  .form-group                  
+                    label(for="right_elastic") Right Elastic:
+                    input#right_elastic(type="text", name="right_elastic")
+                    p.additional_info.hidden 4 April 2016
                   .form-group
                     label(for="lower_wire") Lower Wire:
                     input#lower_wire(type="text", name="lower_wire")
-                    p.additional_info.hidden 4 April 2016
-                  .form-group
-                    label(for="right_elastic") Right Elastic:
-                    input#right_elastic(type="text", name="right_elastic")
                     p.additional_info.hidden 4 April 2016
                   .form-group
                     label(for="left_elastic") Left Elastic:
@@ -278,7 +286,22 @@ main.push.container-fluid(role="main")
                 #all_media.tab-pane.active(role='tabpanel')
                   .form-group
                     select.selectpicker(name="select_all_media")
-                      option(value="active") Filter By - All
+                      option(value="", selected) Filter By - All
+                      option(value="all_images") All Images
+                      option(value="all_radiographs") All Radiographs
+                      option(value="all_documents") All Documents
+                      option(value="facial_profile") Facial Profile                      
+                      option(value="facial_front") Facial Front
+                      option(value="facial_front_smiling") Facial Front Smiling
+                      option(value="occlusal_upper") Occlusal Upper
+                      option(value="intra_oral_teeth_apart") Intra-oral-teeth apart
+                      option(value="occlusal_lower") Occlusal Lower
+                      option(value="intra_oral_right") Intra-oral Right
+                      option(value="intra_oral_center") Intra-oral Center
+                      option(value="intra_oral_left") Intra-oral Left
+                      option(value="panorex") Panorex
+                      option(value="lateral_cef") Lateral Cef
+                      option(value="misc_photos") Misc. Photos                      
                 #ortho_set.tab-pane(role='tabpanel')
                   .form-group
                     select.selectpicker(name="select_ortho_set")
@@ -398,7 +421,7 @@ main.push.container-fluid(role="main")
                         img.gallery-item(src="images/recent_fms_1.png", alt="Sample picture")
               span.timestamp 4 April 2016, 5:32 PM
   .row
-    include ../_includes/footer
+    include ../_includes/dentist/footer
 include ../_includes/modal_disclaimer
 include ../_includes/modal_upload
 include ../_includes/modal_your_notes

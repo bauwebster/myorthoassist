@@ -127,7 +127,7 @@
 @include pushy_overrides();
 
 // 2. Login Page
-.home {
+.login {
   position: relative;
   color: $white;
   min-height: 100vh;
@@ -569,7 +569,7 @@
       border-radius: 4px;
       border-color: $grey-dark;
       &:hover {
-        background-color: darken($white, 2%);
+        background-color: darken($white, 10%);
       }
     }
     .panel-heading {
@@ -1004,7 +1004,7 @@
       border-radius: 4px;
       border-color: $grey-dark;
       &:hover {
-        background-color: darken($white, 2%);
+        background-color: darken($white, 10%);
       }
     }
     .panel-heading {
@@ -2059,6 +2059,54 @@
     a {
       display: block;
       margin-top: $px_ten;
+    }
+  }
+}
+
+// 8. Resources Page - DENTIST
+.resources {
+  .page-title {
+    text-align: left;
+    color: $color-primary;
+    @media #{$phablet} {
+      margin-top: $px_thirty !important;
+      margin-bottom: $px_twenty !important;
+    }
+  }
+}
+
+// 9. Resources Page - ORTHODONTIST
+.resources-orthodontist {
+  .page-title {
+    text-align: left;
+    color: $color-primary;
+    @media #{$phablet} {
+      margin-top: $px_thirty !important;
+      margin-bottom: $px_twenty !important;
+    }
+  }
+}
+
+// 10. Terms Page - DENTIST
+.terms {
+  .page-title {
+    text-align: left;
+    color: $color-primary;
+    @media #{$phablet} {
+      margin-top: $px_thirty !important;
+      margin-bottom: $px_twenty !important;
+    }
+  }
+}
+
+// 10. Terms Page - ORTHODONTIST
+.terms-orthodontist {
+  .page-title {
+    text-align: left;
+    color: $color-primary;
+    @media #{$phablet} {
+      margin-top: $px_thirty !important;
+      margin-bottom: $px_twenty !important;
     }
   }
 }

@@ -43,7 +43,7 @@ Table of Contents:
 */
 
 // 1. Login Page
-.home {
+.login {
   .columns {
     @include make-sm-column(6);
     @include make-sm-column-offset(3);
@@ -356,5 +356,57 @@ Table of Contents:
   }
   .gallery_ortho_set .gallery-item {
     @include make-xs-column(4);
+  }
+}
+
+// 8. Resources Page - DENTIST
+.resources {
+  .page-title {
+    @include make-sm-column(12);
+  }
+  .site-main {
+    @include make-sm-column(12);
+  }
+  .site-footer {
+    @include make-sm-column(12);
+  }
+}
+
+// 9. Resources Page - ORTHODONTIST
+.resources-orthodontist {
+  .page-title {
+    @include make-sm-column(12);
+  }
+  .site-main {
+    @include make-sm-column(12);
+  }
+  .site-footer {
+    @include make-sm-column(12);
+  }
+}
+
+// 10. Terms Page - DENTIST
+.terms {
+  .page-title {
+    @include make-sm-column(12);
+  }
+  .site-main {
+    @include make-sm-column(12);
+  }
+  .site-footer {
+    @include make-sm-column(12);
+  }
+}
+
+// 10. Terms Page - ORTHODONTIST
+.terms-orthodontist {
+  .page-title {
+    @include make-sm-column(12);
+  }
+  .site-main {
+    @include make-sm-column(12);
+  }
+  .site-footer {
+    @include make-sm-column(12);
   }
 }

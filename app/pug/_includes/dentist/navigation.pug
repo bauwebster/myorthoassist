@@ -1,4 +1,4 @@
-include ../pushy_navigation
+include pushy_navigation
 nav.navbar.navbar-default.push
   .container-fluid
     .navbar-header
@@ -12,21 +12,20 @@ nav.navbar.navbar-default.push
     #primary_menu.collapse.navbar-collapse
       ul.nav.navbar-nav.navbar-right
         li(class=(bodyClass === 'cases' ? 'active' : ''))
-          a(href='cases.html', title="Cases") Cases
+          a(href='cases_dentist.html', title="Cases") Cases
         li.notice(class=(bodyClass === 'resources' ? 'active' : ''))
-          a(href='resources.html', title="Resources") Resources
+          a(href='resources_dentist.html', title="Resources") Resources
         li.mobile
           a.menu-btn(href='#', role='button', title="Account")
-            | Account 
-            i.fa.fa-caret-right(aria-hidden="true")
+            | Account
         li.dropdown.desktop    
           a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false', title="Account")
-            | Account 
+            | Account
             i.fa.fa-caret-down(aria-hidden="true")
           ul.dropdown-menu
             li(class=(bodyClass === 'profile' ? 'active' : ''))
               a(href='profile_dentist.html') My Profile
-            li(class=(bodyClass === 'orthodontist' ? 'active' : ''))
+            li
               a(href='orthodontist.html') My Orthodontist
             li
               a(href='login.html') Logout
