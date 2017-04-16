@@ -108,4 +108,14 @@ $(document).ready(function() {
     placement: 'top'
   });
 
+  // 6. Dismiss Upload modal below 768
+  if($(window).width() < 768) {
+    $('#upload_files').modal('hide');
+	}
+  $(window).on("load resize", function() {
+    if($(window).width() < 768) {
+      $('#upload_files').modal('hide');
+    }
+  });
+
 });

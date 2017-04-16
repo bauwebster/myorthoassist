@@ -1,6 +1,7 @@
 @mixin modal_uploadfiles() {
   .modal-dialog {
-    @extend .modal-lg;
+    padding-left: $px_fifteen;
+    width: calc(100% - 30px) !important;
   }
   .modal-title {
     text-align: center;
@@ -20,6 +21,14 @@
     @include tab-styles();
     .nav-tabs {
       display: inline-block;
+    }
+    @media #{$desktop} {
+      .nav-tabs li {
+        margin-right: 5px;
+      }
+      .nav-tabs li a {
+        @include font-size(11px);
+      }
     }
   }
   .how_to {
