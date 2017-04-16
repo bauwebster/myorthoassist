@@ -34,10 +34,12 @@ body {
 /*
 Table of Contents:
 1. Login Page
-2. Profile Page
-3. Cases Page
-4. Navigation
-5. Case Page
+2. Profile Page - DENTIST
+3. Profile Page - ORTHODONTIST
+4. Cases Page - DENTIST
+5. Cases Page - ORTHODONTIST
+6. Navigation
+7. Case Page
 */
 
 // 1. Login Page
@@ -72,7 +74,7 @@ Table of Contents:
   }
 }
 
-// 2. Profile Page
+// 2. Profile Page - DENTIST
 .profile {
   .page-title {
     @include make-sm-column(12);
@@ -126,7 +128,18 @@ Table of Contents:
     }
 	}
 }
+
+// 3. Profile Page - ORTHODONTIST
 .profile-orthodontist {
+  .page-title {
+    @include make-sm-column(12);
+  }
+  .site-main {
+    @include make-sm-column(12);
+  }
+  .site-footer {
+    @include make-sm-column(12);
+  }
   .first_column {
     @include make-sm-column(2);
   }
@@ -137,9 +150,12 @@ Table of Contents:
     @include make-sm-column(4);
     @include make-sm-column-offset(1);
   }
+  .full_column {
+    @include make-sm-column(12);
+  }
 }
 
-// 3. Cases Page
+// 4. Cases Page - DENTIST
 .cases {
   .site-main {
     @include make-sm-column(8);
@@ -181,7 +197,49 @@ Table of Contents:
   }
 }
 
-// 4. Navigation
+// 5. Cases Page - ORTHODONTIST
+.cases-orthodontist {
+  .site-main {
+    @include make-sm-column(8);
+  }
+  .site-widget {
+    @include make-sm-column(4);
+  }
+  .site-footer {
+    @include make-sm-column(12);
+  }
+  .cases_bar {
+    .page-title {
+      @extend .hidden-xs;
+      @extend .hidden-sm;
+      @include make-md-column(2);
+    }
+    form {
+      @include make-xs-column(12);
+      @include make-sm-column(12);
+      @include make-md-column(10);
+    }
+    .new_cases {
+      @include make-xs-column(2);
+      @include make-sm-column(3);
+      @include make-md-column(3);
+    }
+    .archived_cases {
+      @include make-xs-column(12);
+      @include make-sm-column(5);
+      @include make-md-column(5);
+      @extend .text-right;
+    }
+    .search_cases {
+      @include make-xs-column(10);
+      @include make-sm-column(4);
+      @include make-md-column(4);
+      @extend .pull-right;
+    }
+  }
+}
+
+// 6. Navigation
 #primary_menu {
   .mobile {
     @extend .visible-xs;
@@ -191,7 +249,7 @@ Table of Contents:
   }
 }
 
-// 5. Case Page
+// 7. Case Page
 .case {
   .site-header {
     @include make-sm-column(12);

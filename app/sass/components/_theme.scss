@@ -3,10 +3,12 @@
   0. Navigation
   1. Pushy Styles
   2. Login Page
-  3. Profile Page
-  4. Cases Page
-  5. Case Page
-  6. Misc - Types / Site Footer / Page Modals
+  3. Profile Page - DENTIST
+  4. Profile Page - ORTHODONTIST
+  5. Cases Page - DENTIST
+  6. Cases Page - ORTHODONTIST
+  7. Case Page
+  8. Misc - Types / Site Footer / Page Modals
 */
 
 // 0. Navigation
@@ -214,7 +216,7 @@
   }
 }
 
-// 3. Profile Page
+// 3. Profile Page - DENTIST
 .profile {
   min-height: 100vh;
   h1 {
@@ -341,7 +343,75 @@
     }
   }
 }
+
+// 4. Profile Page - ORTHODONTIST
 .profile-orthodontist {
+  min-height: 100vh;
+  h1 {
+    color: $color-primary;
+  }
+  .form-group {
+    position: relative;
+  }
+  .site-main {
+    color: $color-primary;
+    @include font-size(14px);
+  }
+  #form_profile {
+    background: $white;
+    border-radius: 4px;
+    padding: $px_fifteen $px_fifteen 0;
+    // box-shadow: 1px 1px 5px 2px rgba(0,0,0,0.125);
+    @media #{$phablet__up} {
+      padding: $px_thirty $px_thirty 0; //~ 30px
+    }
+    label {
+      font-weight: $font-weight-medium;
+      @media #{$phablet} {
+        @include font-size(12px);
+      }
+    }
+    figcaption {
+      margin-bottom: $px_fifteen;
+      font-weight: $font-weight-medium;
+      @media #{$phablet} {
+        @include font-size(12px);
+      }
+    }
+    img {
+      width: 100%;
+      text-align: center;
+      @extend .img-circle;
+      @media #{$phablet} {
+        width: 100px;
+      }
+    }
+    .full_column {
+      margin: $px_thirty 0;
+      text-align: right;
+      @media #{$phablet} {
+        margin: $px_twenty 0;
+      }
+    }
+  }
+  .additional_info {
+    @extend .help-block;
+    margin-top: -$px_five;
+    &:last-of-type {
+      margin-top: $px_ten;
+    }
+  }
+  #btn_save {
+    margin-left: $px_thirty;
+    @include font-size(16px);
+    text-transform: uppercase;
+  }
+  #btn_cancel {
+    color: $grey-darkest;
+    @include font-size(16px);
+    text-transform: uppercase;
+    @extend .btn_sec_light;
+  }
   .orthodontist_toggle_password {
     position: absolute;
     top: -3px;
@@ -356,9 +426,25 @@
   .second_column {
     margin-bottom: $px_fifteen;
   }
+  @media #{$phablet} {
+    h1 {
+      @include font-size(16px);
+    }
+    label,
+    .additional_info,
+    .form-group:first-child {
+      text-align: center;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    textarea {
+      @include input_text_center();
+    }
+  }
 }
 
-// 4. Cases Page
+// 5. Cases Page - DENTIST
 .cases {
   position: relative;
   min-height: 100vh;
@@ -776,7 +862,448 @@
   }
 }
 
-// 5. Case Page
+// 6. Cases Page - ORTHODONTIST
+.cases-orthodontist {
+  position: relative;
+  min-height: 100vh;
+  .site-main {
+    > .row {
+      margin-top: $px_thirty;
+      margin-bottom: $px_thirty;
+      @media #{$phablet} {
+        margin-top: $px_twenty;
+        margin-bottom: $px_five;
+      }
+    }
+    h1 {
+      margin: 0;
+      padding: 0;
+      line-height: 36px;
+      display: inline-block;
+      color: $color-primary;
+    }
+    form {
+      @extend .form-inline;
+      .archived_cases {
+        input {
+          margin: 0;
+          vertical-align: middle;
+        }
+        label {
+          margin: 0;
+          line-height: 36px;
+          color: $grey-tone;
+          display: inline-block;
+          vertical-align: middle;
+          @include font-size(14px);
+          font-weight: $font-weight-regular;
+        }
+        @media #{$phablet} {
+          label {
+            @include font-size(12px);
+          }
+        }
+      }
+      .search_cases {
+        position: relative;
+        display: block;
+        input {
+          width: 100%;
+          height: 36px;
+          border-radius: 23px;
+          padding-right: $px_thirty*1.5;
+          @include input_text_color($silver-dark);
+        }
+        span {
+          position: absolute;
+          top: 0;
+          right: $px_thirty;
+          z-index: 1000;
+          width: auto;
+        }
+        button {
+          border: none;
+          line-height: 36px;
+        }
+      }
+      .new_case {
+        min-width: auto;
+        padding-top: 0;
+        padding-bottom: 0;
+        line-height: 32px;
+        border-radius: 23px;
+        @include font-size(16px);
+        @media #{$desktop__up} {
+          min-width: 170px;
+        }
+        @media #{$phablet} {
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          display: inline-block;
+          .fa {
+            margin: 6px 0 0 -3.5px;
+            @include font-size(20px);
+          }
+          span {
+            display: none;
+          }
+        }
+      }
+      @media #{$phablet} {
+        .new_cases,
+        .search_cases {
+          margin-bottom: $px_five;
+        }
+      }
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      @include clearfix();
+    }
+    li {
+      list-style-type: none;
+    }
+    .panel {
+      position: relative;
+      box-shadow: none;
+      border-radius: 4px;
+      border-color: $grey-dark;
+    }
+    .panel-heading {
+      padding-bottom: 0;
+      span {
+        line-height: normal;
+        @include font-size(11px);
+        font-weight: $font-weight-medium;
+      }
+      .case_date {
+        color: $silver-dark;
+      }
+      .case_status {
+        color: $grey-tone;
+        margin-left: $px_thirty;
+      }
+      @media #{$phablet} {
+        .case_date {
+          float: left;
+          line-height: $px_fifteen;
+          vertical-align: text-top;
+        }
+        .case_status {
+          float: right;
+          color: $grey-tone;
+          vertical-align: text-top;
+          margin-left: $px_thirty;
+          line-height: $px_fifteen;
+        }
+      }
+    }
+    .panel-body {
+      width: 100%;
+      display: table;
+      color: $silver-dark;
+      .patient_img {
+        width: 85px;
+        display: table-cell;
+        vertical-align: middle;
+        img {
+          @extend .img-circle;
+        }
+      }
+      .patient_info {
+        width: calc(100% - 85px);
+        display: table-cell;
+        vertical-align: middle;
+      }
+      .dentist_info a {
+        margin-top: 3px;
+        border-radius: 23px;
+        display: inline-block;
+        @include font-size(14px);
+        font-weight: $font-weight-regular;
+        span {
+          margin-left: $px_five;
+          font-weight: $font-weight-medium;
+        }
+      }
+      span {
+        line-height: normal;
+      }
+      .patient_name {
+        margin-right: $px_fifteen;
+        @include font-size(24px);
+        font-weight: $font-weight-regular;
+      }
+      .patient_sex {
+        @include font-size(14px);
+        margin-right: $px_ten;
+        font-weight: $font-weight-medium;
+      }
+      .patient_age {
+        @include font-size(14px);
+        font-weight: $font-weight-medium;
+      }
+      @media #{$tablet} {
+        color: $silver-dark;
+        .dentist_info a {
+          margin-top: 3px;
+          padding: 5px 10px;
+          border-radius: 23px;
+          @include font-size(12px);
+        }
+        .patient_info {
+          padding-left: $px_fifteen;
+        }
+        .patient_name {
+          display: block;
+          margin-left: 0;
+          @include font-size(18px);
+        }
+        .patient_sex {
+          @include font-size(14px);
+        }
+        .patient_age {
+          @include font-size(14px);
+        }
+      }
+      @media #{$phablet} {
+        color: $silver-dark;
+        .dentist_info a {
+          margin-top: 3px;
+          padding: 3px 8px;
+          border-radius: 23px;
+          @include font-size(10px);
+        }
+        .patient_img {
+          width: 70px;
+        }
+        .patient_info {
+          width: calc(100% - 70px);
+        }
+        .patient_info {
+          padding-left: $px_fifteen;
+        }
+        .patient_name {
+          display: block;
+          margin-left: 0;
+          @include font-size(16px);
+        }
+        .patient_sex {
+          @include font-size(12px);
+        }
+        .patient_age {
+          @include font-size(12px);
+        }
+      }
+    }
+    .panel-footer {
+      border: none;
+      background: transparent;
+      .btn_delete {
+        @include font-size(14px);
+        text-transform: uppercase;
+      }
+      .icon-group {
+        float: right;
+        a {
+          line-height: 0;
+          @include font-size(24px);
+          margin-left: $px_fifteen;
+        }
+      }
+      @media #{$phablet} {
+        border-top: 1px solid $grey-dark;
+        a {
+          line-height: 0;
+          @include font-size(18px);
+        }
+        .icon-group {
+          float: right;
+          a {
+            @include font-size(16px);
+            margin-left: $px_thirty;
+          }
+        }
+      }
+    }
+    .active .panel {
+      border-color: $color-primary;
+      .case_date,
+      .patient_name {
+        color: $color-primary;
+      }
+      .case_status,
+      .patient_age,
+      .patient_sex {
+        color: $grey-tone;
+      }
+      .panel-footer {
+        .active {
+          position: relative;
+          color: $color-primary;
+          box-shadow: none !important;
+          &:hover {
+            color: darken($color-primary, 20%);
+          }
+          &::before {
+            position: absolute;
+            top: -2.5px;
+            left: -5px;
+            content: '';
+            width: $px_fifteen;
+            height: $px_fifteen;
+            border-radius: 50%;
+            background-color: $red;
+            border: 2px solid $white;
+            @media #{$phablet} {
+              top: 0;
+              left: -5px;
+              width: $px_ten;
+              height: $px_ten;
+            }
+          }
+        }
+      }
+    }
+    .archive .panel {
+      border-color: $greyish;
+      background: none;
+      border-style: dashed;
+      .case_date {
+        color: $greyish;
+      }
+      .case_status {
+        color: $greyish;
+      }
+      .panel-body {
+        color: $greyish;
+        img {
+          opacity: 0.7;
+        }
+      }
+      .panel-footer {
+        a {
+          color: $greyish;
+        }
+        .btn_delete {
+          @include font-size(14px);
+          color: $greyishness;
+        }
+      }
+    }
+    @media #{$phablet__up} {
+      .panel-footer {
+        height: 0;
+        padding: 0;
+      }
+      .btn_delete {
+        position: absolute;
+        z-index: 1000;
+        top: $px_fifteen;
+        right: $px_fifteen;
+      }
+      .icon-group {
+        position: absolute;
+        z-index: 1000;
+        bottom: $px_fifteen;
+        right: $px_fifteen;
+      }
+    }
+  }
+  .site-widget {
+    @extend .hidden-xs;
+    h2 {
+      color: $grey-tone;
+      line-height: 36px;
+      @include font-size(18px);
+      margin: $px_thirty 0 $px_thirty;
+      font-weight: $font-weight-regular;
+    }
+    form {
+      text-align: right;
+      textarea {
+        @include input_text_color($silver-dark);
+      }
+      #btn_addnote {
+        @include font-size(16px);
+        text-transform: uppercase;
+        margin: $px_ten 0 $px_thirty;
+        font-weight: $font-weight-medium;
+      }
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      list-style-type: none;
+    }
+    .panel {
+      background: none;
+      box-shadow: none;
+      border: 1px solid $silver-dark;
+    }
+    .panel-body {
+      margin: 0;
+      border: none;
+      box-shadow: none;
+      background: none;
+      color: $grey-tone;
+      @include font-size(12px);
+      padding: $px_ten $px_ten 0;
+      font-weight: $font-weight-regular;
+      p {
+        margin-bottom: 0;
+      }
+    }
+    .panel-footer {
+      @include clearfix();
+      border: none;
+      background: none;
+      padding: $px_ten/2 $px_ten;
+      .note_info {
+        float: left;
+        line-height: 20px;
+        color: $color-primary;
+        vertical-align: text-top;
+        @include font-size(10px);
+        font-weight: $font-weight-medium;
+      }
+      .delete_note {
+        float: right;
+        line-height: 20px;
+        @include font-size(14px);
+        vertical-align: text-top;
+      }
+    }
+  }
+  .view_notes {
+    @extend .visible-xs;
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    padding: $px_ten;
+    background: $white;
+    border-radius: 50%;
+    right: $px_fifteen;
+    bottom: $px_fifteen;
+    @include font-size(20px);
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2) !important;
+    &:hover {
+      box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2) !important;
+    }
+    &:active {
+      box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2) !important;
+    }
+    &:focus {
+      box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2) !important;
+    }
+  }
+}
+
+// 7. Case Page
 .case {
   .site-header {
     padding-bottom: 80px;
@@ -1374,7 +1901,7 @@
   }
 }
 
-// 5. Miscellanous
+// 8. Miscellanous
 
 // Types
 .page-title {

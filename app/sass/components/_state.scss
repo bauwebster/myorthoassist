@@ -170,6 +170,74 @@ textarea {
     color: darken($grey-darkest, 20%);
   }
 }
+.btn_pri_solid {
+  @extend .btn;
+  @extend .btn-primary;
+  color: $white;
+  &:hover {
+    color: darken($white, 20%);
+    background-color: darken($color-primary, 5%);
+  }
+  &:active {
+    color: darken($white, 20%);
+    background-color: darken($color-primary, 5%);
+  }
+  &:focus {
+    color: darken($white, 20%);
+    background-color: darken($color-primary, 5%);
+  }
+}
+.btn_pri_solid {
+  @extend .btn;
+  color: $white;
+  background-color: $color-primary;
+  &:hover {
+    color: $white;
+    background-color: darken($color-primary, 5%);
+  }
+  &:active {
+    color: $white;
+    background-color: darken($color-primary, 5%);
+  }
+  &:focus {
+    color: $white;
+    background-color: darken($color-primary, 5%);
+  }
+}
+.btn_archive_solid {
+  @extend .btn;
+  color: $white;
+  background-color: $greyish;
+  &:hover {
+    color: $white;
+    background-color: darken($greyish, 5%);
+  }
+  &:active {
+    color: $white;
+    background-color: darken($greyish, 5%);
+  }
+  &:focus {
+    color: $white;
+    background-color: darken($greyish, 5%);
+  }
+}
+.btn_active_solid {
+  @extend .btn;
+  color: $white;
+  background-color: $silver-dark;
+  &:hover {
+    color: $white;
+    background-color: darken($silver-dark, 5%);
+  }
+  &:active {
+    color: $white;
+    background-color: darken($silver-dark, 5%);
+  }
+  &:focus {
+    color: $white;
+    background-color: darken($silver-dark, 5%);
+  }
+}
 
 // 3. Breadcrumbs
 .breadcrumb {

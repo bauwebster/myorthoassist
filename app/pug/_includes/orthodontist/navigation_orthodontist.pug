@@ -11,8 +11,8 @@ nav.navbar.navbar-default.push
         img.logo(src="images/logo.png", alt="MyOrthoAssist logo")
     #primary_menu.collapse.navbar-collapse
       ul.nav.navbar-nav.navbar-right
-        li(class=(bodyClass === 'cases' ? 'active' : ''))
-          a(href='cases.html', title="Cases") Cases
+        li(class=(bodyClass === 'cases-orthodontist' ? 'active' : ''))
+          a(href='cases_orthodontist.html', title="Cases") Cases
         li.notice(class=(bodyClass === 'resources' ? 'active' : ''))
           a(href='resources.html', title="Resources") Resources
         li.mobile
@@ -24,8 +24,8 @@ nav.navbar.navbar-default.push
             | Account 
             i.fa.fa-caret-down(aria-hidden="true")
           ul.dropdown-menu
-            li(class=(bodyClass === 'profile' ? 'active' : ''))
-              a(href='profile.html') My Profile
+            li(class=(bodyClass === 'profile-orthodontist' ? 'active' : ''))
+              a(href='profile_orthodontist.html') My Profile
             li(class=(bodyClass === 'orthodontist' ? 'active' : ''))
               a(href='orthodontist.html') My Orthodontist
             li

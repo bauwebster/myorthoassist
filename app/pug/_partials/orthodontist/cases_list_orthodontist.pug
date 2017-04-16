@@ -1,4 +1,4 @@
-include ../_includes/dentist/navigation
+include ../../_includes/orthodontist/navigation_orthodontist
 main.push.container-fluid(role="main")
   .row   
     section.site-main
@@ -37,7 +37,11 @@ main.push.container-fluid(role="main")
               .patient_info
                 span.patient_name Isabella Strong
                 span.patient_sex (Female)
-                span.patient_age 10y, 9m 
+                span.patient_age 10y, 9m
+                .dentist_info           
+                  a.btn_pri_solid(href="profile_dentist.html") 
+                    | Dentist
+                    span Steve Change
             //- .panel-body      
             .panel-footer
               .icon-group
@@ -64,7 +68,11 @@ main.push.container-fluid(role="main")
               .patient_info
                 span.patient_name Macy Pham
                 span.patient_sex (Female)
-                span.patient_age 10y, 9m       
+                span.patient_age 10y, 9m     
+                .dentist_info           
+                  a.btn_pri_solid(href="profile_dentist.html") 
+                    | Dentist
+                    span Steve Change  
             .panel-footer
               .icon-group
                 a.btn_comment.btn_sec(href="", title="Comment")
@@ -86,7 +94,11 @@ main.push.container-fluid(role="main")
               .patient_info
                 span.patient_name Donald Trump
                 span.patient_sex (Male)
-                span.patient_age 69y, 0m       
+                span.patient_age 69y, 0m  
+                .dentist_info           
+                  a.btn_archive_solid.disabled(href="profile_dentist.html") 
+                    | Dentist
+                    span Steve Change     
             .panel-footer
               .icon-group
                 a.disabled.btn_comment.btn_sec(href="", title="Comment")
@@ -107,7 +119,11 @@ main.push.container-fluid(role="main")
               .patient_info
                 span.patient_name James Comey
                 span.patient_sex (Male)
-                span.patient_age 56y, 3m        
+                span.patient_age 56y, 3m  
+                .dentist_info           
+                  a.btn_active_solid(href="profile_dentist.html") 
+                    | Dentist
+                    span Steve Change      
             .panel-footer
               .icon-group
                 a.btn_comment.btn_sec(href="", title="Comment")
@@ -129,7 +145,11 @@ main.push.container-fluid(role="main")
               .patient_info
                 span.patient_name Wolf Blitzer
                 span.patient_sex (Male)
-                span.patient_age 69y, 0m          
+                span.patient_age 69y, 0m   
+                .dentist_info           
+                  a.btn_active_solid(href="profile_dentist.html") 
+                    | Dentist
+                    span Steve Change       
             .panel-footer
               .icon-group
                 a.btn_comment.btn_sec(href="", title="Comment")
@@ -203,7 +223,7 @@ main.push.container-fluid(role="main")
       i.fa.fa-sticky-note(aria-hidden="true")
     //- .view_notes
   .row
-    include ../_includes/footer
+    include ../../_includes/footer
   //- .row
 //- main | .push | .container-fluid
-include ../_includes/modal_disclaimer
+include ../../_includes/modal_disclaimer
