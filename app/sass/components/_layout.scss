@@ -147,8 +147,7 @@ Table of Contents:
     @include make-sm-column(5);
   }
   .third_column {
-    @include make-sm-column(4);
-    @include make-sm-column-offset(1);
+    @include make-sm-column(5);
   }
   .full_column {
     @include make-sm-column(12);

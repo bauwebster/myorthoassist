@@ -279,7 +279,7 @@
     @extend .help-block;
     margin-top: -$px_five;
     &:last-of-type {
-      margin-top: $px_ten;
+      margin-top: $px_twenty;
     }
   }
   .dentist_toggle_password {
@@ -398,7 +398,7 @@
     @extend .help-block;
     margin-top: -$px_five;
     &:last-of-type {
-      margin-top: $px_ten;
+      margin-top: $px_twenty;
     }
   }
   #btn_save {
@@ -415,15 +415,14 @@
   .orthodontist_toggle_password {
     position: absolute;
     top: -3px;
-    right: 0;
+    right: $px_fifteen;
     label {
       display: inline;
       margin-left: 3px;
     }
   }
   .row > .form-group,
-  .first_column,
-  .second_column {
+  .first_column {
     margin-bottom: $px_fifteen;
   }
   @media #{$phablet} {

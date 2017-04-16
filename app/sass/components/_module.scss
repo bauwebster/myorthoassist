@@ -355,6 +355,9 @@
     color: $grey-tone;
     font-weight: $font-weight-regular !important;
   }
+  .form-group:last-child {
+    margin-bottom: $px_thirty;
+  }
 }
 
 @mixin pushy_overrides() {
