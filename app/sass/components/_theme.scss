@@ -2021,3 +2021,6 @@
   @include modal_notes_overrides();
   @include modal_od();
 }
+#modal_create_note {
+  @include modal_create_note();
+}

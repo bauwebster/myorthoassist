@@ -35,6 +35,9 @@ $(document).ready(function() {
   $('#modal_your_notes .modal-body').html($yo_notes);
 
   // 1C. Cases page
+  // Create a Note modals for mobile
+  var $create_note = $('.cases .site-widget, .cases-orthodontist .site-widget').clone(true, true);
+  $('#modal_create_note .modal-body').html($create_note);
   // Typeahead
   var substringMatcher = function(strs) {
     return function findMatches(q, cb) {

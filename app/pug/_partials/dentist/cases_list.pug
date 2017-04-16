@@ -204,7 +204,7 @@ main.push.container-fluid(role="main")
               span.note_info 4 April 2016, 4:32 pm
               a.delete_note.btn_sec(href="")
                 i.fa.fa-trash(aria-hidden="true")
-    a.btn_pri.view_notes(href="")
+    a.btn_pri.view_notes(href="", data-toggle="modal", data-target="#modal_create_note", title="Create a Note")
       i.fa.fa-sticky-note(aria-hidden="true")
     //- .view_notes
   .row
@@ -212,3 +212,4 @@ main.push.container-fluid(role="main")
   //- .row
 //- main | .push | .container-fluid
 include ../../_includes/modal_disclaimer
+include ../../_includes/modal_create_note

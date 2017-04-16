@@ -331,6 +331,89 @@
   }
 }
 
+@mixin modal_create_note {
+  .modal-header {
+    padding: 0;
+    height: 0;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+  }
+  .modal-body {
+    border-radius: 6px;
+    background-color: $grey-light;
+  }
+  .site-widget {
+    padding: 0;
+    display: block !important;
+    h2 {
+      color: $grey-tone;
+      line-height: 36px;
+      @include font-size(18px);
+      margin: 0 0 $px_fifteen;
+      font-weight: $font-weight-regular;
+    }
+    form {
+      text-align: right;
+      textarea {
+        @include input_text_color($silver-dark);
+      }
+      #btn_addnote {
+        @include font-size(16px);
+        text-transform: uppercase;
+        margin: $px_ten 0 $px_thirty;
+        font-weight: $font-weight-medium;
+      }
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      list-style-type: none;
+    }
+    .panel {
+      background: none;
+      box-shadow: none;
+      border: 1px solid $silver-dark;
+    }
+    .panel-body {
+      margin: 0;
+      border: none;
+      box-shadow: none;
+      background: none;
+      color: $grey-tone;
+      @include font-size(12px);
+      padding: $px_ten $px_ten 0;
+      font-weight: $font-weight-regular;
+      p {
+        margin-bottom: 0;
+      }
+    }
+    .panel-footer {
+      @include clearfix();
+      border: none;
+      background: none;
+      padding: $px_ten/2 $px_ten;
+      .note_info {
+        float: left;
+        line-height: 20px;
+        color: $color-primary;
+        vertical-align: text-top;
+        @include font-size(10px);
+        font-weight: $font-weight-medium;
+      }
+      .delete_note {
+        float: right;
+        line-height: 20px;
+        @include font-size(14px);
+        vertical-align: text-top;
+      }
+    }
+  }
+}
+
 @mixin fieldset_colored() {
   position: relative;
   border-radius: 2px;
