@@ -67,9 +67,9 @@ main.push.container-fluid(role="main")
                 i.fa.fa-comments(aria-hidden="true")
                 span Conversation
             li.notice(role='presentation')
-              a(href='#diagnosis', aria-controls='profile', role='tab', data-toggle='tab')
+              a(href='#treatment', aria-controls='profile', role='tab', data-toggle='tab')
                 i.fa.fa-clipboard(aria-hidden="true")
-                span Diagnosis & Treatment
+                span Treatment
             li(role='presentation')
               a(href='#media', aria-controls='messages', role='tab', data-toggle='tab')
                 i.fa.fa-picture-o(aria-hidden="true")
@@ -110,7 +110,7 @@ main.push.container-fluid(role="main")
                     button.btn_pri(type='submit')
                       i.fa.fa-paper-plane(aria-hidden="true")
                       span Send Message
-            #diagnosis.tab-pane(role='tabpanel')
+            #treatment.tab-pane(role='tabpanel')
               form.form_register_notes(action="", role="form")
                 .row
                   .form-group
@@ -134,6 +134,13 @@ main.push.container-fluid(role="main")
                   span.labels Orthodontist's Notes
                   h3 Notes
                   p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni voluptas, eos, tenetur praesentium mollitia repellendus. Iste quidem itaque at eveniet quo aliquid, similique, laudantium quasi minus maiores facere soluta consectetur!
+                  .btn-group.toggle_od_notes(role='group', aria-label='...')
+                    a.expand_all(href="#")
+                      i.fa.fa-angle-down(aria-hidden="true")
+                      | Expand All
+                    a.collapse_all(href="#")
+                      i.fa.fa-angle-up(aria-hidden="true")
+                      | Collapse All
                   #accordion_orthodontist.panel-group(role='tablist', aria-multiselectable='false')
                     .panel.panel-default
                       #problem_list.panel-heading(role='tab')
@@ -184,6 +191,13 @@ main.push.container-fluid(role="main")
                   span.labels Your Notes   
                   h3 Notes               
                   textarea#note_details(name="note_details")
+                  .btn-group.toggle_yo_notes(role='group', aria-label='...')
+                    a.expand_all(href="#")
+                      i.fa.fa-angle-down(aria-hidden="true")
+                      | Expand All
+                    a.collapse_all(href="#")
+                      i.fa.fa-angle-up(aria-hidden="true")
+                      | Collapse All
                   #accordion_user.panel-group(role='tablist', aria-multiselectable='false')
                     .panel.panel-default
                       #your_problem_list.panel-heading(role='tab')
@@ -193,7 +207,7 @@ main.push.container-fluid(role="main")
                             | Problem List
                       #collapse_your_problem_list.panel-collapse.collapse(role='tabpanel', aria-labelledby='your_problem_list')
                         .panel-body
-                          | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+                          textarea#input_problem_list(name="input_problem_list")
                     .panel.panel-default
                       #your_treatment_objectives.panel-heading(role='tab')
                         h4.panel-title
@@ -202,7 +216,7 @@ main.push.container-fluid(role="main")
                             | Treatment Objectives
                       #collapse_your_treatment_objectives.panel-collapse.collapse(role='tabpanel', aria-labelledby='your_treatment_objectives')
                         .panel-body
-                          | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+                          textarea#input_treatment_objectives(name="input_treatment_objectives")
                     .panel.panel-default
                       #your_treatment_options.panel-heading(role='tab')
                         h4.panel-title
@@ -211,7 +225,7 @@ main.push.container-fluid(role="main")
                             | Treatment Options
                       #collapse_your_treatment_options.panel-collapse.collapse(role='tabpanel', aria-labelledby='your_treatment_options')
                         .panel-body
-                          | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+                          textarea#input_treatment_options(name="input_treatment_options")
                     .panel.panel-default
                       #your_limitation.panel-heading(role='tab')
                         h4.panel-title
@@ -220,7 +234,7 @@ main.push.container-fluid(role="main")
                             | Limitation to Treatment
                       #collapse_your_limitation.panel-collapse.collapse(role='tabpanel', aria-labelledby='your_limitation')
                         .panel-body
-                          | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+                          textarea#input_your_limitation(name="input_your_limitation")
                     .panel.panel-default
                       #your_treatment_plan.panel-heading(role='tab')
                         h4.panel-title
@@ -229,7 +243,7 @@ main.push.container-fluid(role="main")
                             | Treatment Plan
                       #collapse_your_treatment_plan.panel-collapse.collapse(role='tabpanel', aria-labelledby='your_treatment_plan')
                         .panel-body
-                          | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+                          textarea#input_treatment_plan(name="input_treatment_plan")
               .row.notes_modals
                 .col-xs-6
                   a.btn_od_notes(href="", data-toggle="modal", data-target="#modal_orthodontist_notes", title="Orthodontist's Notes")

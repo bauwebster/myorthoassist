@@ -33,6 +33,19 @@ $(document).ready(function() {
   var $yo_notes = $('.your_notes').clone(true, true);
   $('#modal_orthodontist_notes .modal-body').html($od_notes);
   $('#modal_your_notes .modal-body').html($yo_notes);
+  // Expand/Collapse panels
+  $(".toggle_od_notes .expand_all").click(function(){
+    $('#accordion_orthodontist .panel-collapse').collapse('show');
+  });
+  $(".toggle_od_notes .collapse_all").click(function(){
+    $('#accordion_orthodontist .panel-collapse.in').collapse('hide');
+  });
+  $(".toggle_yo_notes .expand_all").click(function(){
+    $('#accordion_user .panel-collapse').collapse('show');
+  });
+  $(".toggle_yo_notes .collapse_all").click(function(){
+    $('#accordion_user .panel-collapse.in').collapse('hide');
+  });
 
   // 1C. Cases page
   // Create a Note modals for mobile
