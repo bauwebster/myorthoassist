@@ -100,4 +100,7 @@ $(document).ready(function() {
   // 3. Lightbox
   $('.swipebox').swipebox();
 
+  // 4. Autogrow Textareas
+  $('.auto_grow').autogrow({vertical: true, horizontal: false});
+
 });

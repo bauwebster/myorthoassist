@@ -198,7 +198,7 @@ main.push.container-fluid(role="main")
                 .your_notes
                   span.labels Your Notes   
                   h3 Notes               
-                  textarea#note_details(name="note_details")
+                  textarea.auto_grow#note_details(name="note_details")
                   .btn-group.toggle_yo_notes(role='group', aria-label='...')
                     a.expand_all(href="#")
                       i.fa.fa-angle-down(aria-hidden="true")
@@ -215,7 +215,7 @@ main.push.container-fluid(role="main")
                             | Problem List
                       #collapse_your_problem_list.panel-collapse.collapse(role='tabpanel', aria-labelledby='your_problem_list')
                         .panel-body
-                          textarea#input_problem_list(name="input_problem_list")
+                          textarea.auto_grow#input_problem_list(name="input_problem_list")
                     .panel.panel-default
                       #your_treatment_objectives.panel-heading(role='tab')
                         h4.panel-title
@@ -224,7 +224,7 @@ main.push.container-fluid(role="main")
                             | Treatment Objectives
                       #collapse_your_treatment_objectives.panel-collapse.collapse(role='tabpanel', aria-labelledby='your_treatment_objectives')
                         .panel-body
-                          textarea#input_treatment_objectives(name="input_treatment_objectives")
+                          textarea.auto_grow#input_treatment_objectives(name="input_treatment_objectives")
                     .panel.panel-default
                       #your_treatment_options.panel-heading(role='tab')
                         h4.panel-title
@@ -233,7 +233,7 @@ main.push.container-fluid(role="main")
                             | Treatment Options
                       #collapse_your_treatment_options.panel-collapse.collapse(role='tabpanel', aria-labelledby='your_treatment_options')
                         .panel-body
-                          textarea#input_treatment_options(name="input_treatment_options")
+                          textarea.auto_grow#input_treatment_options(name="input_treatment_options")
                     .panel.panel-default
                       #your_limitation.panel-heading(role='tab')
                         h4.panel-title
@@ -242,7 +242,7 @@ main.push.container-fluid(role="main")
                             | Limitation to Treatment
                       #collapse_your_limitation.panel-collapse.collapse(role='tabpanel', aria-labelledby='your_limitation')
                         .panel-body
-                          textarea#input_your_limitation(name="input_your_limitation")
+                          textarea.auto_grow#input_your_limitation(name="input_your_limitation")
                     .panel.panel-default
                       #your_treatment_plan.panel-heading(role='tab')
                         h4.panel-title
@@ -251,7 +251,7 @@ main.push.container-fluid(role="main")
                             | Treatment Plan
                       #collapse_your_treatment_plan.panel-collapse.collapse(role='tabpanel', aria-labelledby='your_treatment_plan')
                         .panel-body
-                          textarea#input_treatment_plan(name="input_treatment_plan")
+                          textarea.auto_grow#input_treatment_plan(name="input_treatment_plan")
               .row.notes_modals
                 .col-xs-6
                   a.btn_od_notes(href="", data-toggle="modal", data-target="#modal_orthodontist_notes", title="Orthodontist's Notes")
