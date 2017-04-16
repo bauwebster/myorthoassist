@@ -124,6 +124,24 @@ textarea {
   @extend .btn;
   @extend .btn-primary;
   @extend .btn-outline;
+  &:hover {
+    color: $white !important;
+    box-shadow: none !important;
+    border-color: $color-primary !important;
+    background-color: darken($color-primary, 5%) !important;
+  }
+  &:active {
+    color: $white !important;
+    box-shadow: none !important;
+    border-color: $color-primary !important;
+    background-color: darken($color-primary, 5%) !important;
+  }
+  &:focus {
+    color: $white !important;
+    box-shadow: none !important;
+    border-color: $color-primary !important;
+    background-color: darken($color-primary, 5%) !important;
+  }
 }
 .btn_out_sec {
   @extend .btn;

@@ -25,13 +25,14 @@ main.push.container-fluid(role="main")
         //- form
       //- .cases_bar | .row
       ul
-        li.active
-          .panel
+        li.active          
+          .panel 
+            a.case_link(href="case.html")                     
             .panel-heading
               span.case_date Today, 5:32 PM
               span.case_status Status: Active
             //- .panel-heading
-            .panel-body         
+            .panel-body 
               .patient_img     
                 img(src="images/user_isabella.png", alt="Isabella Strong")
               .patient_info
@@ -41,20 +42,21 @@ main.push.container-fluid(role="main")
             //- .panel-body      
             .panel-footer
               .icon-group
-                a.btn_comment.btn_pri.active(href="", title="Comment")
+                a.btn_comment.btn_pri.active(href="#", title="Comment")
                   i.fa.fa-comments(aria-hidden="true")
-                a.btn_edit.btn_sec(href="", title="Edit File")
+                a.btn_edit.btn_sec(href="#", title="Edit File")
                   i.fa.fa-clipboard(aria-hidden="true")
-                a.btn_gallery.btn_sec(href="", title="Edit Image")
+                a.btn_gallery.btn_sec(href="#", title="Edit Image")
                   i.fa.fa-picture-o(aria-hidden="true")
               //- .icon-group
-              a.btn_delete.btn_sec(href="", title="Delete Case")
+              a.btn_delete.btn_sec(href="#", title="Delete Case")
                 i.fa.fa-archive(aria-hidden="true")
-            //- .panel-footer
+            //- .panel-footer          
           //- .panel
         //- li
         li.active
           .panel
+            a.case_link(href="case.html")   
             .panel-heading
               span.case_date 30 March
               span.case_status Status: Active
@@ -77,6 +79,7 @@ main.push.container-fluid(role="main")
                 i.fa.fa-archive(aria-hidden="true")
         li.archive
           .panel
+            a.case_link.disabled(href="case.html")  
             .panel-heading
               span.case_date 2 March
               span.case_status Status: Closed (ARCHIVED)
@@ -98,6 +101,7 @@ main.push.container-fluid(role="main")
               a.btn_delete.btn_sec(href="", title="Unarchive Case") Unarchive
         li
           .panel
+            a.case_link(href="case.html")   
             .panel-heading
               span.case_date 26 February
               span.case_status Status: Active
@@ -120,6 +124,7 @@ main.push.container-fluid(role="main")
                 i.fa.fa-archive(aria-hidden="true")
         li
           .panel
+            a.case_link(href="case.html")   
             .panel-heading
               span.case_date 12 February
               span.case_status Status: Active
