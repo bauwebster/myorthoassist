@@ -272,7 +272,7 @@
     line-height: 1;
     display: block;
   }
-  .toggle_yo_notes {
+  .modal_toggle_yo_notes {
     margin-top: 0;
     margin-bottom: 0;
     text-align: left;
@@ -290,7 +290,7 @@
       }
     }
   }
-  .toggle_od_notes {
+  .modal_toggle_od_notes {
     margin-top: 0;
     margin-bottom: 0;
     text-align: left;
@@ -378,6 +378,9 @@
       &:first-child {
         border-top: 1px solid $green-dark;
       }
+    }
+    textarea {
+      min-height: 60px;
     }
   }
 }

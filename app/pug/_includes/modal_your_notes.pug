@@ -6,6 +6,58 @@
           span(aria-hidden='true') &times;
       //- .modal-header
       .modal-body
+        .your_notes
+          span.labels Your Notes   
+          h3 Notes               
+          textarea.auto_grow#note_details(name="note_details")
+          .btn-group.modal_toggle_yo_notes(role='group', aria-label='...')
+            a.expand_all(href="#")
+              i.fa.fa-angle-down(aria-hidden="true")
+              | Expand All
+            a.collapse_all(href="#")
+              i.fa.fa-angle-up(aria-hidden="true")
+              | Collapse All
+          #modal_accordion_user.panel-group(role='tablist', aria-multiselectable='false')
+            .panel.panel-default
+              #yto.panel-heading(role='tab')
+                h4.panel-title
+                  a(role='button', data-toggle='collapse', data-parent='#modal_accordion_user', href='#collapse_yto', aria-expanded='true', aria-controls='collapse_yto')
+                    i.fa.fa-angle-down(aria-hidden="true")
+                    | Problem List
+              #collapse_yto.panel-collapse.collapse(role='tabpanel', aria-labelledby='yto')
+                .panel-body
+            .panel.panel-default
+              #ytob.panel-heading(role='tab')
+                h4.panel-title
+                  a.collapsed(role='button', data-toggle='collapse', data-parent='#modal_accordion_user', href='#collapse_ytob', aria-expanded='true', aria-controls='collapse_ytob')
+                    i.fa.fa-angle-down(aria-hidden="true")
+                    | Treatment Objectives
+              #collapse_ytob.panel-collapse.collapse(role='tabpanel', aria-labelledby='ytob')
+                .panel-body
+            .panel.panel-default
+              #ytop.panel-heading(role='tab')
+                h4.panel-title
+                  a.collapsed(role='button', data-toggle='collapse', data-parent='#modal_accordion_user', href='#collapse_ytop', aria-expanded='true', aria-controls='collapse_ytop')
+                    i.fa.fa-angle-down(aria-hidden="true")
+                    | Treatment Options
+              #collapse_ytop.panel-collapse.collapse(role='tabpanel', aria-labelledby='ytop')
+                .panel-body                  
+            .panel.panel-default
+              #yl.panel-heading(role='tab')
+                h4.panel-title
+                  a.collapsed(role='button', data-toggle='collapse', data-parent='#modal_accordion_user', href='#collapse_yl', aria-expanded='true', aria-controls='collapse_yl')
+                    i.fa.fa-angle-down(aria-hidden="true")
+                    | Limitation to Treatment
+              #collapse_yl.panel-collapse.collapse(role='tabpanel', aria-labelledby='yl')
+                .panel-body                  
+            .panel.panel-default
+              #ytp.panel-heading(role='tab')
+                h4.panel-title
+                  a.collapsed(role='button', data-toggle='collapse', data-parent='#modal_accordion_user', href='#collapse_ytp', aria-expanded='true', aria-controls='collapse_ytp')
+                    i.fa.fa-angle-down(aria-hidden="true")
+                    | Treatment Plan
+              #collapse_ytp.panel-collapse.collapse(role='tabpanel', aria-labelledby='ytp')
+                .panel-body                  
       //- .modal-body
     //- .modal-content
   //- .modal-dialog

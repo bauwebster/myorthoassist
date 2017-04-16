@@ -28,11 +28,28 @@ $(document).ready(function() {
   });
 
   // 1B. Case page
-  // Notes modals for mobile
-  var $od_notes = $('.orthodontist_notes').clone(true, true);
-  var $yo_notes = $('.your_notes').clone(true, true);
-  $('#modal_orthodontist_notes .modal-body').html($od_notes);
-  $('#modal_your_notes .modal-body').html($yo_notes);
+  // Cloning for Orthodontist modal
+  var $od_problem_list = $('#collapse_problem_list .panel-body').clone();
+  var $od_treatment_objectives = $('#collapse_treatment_objectives .panel-body').clone();
+  var $od_treatment_options = $('#collapse_treatment_options .panel-body').clone();
+  var $od_limitation = $('#collapse_limitation .panel-body').clone();
+  var $od_treatment_plan = $('#collapse_treatment_plan .panel-body').clone();
+  $('#collapse_pl .panel-body').html($od_problem_list);
+  $('#collapse_tob .panel-body').html($od_treatment_objectives);
+  $('#collapse_top .panel-body').html($od_treatment_options);
+  $('#collapse_lim .panel-body').html($od_limitation);
+  $('#collapse_tp .panel-body').html($od_treatment_plan);
+  // Cloning for Dentist modal
+  var $yo_problem_list = $('#collapse_your_problem_list .panel-body').clone();
+  var $yo_treatment_objectives = $('#collapse_your_treatment_objectives .panel-body').clone();
+  var $yo_treatment_options = $('#collapse_your_treatment_options .panel-body').clone();
+  var $yo_limitation = $('#collapse_your_limitation .panel-body').clone();
+  var $yo_treatment_plan = $('#collapse_your_treatment_plan .panel-body').clone();
+  $('#collapse_yto .panel-body').html($yo_problem_list);
+  $('#collapse_ytob .panel-body').html($yo_treatment_objectives);
+  $('#collapse_ytop .panel-body').html($yo_treatment_options);
+  $('#collapse_yl .panel-body').html($yo_limitation);
+  $('#collapse_ytp .panel-body').html($yo_treatment_plan);
   // Expand/Collapse panels
   $(".toggle_od_notes .expand_all").click(function(){
     $('#accordion_orthodontist .panel-collapse').collapse('show');
@@ -45,6 +62,19 @@ $(document).ready(function() {
   });
   $(".toggle_yo_notes .collapse_all").click(function(){
     $('#accordion_user .panel-collapse.in').collapse('hide');
+  });
+  // Modals
+  $(".modal_toggle_od_notes .expand_all").click(function(){
+    $('#modal_accordion_orthodontist .panel-collapse').collapse('show');
+  });
+  $(".modal_toggle_od_notes .collapse_all").click(function(){
+    $('#modal_accordion_orthodontist .panel-collapse.in').collapse('hide');
+  });
+  $(".modal_toggle_yo_notes .expand_all").click(function(){
+    $('#modal_accordion_user .panel-collapse').collapse('show');
+  });
+  $(".modal_toggle_yo_notes .collapse_all").click(function(){
+    $('#modal_accordion_user .panel-collapse.in').collapse('hide');
   });
 
   // 1C. Cases page
@@ -110,7 +140,15 @@ $(document).ready(function() {
 
   // 6. Dismiss Upload modal below 768
   if($(window).width() < 768) {
+
     $('#upload_files').modal('hide');
+
+    // var $select = $('<select class="selectpicker"></select>');
+    // $('.media_tab li a').each(function() {
+    //   $select.append('<option>' + $(this).text() + '</option>');
+    // });
+    // $('.nav').before($select).remove();
+
 	}
   $(window).on("load resize", function() {
     if($(window).width() < 768) {

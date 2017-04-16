@@ -1607,6 +1607,11 @@
   }
   .panel-group {
     margin: $px_fifteen -15px $px_twenty;
+    &#accordion_user {
+      textarea {
+        min-height: 60px;
+      }
+    }
   }
   .fa {
     margin-right: $px_five;

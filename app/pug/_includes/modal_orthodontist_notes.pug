@@ -6,6 +6,58 @@
           span(aria-hidden='true') &times;
       //- .modal-header
       .modal-body
+        .orthodontist_notes
+          span.labels Orthodontist's Notes
+          h3 Notes
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni voluptas, eos, tenetur praesentium mollitia repellendus. Iste quidem itaque at eveniet quo aliquid, similique, laudantium quasi minus maiores facere soluta consectetur!
+          .btn-group.modal_toggle_od_notes(role='group', aria-label='...')
+            a.expand_all(href="#")
+              i.fa.fa-angle-down(aria-hidden="true")
+              | Expand All
+            a.collapse_all(href="#")
+              i.fa.fa-angle-up(aria-hidden="true")
+              | Collapse All
+          #modal_accordion_orthodontist.panel-group(role='tablist', aria-multiselectable='false')
+            .panel.panel-default
+              #pl.panel-heading(role='tab')
+                h4.panel-title
+                  a(role='button', data-toggle='collapse', data-parent='#modal_accordion_orthodontist', href='#collapse_pl', aria-expanded='true', aria-controls='collapse_pl')
+                    i.fa.fa-angle-down(aria-hidden="true")
+                    | Problem List
+              #collapse_pl.panel-collapse.collapse(role='tabpanel', aria-labelledby='pl')
+                .panel-body
+            .panel.panel-default
+              #tob.panel-heading(role='tab')
+                h4.panel-title
+                  a.collapsed(role='button', data-toggle='collapse', data-parent='#modal_accordion_orthodontist', href='#collapse_tob', aria-expanded='true', aria-controls='collapse_tob')
+                    i.fa.fa-angle-down(aria-hidden="true")
+                    | Treatment Objectives
+              #collapse_tob.panel-collapse.collapse(role='tabpanel', aria-labelledby='tob')
+                .panel-body
+            .panel.panel-default
+              #top.panel-heading(role='tab')
+                h4.panel-title
+                  a.collapsed(role='button', data-toggle='collapse', data-parent='#modal_accordion_orthodontist', href='#collapse_top', aria-expanded='true', aria-controls='collapse_top')
+                    i.fa.fa-angle-down(aria-hidden="true")
+                    | Treatment Options
+              #collapse_top.panel-collapse.collapse(role='tabpanel', aria-labelledby='top')
+                .panel-body
+            .panel.panel-default
+              #lim.panel-heading(role='tab')
+                h4.panel-title
+                  a.collapsed(role='button', data-toggle='collapse', data-parent='#modal_accordion_orthodontist', href='#collapse_lim', aria-expanded='true', aria-controls='collapse_lim')
+                    i.fa.fa-angle-down(aria-hidden="true")
+                    | Limitation to Treatment
+              #collapse_lim.panel-collapse.collapse(role='tabpanel', aria-labelledby='lim')
+                .panel-body
+            .panel.panel-default
+              #tp.panel-heading(role='tab')
+                h4.panel-title
+                  a.collapsed(role='button', data-toggle='collapse', data-parent='#modal_accordion_orthodontist', href='#collapse_tp', aria-expanded='true', aria-controls='collapse_tp')
+                    i.fa.fa-angle-down(aria-hidden="true")
+                    | Treatment Plan
+              #collapse_tp.panel-collapse.collapse(role='tabpanel', aria-labelledby='tp')
+                .panel-body
       //- .modal-body
     //- .modal-content
   //- .modal-dialog
