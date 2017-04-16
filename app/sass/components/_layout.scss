@@ -144,10 +144,7 @@ Table of Contents:
     @include make-sm-column(2);
   }
   .second_column {
-    @include make-sm-column(5);
-  }
-  .third_column {
-    @include make-sm-column(5);
+    @include make-sm-column(10);
   }
   .full_column {
     @include make-sm-column(12);

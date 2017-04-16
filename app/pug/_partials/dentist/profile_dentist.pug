@@ -45,7 +45,7 @@ main.push.container-fluid(role="main")
                     input#dentist_personal_phone(type="text", name="dentist_personal_phone", placeholder="(209) 555-5555")
                   //- .form-group | .col-sm-6
                 //- .row
-                .form-group
+                .form-group.gutter
                   label(for="dentist_about") About Yourself (Optional)
                   p.additional_info Please tell us a bit about yourself and anything you think might be helpful for your Orthodontist to know.
                   textarea#dentist_about(name="dentist_about", rows="5", placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi in quos modi quis vero commodi nobis animi corporis. Labore voluptatem, ipsa odio tenetur. Reiciendis, sed, temporibus. Doloremque eligendi consectetur voluptatum.")
@@ -53,6 +53,9 @@ main.push.container-fluid(role="main")
                   textarea#dentist_about_experiences(name="dentist_about_experiences", rows="5", placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi in quos modi quis vero commodi nobis animi corporis. Labore voluptatem, ipsa odio tenetur. Reiciendis, sed, temporibus. Doloremque eligendi consectetur voluptatum.")
                 //- .form-group
                 .row
+                  .col-sm-6
+                    hr
+                  .clearfix
                   .form-group.col-sm-6
                     label(for="dentist_set_password") Password              
                     input#dentist_set_password(type="password", name="dentist_set_password", placeholder="default", value="default")                            

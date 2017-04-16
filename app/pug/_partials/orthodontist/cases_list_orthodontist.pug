@@ -18,7 +18,7 @@ main.push.container-fluid(role="main")
                   i.fa.fa-search(aria-hidden="true")
             //- //- .form-group
             .form-group.archived_cases
-              input#input_archive(type="checkbox")
+              input#input_archive(type="checkbox", checked="checked")
               label(for="input_archive") Show Archived Cases
             //- .form-group
           //- .row
@@ -26,7 +26,8 @@ main.push.container-fluid(role="main")
       //- .cases_bar | .row
       ul
         li.active
-          .panel
+          .panel 
+            a.case_link(href="case.html")
             .panel-heading
               span.case_date Today, 5:32 PM
               span.case_status Status: Active
@@ -58,7 +59,8 @@ main.push.container-fluid(role="main")
           //- .panel
         //- li
         li.active
-          .panel
+          .panel 
+            a.case_link(href="case.html")
             .panel-heading
               span.case_date 30 March
               span.case_status Status: Active
@@ -84,7 +86,8 @@ main.push.container-fluid(role="main")
               a.btn_delete.btn_sec(href="", title="Delete Case")
                 i.fa.fa-archive(aria-hidden="true")
         li.archive
-          .panel
+          .panel 
+            a.disabled.case_link(href="case.html")
             .panel-heading
               span.case_date 2 March
               span.case_status Status: Closed (ARCHIVED)
@@ -109,7 +112,8 @@ main.push.container-fluid(role="main")
                   i.fa.fa-picture-o(aria-hidden="true")
               a.btn_delete.btn_sec(href="", title="Unarchive Case") Unarchive
         li
-          .panel
+          .panel 
+            a.case_link(href="case.html")
             .panel-heading
               span.case_date 26 February
               span.case_status Status: Active
@@ -135,7 +139,8 @@ main.push.container-fluid(role="main")
               a.btn_delete.btn_sec(href="", title="Delete Case")
                 i.fa.fa-archive(aria-hidden="true")
         li
-          .panel
+          .panel 
+            a.case_link(href="case.html")
             .panel-heading
               span.case_date 12 February
               span.case_status Status: Active

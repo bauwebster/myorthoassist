@@ -52,7 +52,7 @@ $(document).ready(function() {
       cb(matches);
     };
   };
-  var states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
+  var patientNames = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
     'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii',
     'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana',
     'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota',
@@ -68,8 +68,8 @@ $(document).ready(function() {
     minLength: 1
   },
   {
-    name: 'states',
-    source: substringMatcher(states)
+    name: 'patientNames',
+    source: substringMatcher(patientNames)
   });
 
   // 2. Modal Windows
