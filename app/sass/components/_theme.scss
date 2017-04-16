@@ -1452,6 +1452,9 @@
 }
 // Content styles
 .orthodontist_notes {
+  height: 100%;
+  max-height: 394px;
+  overflow-y: scroll;
   position: relative;
   background-color: $blueish;
   border: 1px solid $grey-dark;
@@ -1461,7 +1464,7 @@
   @media #{$phablet__up} {
     border-right: none;
     p {
-      height: 46px;
+      min-height: 75px;
     }
   }
   span {
@@ -1473,6 +1476,9 @@
   }
 }
 .your_notes {
+  height: 100%;
+  max-height: 394px;
+  overflow-y: scroll;
   position: relative;
   background-color: $greenish;
   border: 1px solid $grey-dark;
@@ -1485,7 +1491,7 @@
   }
   @media #{$phablet__up} {
     #note_details {
-      height: 46px;
+      min-height: 75px;
     }
   }
 }
@@ -1560,7 +1566,7 @@
 .tab-pane#media {
   @include tab-styles();
   > ul {
-    margin-top: $px_fifteen;
+    padding-top: $px_fifteen;
   }
   .bootstrap-select {
     margin: $px_fifteen 0;
@@ -1597,7 +1603,6 @@
   }
   .additional_info {
     position: absolute;
-    width: 100%;
     left: $px_fifteen;
     right: $px_fifteen;
     margin: 0;
@@ -1608,13 +1613,13 @@
     @include font-size(10px);
   }
   .btn-group {
-    line-height: normal;
+    line-height: 1;
     display: block;
     text-align: right;
     margin-top: $px_thirty;
     margin-bottom: $px_thirty+$px_five;
     button {
-      line-height: normal;
+      line-height: 1;
     }
   }
   .btn_pri {
