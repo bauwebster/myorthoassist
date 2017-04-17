@@ -14,6 +14,7 @@
     background: none;
     // background: $grey;
     margin: $px_fifteen;
+    margin-bottom: 0;
     color: $color-primary;
     @include font-size(14px);
     // border: 1px solid $grey-dark;
@@ -44,6 +45,27 @@
     box-shadow: none;
     border-color: $grey-dark;
     background-color: transparent;
+    &.ortho_set__facial_profile,
+    &.ortho_set__facial_front,
+    &.ortho_set__facial_front_smiling {
+      .panel-body {
+        height: 150px;
+      }
+    }
+    &.ortho_set__occlusal_upper,
+    &.ortho_set__intra_oral_teeth_apart,
+    &.ortho_set__occlusal_lower {
+      .panel-body {
+        height: 125px;
+      }
+    }
+    &.ortho_set__intra_oral_right,
+    &.ortho_set__intra_oral_center,
+    &.ortho_set__intra_oral_left {
+      .panel-body {
+        height: 100px;
+      }
+    }
   }
   .panel-heading {
     border-radius: 0;
@@ -58,6 +80,8 @@
   }
   .panel-body {
     background-color: $silvery;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   .panel-footer {
     padding: 0;
@@ -140,6 +164,18 @@
     background: url("../images/helper_documents.png") no-repeat $silvery;
     background-size: 96px 130px;
     background-position: center;
+  }
+  .modal-footer {
+    padding: 0;
+    margin: $px_thirty;
+    margin-top: 0!important;
+    @include clearfix();
+    a {
+      line-height: 1;
+      @include font-size(16px);
+      text-transform: uppercase;
+      margin-left: 15px;
+    }
   }
 }
 
