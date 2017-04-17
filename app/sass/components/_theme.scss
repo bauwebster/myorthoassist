@@ -1537,7 +1537,11 @@
     .register_fields {
       position: absolute;
       top: 0;
-      right: 0;
+      margin: 0;
+      padding: 0;
+      right: $px_fifteen;
+      @include font-size(24px);
+      @extend .visible-xs;
     }
   }
   // Content styles for Case - DENTIST
@@ -2399,6 +2403,15 @@
         margin-top: $px_twenty;
       }
     }
+    .register_fields {
+      position: absolute;
+      top: 0;
+      margin: 0;
+      padding: 0;
+      right: $px_fifteen;
+      @include font-size(24px);
+      @extend .visible-xs;
+    }
     img {
       @extend .img-circle;
     }
@@ -2832,11 +2845,11 @@
       textarea {
         width: calc(100% - 200px);
         padding: $px_fifteen;
-        box-shadow: none !important;
         border: none;
         color: $grey-tone;
         resize: none;
         line-height: normal;
+        box-shadow: none !important;
         @include input_text_color($silver-dark);
         @media #{$phablet} {
           width: calc(100% - 65px);
@@ -2868,6 +2881,7 @@
         }
         @media #{$phablet} {
           .fa {
+            margin-top: 15px;
             margin-right: 5px;
           }
           span {
@@ -2886,16 +2900,16 @@
         width: auto;
         padding: $px_fifteen;
         background-color: $white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
         @media #{$phablet} {
           padding: 0;
           right: $px_fifteen;
         }
-        > .btn {
-          flex: 1 1 0%;
-        }
+        // > .btn {
+        //   flex: 1 1 0%;
+        // }
       }
     }
     .chat_window {
@@ -3245,4 +3259,10 @@
 }
 #modal_edit_media {
   @include modal_edit_media();
+}
+#modal_dentist_registration {
+  @include modal_dentist_registration();
+}
+#modal_orthodontist_registration {
+  @include modal_orthodontist_registration();
 }

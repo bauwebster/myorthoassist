@@ -50,6 +50,27 @@ $(document).ready(function() {
   $('#collapse_ytop .panel-body').html($yo_treatment_options);
   $('#collapse_yl .panel-body').html($yo_limitation);
   $('#collapse_ytp .panel-body').html($yo_treatment_plan);
+
+  // Cloning Registration fields for Dentist
+  var $d_sc_zero = $(".case .first_column .form-group").clone();
+  var $d_sc_first = $(".sc_first .form-group").clone();
+  var $d_sc_second = $(".sc_second .form-group").clone();
+  var $d_sc_third = $(".sc_third .form-group").clone();
+  var $d_sc_fourth = $(".sc_fourth .form-group").clone();
+  var $d_sc_fifth = $(".sc_fifth .form-group").clone();
+  var $d_sc_sixth = $(".sc_sixth .form-group").clone();
+  $("#modal_dentist_registration .modal-body").append($d_sc_zero);
+  $("#modal_dentist_registration .modal-body").append($d_sc_first);
+  $("#modal_dentist_registration .modal-body").find(".register_fields").remove();
+  $("#modal_dentist_registration .modal-body").append($d_sc_second);
+  $("#modal_dentist_registration .modal-body").append($d_sc_third);
+  $("#modal_dentist_registration .modal-body").append($d_sc_fourth);
+  $("#modal_dentist_registration .modal-body").append($d_sc_fifth);
+  $("#modal_dentist_registration .modal-body").append($d_sc_sixth);
+  // Cloning Registration fields for Orthodontist
+  var $od_zero = $(".case-orthodontist .patient_summary .form-group").clone();
+  $("#modal_orthodontist_registration .modal-body").append($od_zero);
+
   // Expand/Collapse panels
   $(".toggle_od_notes .expand_all").click(function(){
     $('#accordion_orthodontist .panel-collapse').collapse('show');

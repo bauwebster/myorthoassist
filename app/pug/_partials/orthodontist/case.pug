@@ -20,6 +20,8 @@ main.push.container-fluid(role="main")
                 a.btn_pri_solid(href="")
                   | Dentist
                   span Steve Chang
+                a.register_fields(href="", data-toggle="modal", data-target="#modal_orthodontist_registration")
+                  i.fa.fa-plus-circle(aria-hidden="true")
             .row
               .patient_summary
                 .form-group
@@ -458,3 +460,4 @@ include ../../_includes/modal_upload
 include ../../_includes/modal_your_notes
 include ../../_includes/modal_orthodontist_notes
 include ../../_includes/modal_edit_media
+include ../../_includes/modal_orthodontist_registration
