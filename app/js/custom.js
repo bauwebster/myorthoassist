@@ -161,4 +161,14 @@ $(document).ready(function() {
     $('.media_tab li a').eq($(this).val()).tab('show'); 
   });
 
+  //Pras Edit 002: Cropit
+  $('.image-editor').cropit();
+    // Handle rotation
+  $('.rotate-cw').click(function() {
+    $(this).closest('.image-editor').cropit('rotateCW');
+  });
+  $('.rotate-ccw').click(function() {
+    $(this).closest('.image-editor').cropit('rotateCCW');
+  });
+
 });
