@@ -1,14 +1,14 @@
 {
-  "name": "npm-app",
+  "name": "myorthoassist",
   "version": "1.0.0",
-  "description": "This is a starter template for Web application based on npm scripts.",
-  "author": "Tej Kahlon <tejpartapsingh91@gmail.com>",
+  "description": "This is a front-end templating engine used for MyOrthoAssist website.",
+  "author": "Baustein Strategic Design Group Inc. <webmaster@baustein.ca>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tpkahlon/npm-app"
+    "url": "https://github.com/baudeveloper/myorthoassist"
   },
-  "bugs": "https://github.com/tpkahlon/npm-app/issues",
+  "bugs": "https://github.com/baudeveloper/myorthoassist/issues",
   "keywords": [
     "npm",
     "scripts",
