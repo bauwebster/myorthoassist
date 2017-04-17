@@ -66,10 +66,15 @@ Table of Contents:
       // --- Align this box vertically centered
       // --- Source: https://css-tricks.com/centering-css-complete-guide/
       position: absolute;
-      bottom: 2%;
       left: 50%;
       transform: translate(-50%, -50%);
       // --- Align this box vertically centered
+    }
+    @media #{$desktop} {
+      bottom: 0;
+    }
+    @media #{$desktop__up} {
+      bottom: 3%;
     }
   }
 }

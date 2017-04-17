@@ -152,6 +152,10 @@
         max-width: 180px;
         margin-top: $px_thirty;
       }
+      @media #{$tablet} {
+        max-width: 200px;
+        margin-top: $px_thirty;
+      }
     }
   }
   // Form Elements
@@ -175,17 +179,34 @@
     @include font-size(12px);
     a {
       color: $white;
+      margin-bottom: $px_thirty;
       text-decoration: underline;
-    }
-    @media #{$desktop__up} {
-      span::after {
-        content: "\00a0\00a0\00a0|\00a0\00a0\00a0";
+      @media #{$desktop__up} {
+        margin-bottom: 0;
+      }
+      @media #{$desktop} {
+        display: block;
+        margin-bottom: 0;
+      }
+      @media #{$tablet} {
+        display: block;
+        margin-bottom: 0;
+      }
+      @media #{$phablet} {
+        display: block;
+        margin-bottom: 0;
+      }
+      @media #{$mobile} {
+        display: block;
+        margin-bottom: $px_thirty;
       }
     }
-    @media #{$desktop} {
+    @media #{$desktop__up} {
       a {
-        display: block;
-        margin-top: $px_ten;
+        margin-bottom: 0;
+      }
+      span::after {
+        content: "\00a0\00a0\00a0|\00a0\00a0\00a0";
       }
     }
   }
