@@ -805,6 +805,7 @@
     form {
       text-align: right;
       textarea {
+        min-height: 100px;
         @include input_text_color($silver-dark);
       }
       #btn_addnote {
@@ -1263,6 +1264,7 @@
     form {
       text-align: right;
       textarea {
+        min-height: 100px;
         @include input_text_color($silver-dark);
       }
       #btn_addnote {
