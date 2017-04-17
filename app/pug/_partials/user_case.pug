@@ -267,6 +267,15 @@ main.push.container-fluid(role="main")
                     button.btn_sec(type='button') Cancel
                     button.btn_pri(type='submit') Save                                  
             #media.tab-pane(role='tabpanel')
+              form.media_type_form
+                select#media_type_select.selectpicker(data-width="100%")
+                  option(value="0") All Media
+                  option(value="1") Ortho Set
+                  option(value="2") Panorex
+                  option(value="3") Lateral Cef
+                  option(value="4") Intra-oral Radiographs
+                  option(value="5") Misc Photos
+                  option(value="6") Documents
               ul.nav.nav-tabs.media_tab(role='tablist')
                 li.active(role='presentation')
                   a(href='#all_media', aria-controls='home', role='tab', data-toggle='tab') All Media
@@ -301,31 +310,38 @@ main.push.container-fluid(role="main")
                       option(value="intra_oral_left") Intra-oral Left
                       option(value="panorex") Panorex
                       option(value="lateral_cef") Lateral Cef
-                      option(value="misc_photos") Misc. Photos                      
+                      option(value="misc_photos") Misc. Photos
+                  | All Media                  
                 #ortho_set.tab-pane(role='tabpanel')
                   .form-group
                     select.selectpicker(name="select_ortho_set")
                       option(value="active") Filter By - All
+                  | Ortho Set
                 #panorex.tab-pane(role='tabpanel')
                   .form-group
                     select.selectpicker(name="select_panorex")
                       option(value="active") Filter By - All
+                  | Panorex
                 #lateral_cef.tab-pane(role='tabpanel')
                   .form-group
                     select.selectpicker(name="select_lateral_cef")
                       option(value="active") Filter By - All
+                  | Lateral Cef
                 #intra_oral_radiographs.tab-pane(role='tabpanel')
                   .form-group
                     select.selectpicker(name="select_intra_oral_radiographs")
                       option(value="active") Filter By - All
+                  | Intra-oral Radiographs
                 #misc_photo.tab-pane(role='tabpanel')
                   .form-group
                     select.selectpicker(name="select_misc_photos")
                       option(value="active") Filter By - All
+                  | Misc Photos
                 #documents.tab-pane(role='tabpanel')
                   .form-group
                     select.selectpicker(name="select_documents")
                       option(value="active") Filter By - All
+                  | Documents
         .sidebar
           .row
             .recent_ortho_set

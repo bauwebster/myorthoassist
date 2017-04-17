@@ -156,4 +156,9 @@ $(document).ready(function() {
     }
   });
 
+  //Pras Edit 001: Media Tabs on Desktop to Select Input on Mobile
+  $('#media_type_select').on('change', function (e) {
+    $('.media_tab li a').eq($(this).val()).tab('show'); 
+  });
+
 });
