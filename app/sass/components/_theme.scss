@@ -1933,10 +1933,13 @@
   }
   .tab-pane#conversation {
     .print_conversation {
+      margin-left: -$px_fifteen;
+      margin-right: -$px_fifteen;
       text-align: right;
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.15);
       a {
         line-height: 1;
-        padding: $px_fifteen 0;
+        padding: $px_fifteen $px_fifteen $px_fifteen 0;
         display: inline-block;
         @include font-size(12px);
         font-weight: $font-weight-bold;
@@ -2361,7 +2364,7 @@
       @extend .img-circle;
     }
   }
-  // Content styles for Case - DENTIST
+  // Content styles for Case - ORTHODONTIST
   .media_tab {
     @media #{$phablet} {
       display: none;
@@ -2761,10 +2764,13 @@
   }
   .tab-pane#conversation {
     .print_conversation {
+      margin-left: -$px_fifteen;
+      margin-right: -$px_fifteen;
       text-align: right;
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.15);
       a {
         line-height: 1;
-        padding: $px_fifteen 0;
+        padding: $px_fifteen $px_fifteen $px_fifteen 0;
         display: inline-block;
         @include font-size(12px);
         font-weight: $font-weight-bold;
@@ -2876,7 +2882,7 @@
       }
     }
   }
-  // Mobile styles for Case - DENTIST
+  // Mobile styles for Case - ORTHODONTIST
   .patient_credentials {
     h1 {
       margin: 0 0 $px_twenty;
@@ -3154,6 +3160,10 @@
   @include modal_yo();
 }
 #modal_orthodontist_notes {
+  @include modal_notes_overrides();
+  @include modal_od();
+}
+#modal_dentist_notes {
   @include modal_notes_overrides();
   @include modal_od();
 }

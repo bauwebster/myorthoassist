@@ -139,7 +139,7 @@ main.push.container-fluid(role="main")
                     p.additional_info.hidden 4 April 2016
               .row-fluid.row_notes
                 .orthodontist_notes
-                  span.labels Orthodontist's Notes
+                  span.labels Dentist's Notes
                   h3 Notes
                   p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni voluptas, eos, tenetur praesentium mollitia repellendus. Iste quidem itaque at eveniet quo aliquid, similique, laudantium quasi minus maiores facere soluta consectetur!
                   .btn-group.toggle_od_notes(role='group', aria-label='...')
@@ -254,9 +254,9 @@ main.push.container-fluid(role="main")
                           textarea.auto_grow#input_treatment_plan(name="input_treatment_plan")
               .row.notes_modals
                 .col-xs-6
-                  a.btn_od_notes(href="", data-toggle="modal", data-target="#modal_orthodontist_notes", title="Orthodontist's Notes")
+                  a.btn_od_notes(href="", data-toggle="modal", data-target="#modal_dentist_notes", title="Dentist's Notes")
                     i.fa.fa-file-text(aria-hidden="true")
-                  span Orthodontist's Notes
+                  span Dentist's Notes
                 .col-xs-6                  
                   a.btn_yo_notes(href="", data-toggle="modal", data-target="#modal_your_notes", title="Your Notes")
                     i.fa.fa-file-text(aria-hidden="true")
@@ -481,5 +481,5 @@ main.push.container-fluid(role="main")
 include ../../_includes/modal_disclaimer
 include ../../_includes/modal_upload
 include ../../_includes/modal_your_notes
-include ../../_includes/modal_orthodontist_notes
+include ../../_includes/modal_dentist_notes
 include ../../_includes/modal_edit_media
