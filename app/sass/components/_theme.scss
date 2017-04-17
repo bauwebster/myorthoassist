@@ -2146,6 +2146,7 @@
         border: none;
         box-shadow: none;
         background-color: transparent;
+        pointer-events: none;
         @include font-size(16px);
         &::-webkit-input-placeholder {
          color: $color-primary;

@@ -68,8 +68,12 @@ $(document).ready(function() {
   $("#modal_dentist_registration .modal-body").append($d_sc_fifth);
   $("#modal_dentist_registration .modal-body").append($d_sc_sixth);
   // Cloning Registration fields for Orthodontist
-  var $od_zero = $(".case-orthodontist .patient_summary .form-group").clone();
+  var $od_zero = $(".case-orthodontist .patient_credentials h1").clone();
   $("#modal_orthodontist_registration .modal-body").append($od_zero);
+  var $od_first = $(".case-orthodontist .patient_photo").clone();
+  $("#modal_orthodontist_registration .modal-body").append($od_first);
+  var $od_second = $(".case-orthodontist .patient_summary .form-group").clone();
+  $("#modal_orthodontist_registration .modal-body").append($od_second);
 
   // Expand/Collapse panels
   $(".toggle_od_notes .expand_all").click(function(){
@@ -175,18 +179,13 @@ $(document).ready(function() {
   });
 
   // 8. Crop Image in Edit Media Modal window
-  $('#image-cropper').cropit();
-  // When user clicks select image button,
-  // open select file dialog programmatically
-  $('.select-image-btn').click(function() {
-    $('.cropit-image-input').click();
-  });
+  $('.image-editor').cropit();
   // Handle rotation
-  $('.rotate-cw-btn').click(function() {
-    $('#image-cropper').cropit('rotateCW');
+  $('.rotate-cw').click(function() {
+    $(this).closest('.image-editor').cropit('rotateCW');
   });
-  $('.rotate-ccw-btn').click(function() {
-    $('#image-cropper').cropit('rotateCCW');
+  $('.rotate-ccw').click(function() {
+    $(this).closest('.image-editor').cropit('rotateCCW');
   });
 
 });
