@@ -2347,7 +2347,6 @@
       line-height: 30px;
     }
     .third_column {
-      margin-top: 44px;
       .additional_info {
         margin: $px_five 0 0;
       }
@@ -2355,9 +2354,7 @@
         margin-top: $px_fifteen;
       }
       @media #{$desktop__up} {
-        .third_column {
-          margin-top: $px_twenty;
-        }
+        margin-top: $px_twenty;
       }
     }
     img {
