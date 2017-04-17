@@ -27,7 +27,7 @@
       }
       .export {
         margin-top: 10px;
-      }  
+      }
     }
     label {
       color: $color-primary;
@@ -80,11 +80,13 @@
     background: none;
     // background: $grey;
     margin: $px_fifteen;
+    margin-bottom: 0;
     color: $color-primary;
     @include font-size(14px);
     // border: 1px solid $grey-dark;
     font-weight: $font-weight-bold;
     @include tab-styles();
+    text-align: center;
     .nav-tabs {
       display: inline-block;
     }
@@ -110,9 +112,130 @@
     box-shadow: none;
     border-color: $grey-dark;
     background-color: transparent;
+    background-color: $silvery;
+    text-align: center;
+    margin:0 15px 30px 15px;
+    display: inline-block;
+    &.ortho_set__facial_profile,
+    &.ortho_set__facial_front,
+    &.ortho_set__facial_front_smiling {
+      width: 130px;
+      .panel-body {
+        width: 127px;
+        height: 150px;
+      }
+    }
+    &.ortho_set__occlusal_upper,
+    &.ortho_set__intra_oral_teeth_apart,
+    &.ortho_set__occlusal_lower {
+      width: 152px;
+      .panel-body {
+        width: 150px;
+        height: 100px;
+      }
+    }
+    &.ortho_set__intra_oral_right,
+    &.ortho_set__intra_oral_center,
+    &.ortho_set__intra_oral_left {
+      width: 138px;
+      .panel-body {
+        width: 136px;
+        height: 85px;
+      }
+    }
+    &.ortho_set__panorex {
+      width: 622px;
+      .panel-body {
+        width: 620px;
+        height: 310px;
+      }
+    }
+    &.ortho_set__lateral_Cephalogram {
+      width: 502px;
+      .panel-body {
+        width: 500px;
+        height: 500px;
+      }
+    }
+    &.ortho_set__intra_oral_radiographs_xray_01,
+    &.ortho_set__intra_oral_radiographs_xray_02,
+    &.ortho_set__intra_oral_radiographs_xray_07,
+    &.ortho_set__intra_oral_radiographs_xray_08,
+    &.ortho_set__intra_oral_radiographs_xray_09,
+    &.ortho_set__intra_oral_radiographs_xray_10,
+    &.ortho_set__intra_oral_radiographs_xray_11,
+    &.ortho_set__intra_oral_radiographs_xray_12,
+    &.ortho_set__intra_oral_radiographs_xray_13,
+    &.ortho_set__intra_oral_radiographs_xray_20 {
+      margin:0 5px 0px 5px;
+      width: 152px;
+      .panel-body {
+        width: 150px;
+        height: 111px;
+      }
+    }
+    &.ortho_set__intra_oral_radiographs_xray_10 {
+      margin-right:444px;
+    }
+    &.ortho_set__intra_oral_radiographs_xray_03,
+    &.ortho_set__intra_oral_radiographs_xray_04,
+    &.ortho_set__intra_oral_radiographs_xray_05,
+    &.ortho_set__intra_oral_radiographs_xray_06 {
+      margin:0 5px 0px 5px;
+      width: 96px;
+      .panel-body {
+        width: 94px;
+        height: 152px;
+      }
+    }
+    &.ortho_set__intra_oral_radiographs_xray_14,
+    &.ortho_set__intra_oral_radiographs_xray_19 {
+      margin:0 5px 0px 5px;
+      width: 113px;
+      .panel-body {
+        width: 111px;
+        height: 111px;
+      }
+    }
+    &.ortho_set__intra_oral_radiographs_xray_15,
+    &.ortho_set__intra_oral_radiographs_xray_16,
+    &.ortho_set__intra_oral_radiographs_xray_17,
+    &.ortho_set__intra_oral_radiographs_xray_18 {
+      margin:0 5px 0px 5px;
+      width: 96px;
+      .panel-body {
+        width: 94px;
+        height: 112px;
+      }
+    }
+    &.ortho_set__misc_01,
+    &.ortho_set__misc_02,
+    &.ortho_set__misc_03,
+    &.ortho_set__misc_04,
+    &.ortho_set__misc_05,
+    &.ortho_set__misc_06 {
+      margin:0 15px 15px 15px;
+      width: 202px;
+      .panel-body {
+        width: 200px;
+        height: 200px;
+        background-size:45%;
+      }
+    }
+    &.ortho_set__documents {
+      width: 622px;
+      .panel-body {
+        width: 620px;
+        height: 310px;
+        background-size:15%;
+      }
+    }
   }
   .panel-heading {
     border-radius: 0;
+    padding-left:0;
+    padding-right:0;
+    padding-bottom:0;
     color: $greyish-tone;
     @include font-size(11px);
     background-color: $silvery;
@@ -124,6 +247,10 @@
   }
   .panel-body {
     background-color: $silvery;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain;
+    display: inline-block;
   }
   .panel-footer {
     padding: 0;
@@ -207,7 +334,164 @@
     background-size: 96px 130px;
     background-position: center;
   }
+  .modal-footer {
+    padding: 0;
+    margin: $px_thirty;
+    margin-top: 0!important;
+    @include clearfix();
+    a {
+      line-height: 1;
+      @include font-size(16px);
+      text-transform: uppercase;
+      margin-left: 15px;
+    }
+  }
 }
+
+// @mixin modal_uploadfiles() {
+//   .modal-dialog {
+//     padding-left: $px_fifteen;
+//     width: calc(100% - 30px) !important;
+//   }
+//   .modal-title {
+//     text-align: center;
+//     color: $color-primary;
+//     @include font-size(24px);
+//     font-weight: $font-weight-regular;
+//   }
+//   .modal-body {
+//     border: none;
+//     background: none;
+//     // background: $grey;
+//     margin: $px_fifteen;
+//     color: $color-primary;
+//     @include font-size(14px);
+//     // border: 1px solid $grey-dark;
+//     font-weight: $font-weight-bold;
+//     @include tab-styles();
+//     .nav-tabs {
+//       display: inline-block;
+//     }
+//     @media #{$desktop} {
+//       .nav-tabs li {
+//         margin-right: 5px;
+//       }
+//       .nav-tabs li a {
+//         @include font-size(11px);
+//       }
+//     }
+//   }
+//   .how_to {
+//     color: $grey-tone;
+//     word-spacing: 2px;
+//     letter-spacing: 1px;
+//     @include font-size(10px);
+//     text-transform: uppercase;
+//     margin: $px_twenty 0 $px_twenty;
+//     font-weight: $font-weight-regular;
+//   }
+//   .panel {
+//     box-shadow: none;
+//     border-color: $grey-dark;
+//     background-color: transparent;
+//   }
+//   .panel-heading {
+//     border-radius: 0;
+//     color: $greyish-tone;
+//     @include font-size(11px);
+//     background-color: $silvery;
+//     font-weight: $font-weight-regular;
+//     .fa {
+//       margin-left: $px_five;
+//       color: $color-primary;
+//     }
+//   }
+//   .panel-body {
+//     background-color: $silvery;
+//   }
+//   .panel-footer {
+//     padding: 0;
+//     color: $grey-tone;
+//     @include clearfix();
+//     // overflow: hidden;
+//     // border: none;
+//     @include font-size(14px);
+//     border-top: 1px solid $grey-dark;
+//     font-weight: $font-weight-regular;
+//   }
+//   // Datepicker styles
+//   .date {
+//     width: 100%;
+//     * {
+//       border: none;
+//     }
+//   }
+//   .input-group-addon {
+//     position: absolute;
+//     z-index: 1;
+//     top: 0px;
+//     padding: 0px;
+//     right: $px_twenty;
+//     line-height: 34px;
+//     background-color: transparent;
+//   }
+//   // Well styles
+//   .well {
+//     color: $greyish-tone;
+//     border-radius: 0;
+//     box-shadow: none;
+//     min-height: 375px;
+//     margin-bottom: 0;
+//     @include font-size(11px);
+//     font-weight: $font-weight-regular;
+//     .fa {
+//       margin-left: 5px;
+//       color: $color-primary;
+//     }
+//   }
+//   .date_singular {
+//     @include clearfix();
+//     color: $grey-tone;
+//     font-weight: $font-weight-regular;
+//     > div {
+//       width: 200px;
+//       border-radius: 2px;
+//       @extend .pull-right;
+//       border: 1px solid $grey-dark;
+//       border-top: none;
+//     }
+//   }
+//   // Misc Photos
+//   #modal_misc_photos .row:first-of-type {
+//     margin-bottom: $px_twenty;
+//   }
+//   #modal_misc_photos .well {
+//     min-height: 200px;
+//   }
+//   // Intra Oral
+//   #modal_intra_oral .date {
+//     width: 100%;
+//     input {
+//       @include font-size(12px);
+//     }
+//   }
+//   #modal_intra_oral .row {
+//     margin-bottom: $px_fifteen;
+//   }
+//   #modal_intra_oral .mod_first_column .well,
+//   #modal_intra_oral .mod_third_column .well {
+//     min-height: 80px;
+//   }
+//   #modal_intra_oral .mod_second_column .well {
+//     min-height: 200px;
+//   }
+//   // Documents banner
+//   #modal_documents .well {
+//     background: url("../images/helper_documents.png") no-repeat $silvery;
+//     background-size: 96px 130px;
+//     background-position: center;
+//   }
+// }
 
 @mixin modal_disclaimer() {
   .modal-header {

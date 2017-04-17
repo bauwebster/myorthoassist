@@ -15,7 +15,7 @@
 .navbar {
   border: none;
   @include font-size(14px);
-  background: transparent url('../images/background_nav.png') center/contain repeat;
+  background: transparent url('../images/moa_whitelines_pattern.jpg') repeat;
   > div,
   .navbar-brand {
     position: relative;
@@ -132,7 +132,7 @@
   color: $white;
   min-height: 100vh;
   @include font-size(14px);
-  background: $white url('../images/background.jpg') center/cover no-repeat;
+  background: $white url('../images/moa_whitelines_pattern.jpg') repeat;
   .panel {
     margin: 0;
     border: none;

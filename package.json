@@ -37,7 +37,7 @@
     "uglify": "mkdirp dist/js -p && uglifyjs app/js/custom.js -m -o dist/js/custom.js && uglifyjs app/js/custom.js -m -c -o dist/js/custom.min.js",
     "scripts": "npm run lint && npm run uglify",
     "icons": "svgo -f app/images/icons -o dist/images/icons && svg-sprite-generate -d app/images/icons -o dist/images/sprite.svg",
-    "images": "imagemin --plugin=pngquant app/images/* -o dist/images && npm run icons",
+    "images": "imagemin --plugin=pngquant app/images/* -o dist/images && imagemin --plugin=pngquant app/images/illustrations/* -o dist/images/illustrations && npm run icons",
     "fonts": "mkdirp dist/fonts -p && npm run vendor_fonts",
     "html": "pug --pretty app/pug/pages -o dist",
     "serve": "browser-sync start --server --serveStatic dist --files \"dist/css/*.css, dist/js/*.js, **/*.html, app/pug/**/.pug, dist/images/*.*, !node_modules\"",
