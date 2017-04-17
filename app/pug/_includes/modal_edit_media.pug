@@ -6,14 +6,14 @@
           span(aria-hidden='true') &times;
         h4.modal-title Edit Media
       //- .modal-header
-      .modal-body
-        #image-cropper
+      .modal-body     
+        .image-editor
           .cropit-preview
           input.cropit-image-zoom-input(type='range')
-          // The actual file input will be hidden
-          input.cropit-image-input(type='file')
-          // And clicking on this button will open up select file dialog
-          .select-image-btn Select new image         
+          button.rotate-ccw
+            i.fa.fa-undo(aria-hidden='true')
+          button.rotate-cw
+            i.fa.fa-repeat(aria-hidden='true') 
         hr
         .form-group
           label(for="edit_media_date") Upload Date
@@ -27,8 +27,9 @@
       //- .modal-body
       .modal-footer
         .btn-group
-          a.btn_cancel_media.btn_sec(href="", title="Cancel", data-dismiss='modal', role='button') Cancel
+          a.btn_print_media.btn_sec(href="", title="Print", role='button') Print
           a.btn_delete_media.btn_sec(href="", title="Delete") Delete          
+          a.btn_cancel_media.btn_sec(href="", title="Cancel", data-dismiss='modal', role='button') Cancel          
           a.btn_save_media.btn_pri(href="", title="Save") Save
       //- .modal-footer
     //- .modal-content
