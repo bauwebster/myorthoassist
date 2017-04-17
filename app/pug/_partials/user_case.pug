@@ -312,7 +312,7 @@ main.push.container-fluid(role="main")
                       option(value="lateral_cef") Lateral Cef
                       option(value="misc_photos") Misc. Photos                      
                     .all_media_gallery
-                      a(href="")
+                      a(href="", data-toggle="modal", data-target="#modal_edit_media")
                         img(src="images/all_media_1.png", alt="Sample Picture")
                         span.timestamp 04/04/2017
                       a.document(href="")
@@ -482,3 +482,4 @@ include ../_includes/modal_disclaimer
 include ../_includes/modal_upload
 include ../_includes/modal_your_notes
 include ../_includes/modal_orthodontist_notes
+include ../_includes/modal_edit_media

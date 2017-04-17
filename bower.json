@@ -24,6 +24,7 @@
     "eonasdan-bootstrap-datetimepicker": "^4.17.47",
     "swipebox": "^1.4.4",
     "typeahead.js": "^0.11.1",
-    "jquery.ns-autogrow": "^1.1.6"
+    "jquery.ns-autogrow": "^1.1.6",
+    "cropit": "^0.5.1"
   }
 }

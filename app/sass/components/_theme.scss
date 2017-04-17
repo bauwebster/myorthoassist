@@ -2266,3 +2266,6 @@
 #modal_create_note {
   @include modal_create_note();
 }
+#modal_edit_media {
+  @include modal_edit_media();
+}
