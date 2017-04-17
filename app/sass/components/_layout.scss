@@ -245,8 +245,11 @@ Table of Contents:
   }
 }
 
-// 7. Case Page
+// 7. Case Page - DENTIST
 .case {
+  .breadcrumb {
+    @extend .hidden-xs;
+  }
   .site-header {
     @include make-sm-column(12);
   }
@@ -318,6 +321,102 @@ Table of Contents:
   .sc_fifth,
   .sc_sixth, {
     @extend .hidden-xs;
+  }
+  // Diagnosis tab
+  .form_register_notes {
+    .form-group {
+      @include make-xs-column(6);
+      @include make-sm-column(6);
+    }
+  }
+  .orthodontist_notes,
+  .your_notes {
+    @extend .hidden-xs;
+  }
+  .notes_modals {
+    @extend .visible-xs;
+  }
+  // Sidebar
+  .sidebar {
+    @extend .hidden-xs;
+    @include make-sm-column(3);
+  }
+  .recent_ortho_set {
+    @include make-sm-column(12);
+  }
+  .recent_panorex {
+    @include make-sm-column(12);
+  }
+  .recent_lateral_cephalogram {
+    @include make-sm-column(12);
+  }
+  .recent_full_mouth_series {
+    @include make-sm-column(12);
+  }
+  // Gallery
+  .gallery-row {
+    @include make-row();
+  }
+  .gallery_ortho_set .gallery-item {
+    @include make-xs-column(4);
+  }
+}
+
+// 7B. Case Page - ORTHODONTIST
+.case-orthodontist {
+  .breadcrumb {
+    @extend .hidden-xs;
+  }
+  .site-header {
+    @include make-sm-column(12);
+  }
+  .site-main {
+    @include make-sm-column(12);
+  }
+  .site-footer {
+    @extend .hidden-xs;
+    @include make-sm-column(12);
+  }
+  // Content
+  .patient_credentials {
+    @include make-sm-column(12);
+  }
+  .patient_summary {
+    @include make-sm-column(12);
+  }
+  .content {
+    @include make-sm-column(9);
+  }
+  .orthodontist_notes {
+    @include make-sm-column(6);
+  }
+  .your_notes {
+    @include make-sm-column(6);
+  }
+  // Conversation tab
+  .first_column {
+    @include make-xs-column(3);
+    @include make-sm-column(2);
+    @include make-md-column(2);
+    @include make-lg-column(2);
+    figcaption {
+      @extend .hidden-xs;
+    }
+  }
+  .second_column {
+    @include make-xs-column(9);
+    @include make-sm-column(10);
+    @include make-md-column(8);
+    @include make-lg-column(7);
+    .patient_summary {
+      @extend .hidden-xs;
+    }
+  }
+  .third_column {
+    @extend .hidden-xs;
+    @include make-sm-column(10);
+    @include make-md-column(2);
+    @include make-lg-column(3);
   }
   // Diagnosis tab
   .form_register_notes {

@@ -1,0 +1,460 @@
+include ../../_includes/orthodontist/navigation
+main.push.container-fluid(role="main")
+  .row   
+    header.site-header
+      ol.breadcrumb
+        li.active
+          a(href='cases.html')
+            i.fa.fa-angle-left(aria-hidden="true")
+            | Cases
+      form.form_register_case(action="", role="form")
+        .row
+          .first_column
+            img.patient_photo(src="images/patient_picture.png", alt="Patient picture")            
+          .second_column
+            .row
+              .patient_credentials
+                h1.page-title Isabella Strong
+                p (Female)
+                  span 10y, 9m
+                a.btn_pri_solid(href="")
+                  | Dentist
+                  span Steve Chang
+            .row
+              .patient_summary
+                .form-group
+                  label.label_caption Status
+                  label.label_data Observation
+                .form-group
+                  label.label_caption Case Start Date
+                  label.label_data September 11, 2015
+                .form-group
+                  label.label_caption Case type
+                  label.label_data Invisalign
+                .form-group
+                  a(href="#") Invisalign
+                  label.label_caption Username/Password
+                  label.label_data Username001 / passwordXYZ
+          .third_column
+            .form-group
+              a.btn_out_pri(href="", data-toggle="modal", data-target="#upload_files")
+                i.fa.fa-plus(aria-hidden="true")
+                | Add Images
+            p.additional_info or Documents (PDF, DOC)
+    section.site-main
+      .row
+        .content
+          ul.nav.nav-tabs.parent-tab(role='tablist')
+            li.active(role='presentation')
+              a(href='#conversation', aria-controls='home', role='tab', data-toggle='tab')
+                i.fa.fa-comments(aria-hidden="true")
+                span Conversation
+            li.notice(role='presentation')
+              a(href='#treatment', aria-controls='profile', role='tab', data-toggle='tab')
+                i.fa.fa-clipboard(aria-hidden="true")
+                span Treatment
+            li(role='presentation')
+              a(href='#media', aria-controls='messages', role='tab', data-toggle='tab')
+                i.fa.fa-picture-o(aria-hidden="true")
+                span Media Library              
+          .tab-content
+            #conversation.tab-pane.active(role='tabpanel')              
+              .print_conversation
+                a(href="")
+                  i.fa.fa-print(aria-hidden="true")
+                  | Print Conversations
+              .chat_window
+                .panel.conversation_received
+                  .panel-body Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit deleniti id cum ab aliquam commodi quasi, magnam iusto amet officiis sed itaque eos dolorum accusamus ipsam necessitatibus. Id, dolorem saepe.
+                  .panel-footer
+                    span.timestamp 4 April 2016, 5:32 PM
+                .panel.conversation_sent
+                  .panel-body Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit deleniti id cum ab aliquam commodi quasi, magnam iusto amet officiis sed itaque eos dolorum accusamus ipsam necessitatibus. Id, dolorem saepe.
+                  .panel-footer
+                    span.timestamp
+                      i.fa.fa-check-circle(aria-hidden="true")
+                      | 4 April 2016, 5:32 PM
+                .panel.conversation_received
+                  .panel-body Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit deleniti id cum ab aliquam commodi quasi, magnam iusto amet officiis sed itaque eos dolorum accusamus ipsam necessitatibus. Id, dolorem saepe.
+                  .panel-footer
+                    span.timestamp 5 April 2016, 5:32 PM
+                .panel.conversation_received
+                  .panel-body Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit deleniti id cum ab aliquam commodi quasi, magnam iusto amet officiis sed itaque eos dolorum accusamus ipsam necessitatibus. Id, dolorem saepe.
+                  .panel-footer
+                    span.timestamp 5 April 2016, 5:32 PM
+                .panel.conversation_received
+                  .panel-body Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit deleniti id cum ab aliquam commodi quasi, magnam iusto amet officiis sed itaque eos dolorum accusamus ipsam necessitatibus. Id, dolorem saepe.
+                  .panel-footer
+                    span.timestamp 5 April 2016, 5:32 PM
+              form.form_conversation_submit(action="")
+                .input-group
+                  input(type='text', placeholder='Write a message...')
+                  span.input-group-btn
+                    button.btn_pri(type='submit')
+                      i.fa.fa-paper-plane(aria-hidden="true")
+                      span Send Message
+            #treatment.tab-pane(role='tabpanel')
+              form.form_register_notes(action="", role="form")
+                .row
+                  .form-group
+                    label(for="upper_wire") Upper Wire:
+                    input#upper_wire(type="text", name="upper_wire", placeholder="19x25 Demo")
+                    p.additional_info 4 April 2016
+                  .form-group                  
+                    label(for="right_elastic") Right Elastic:
+                    input#right_elastic(type="text", name="right_elastic")
+                    p.additional_info.hidden 4 April 2016
+                  .form-group
+                    label(for="lower_wire") Lower Wire:
+                    input#lower_wire(type="text", name="lower_wire")
+                    p.additional_info.hidden 4 April 2016
+                  .form-group
+                    label(for="left_elastic") Left Elastic:
+                    input#left_elastic(type="text", name="left_elastic")
+                    p.additional_info.hidden 4 April 2016
+              .row-fluid.row_notes
+                .orthodontist_notes
+                  span.labels Orthodontist's Notes
+                  h3 Notes
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni voluptas, eos, tenetur praesentium mollitia repellendus. Iste quidem itaque at eveniet quo aliquid, similique, laudantium quasi minus maiores facere soluta consectetur!
+                  .btn-group.toggle_od_notes(role='group', aria-label='...')
+                    a.expand_all(href="#")
+                      i.fa.fa-angle-down(aria-hidden="true")
+                      | Expand All
+                    a.collapse_all(href="#")
+                      i.fa.fa-angle-up(aria-hidden="true")
+                      | Collapse All
+                  #accordion_orthodontist.panel-group(role='tablist', aria-multiselectable='false')
+                    .panel.panel-default
+                      #problem_list.panel-heading(role='tab')
+                        h4.panel-title
+                          a(role='button', data-toggle='collapse', data-parent='#accordion_orthodontist', href='#collapse_problem_list', aria-expanded='true', aria-controls='collapse_problem_list')
+                            i.fa.fa-angle-down(aria-hidden="true")
+                            | Problem List
+                      #collapse_problem_list.panel-collapse.collapse(role='tabpanel', aria-labelledby='problem_list')
+                        .panel-body
+                          | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+                    .panel.panel-default
+                      #treatment_objectives.panel-heading(role='tab')
+                        h4.panel-title
+                          a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion_orthodontist', href='#collapse_treatment_objectives', aria-expanded='false', aria-controls='collapse_treatment_objectives')
+                            i.fa.fa-angle-down(aria-hidden="true")
+                            | Treatment Objectives
+                      #collapse_treatment_objectives.panel-collapse.collapse(role='tabpanel', aria-labelledby='treatment_objectives')
+                        .panel-body
+                          | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+                    .panel.panel-default
+                      #treatment_options.panel-heading(role='tab')
+                        h4.panel-title
+                          a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion_orthodontist', href='#collapse_treatment_options', aria-expanded='false', aria-controls='collapse_treatment_options')
+                            i.fa.fa-angle-down(aria-hidden="true")
+                            | Treatment Options
+                      #collapse_treatment_options.panel-collapse.collapse(role='tabpanel', aria-labelledby='treatment_options')
+                        .panel-body
+                          | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+                    .panel.panel-default
+                      #limitation.panel-heading(role='tab')
+                        h4.panel-title
+                          a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion_orthodontist', href='#collapse_limitation', aria-expanded='false', aria-controls='collapse_limitation')
+                            i.fa.fa-angle-down(aria-hidden="true")
+                            | Limitation to Treatment
+                      #collapse_limitation.panel-collapse.collapse(role='tabpanel', aria-labelledby='limitation')
+                        .panel-body
+                          | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+                    .panel.panel-default
+                      #treatment_plan.panel-heading(role='tab')
+                        h4.panel-title
+                          a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion_orthodontist', href='#collapse_treatment_plan', aria-expanded='false', aria-controls='collapse_treatment_plan')
+                            i.fa.fa-angle-down(aria-hidden="true")
+                            | Treatment Plan
+                      #collapse_treatment_plan.panel-collapse.collapse(role='tabpanel', aria-labelledby='treatment_plan')
+                        .panel-body
+                          | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+                .your_notes
+                  span.labels Your Notes   
+                  h3 Notes               
+                  textarea.auto_grow#note_details(name="note_details")
+                  .btn-group.toggle_yo_notes(role='group', aria-label='...')
+                    a.expand_all(href="#")
+                      i.fa.fa-angle-down(aria-hidden="true")
+                      | Expand All
+                    a.collapse_all(href="#")
+                      i.fa.fa-angle-up(aria-hidden="true")
+                      | Collapse All
+                  #accordion_user.panel-group(role='tablist', aria-multiselectable='false')
+                    .panel.panel-default
+                      #your_problem_list.panel-heading(role='tab')
+                        h4.panel-title
+                          a(role='button', data-toggle='collapse', data-parent='#accordion_user', href='#collapse_your_problem_list', aria-expanded='true', aria-controls='collapse_your_problem_list')
+                            i.fa.fa-angle-down(aria-hidden="true")
+                            | Problem List
+                      #collapse_your_problem_list.panel-collapse.collapse(role='tabpanel', aria-labelledby='your_problem_list')
+                        .panel-body
+                          textarea.auto_grow#input_problem_list(name="input_problem_list")
+                    .panel.panel-default
+                      #your_treatment_objectives.panel-heading(role='tab')
+                        h4.panel-title
+                          a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion_user', href='#collapse_your_treatment_objectives', aria-expanded='false', aria-controls='collapse_your_treatment_objectives')
+                            i.fa.fa-angle-down(aria-hidden="true")
+                            | Treatment Objectives
+                      #collapse_your_treatment_objectives.panel-collapse.collapse(role='tabpanel', aria-labelledby='your_treatment_objectives')
+                        .panel-body
+                          textarea.auto_grow#input_treatment_objectives(name="input_treatment_objectives")
+                    .panel.panel-default
+                      #your_treatment_options.panel-heading(role='tab')
+                        h4.panel-title
+                          a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion_user', href='#collapse_your_treatment_options', aria-expanded='false', aria-controls='collapse_your_treatment_options')
+                            i.fa.fa-angle-down(aria-hidden="true")
+                            | Treatment Options
+                      #collapse_your_treatment_options.panel-collapse.collapse(role='tabpanel', aria-labelledby='your_treatment_options')
+                        .panel-body
+                          textarea.auto_grow#input_treatment_options(name="input_treatment_options")
+                    .panel.panel-default
+                      #your_limitation.panel-heading(role='tab')
+                        h4.panel-title
+                          a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion_user', href='#collapse_your_limitation', aria-expanded='false', aria-controls='collapse_your_limitation')
+                            i.fa.fa-angle-down(aria-hidden="true")
+                            | Limitation to Treatment
+                      #collapse_your_limitation.panel-collapse.collapse(role='tabpanel', aria-labelledby='your_limitation')
+                        .panel-body
+                          textarea.auto_grow#input_your_limitation(name="input_your_limitation")
+                    .panel.panel-default
+                      #your_treatment_plan.panel-heading(role='tab')
+                        h4.panel-title
+                          a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion_user', href='#collapse_your_treatment_plan', aria-expanded='false', aria-controls='collapse_your_treatment_plan')
+                            i.fa.fa-angle-down(aria-hidden="true")
+                            | Treatment Plan
+                      #collapse_your_treatment_plan.panel-collapse.collapse(role='tabpanel', aria-labelledby='your_treatment_plan')
+                        .panel-body
+                          textarea.auto_grow#input_treatment_plan(name="input_treatment_plan")
+              .row.notes_modals
+                .col-xs-6
+                  a.btn_od_notes(href="", data-toggle="modal", data-target="#modal_orthodontist_notes", title="Orthodontist's Notes")
+                    i.fa.fa-file-text(aria-hidden="true")
+                  span Orthodontist's Notes
+                .col-xs-6                  
+                  a.btn_yo_notes(href="", data-toggle="modal", data-target="#modal_your_notes", title="Your Notes")
+                    i.fa.fa-file-text(aria-hidden="true")
+                  span Your Notes
+              .row
+                .col-sm-12
+                  .btn-group(role='group')
+                    button.btn_sec(type='button') Cancel
+                    button.btn_pri(type='submit') Save                                  
+            #media.tab-pane(role='tabpanel')
+              form.media_type_form
+                select#media_type_select.selectpicker(data-width="100%")
+                  option(value="0") All Media
+                  option(value="1") Ortho Set
+                  option(value="2") Panorex
+                  option(value="3") Lateral Cef
+                  option(value="4") Intra-oral Radiographs
+                  option(value="5") Misc Photos
+                  option(value="6") Documents
+              ul.nav.nav-tabs.media_tab(role='tablist')
+                li.active(role='presentation')
+                  a(href='#all_media', aria-controls='home', role='tab', data-toggle='tab') All Media
+                li(role='presentation')
+                  a(href='#ortho_set', aria-controls='profile', role='tab', data-toggle='tab') Ortho Set
+                li(role='presentation')
+                  a(href='#panorex', aria-controls='messages', role='tab', data-toggle='tab') Panorex
+                li(role='presentation')
+                  a(href='#lateral_cef', aria-controls='settings', role='tab', data-toggle='tab') Lateral CEF
+                li(role='presentation')
+                  a(href='#intra_oral_radiographs', aria-controls='settings', role='tab', data-toggle='tab') Intra-oral Radiographs
+                li(role='presentation')
+                  a(href='#misc_photo', aria-controls='settings', role='tab', data-toggle='tab') Misc Photos
+                li(role='presentation')
+                  a(href='#documents', aria-controls='settings', role='tab', data-toggle='tab') Documents
+              .tab-content
+                #all_media.tab-pane.active(role='tabpanel')
+                  .form-group
+                    select.selectpicker(name="select_all_media")
+                      option(value="", selected) Filter By - All
+                      option(value="all_images") All Images
+                      option(value="all_radiographs") All Radiographs
+                      option(value="all_documents") All Documents
+                      option(value="facial_profile") Facial Profile                      
+                      option(value="facial_front") Facial Front
+                      option(value="facial_front_smiling") Facial Front Smiling
+                      option(value="occlusal_upper") Occlusal Upper
+                      option(value="intra_oral_teeth_apart") Intra-oral-teeth apart
+                      option(value="occlusal_lower") Occlusal Lower
+                      option(value="intra_oral_right") Intra-oral Right
+                      option(value="intra_oral_center") Intra-oral Center
+                      option(value="intra_oral_left") Intra-oral Left
+                      option(value="panorex") Panorex
+                      option(value="lateral_cef") Lateral Cef
+                      option(value="misc_photos") Misc. Photos                      
+                    .all_media_gallery
+                      a(href="", data-toggle="modal", data-target="#modal_edit_media")
+                        img(src="images/all_media_1.png", alt="Sample Picture")
+                        span.timestamp 04/04/2017
+                      a.document(href="")
+                        img(src="images/all_media_pdf.png", alt="Sample Picture")                      
+                        span.document_name Some_Document_Title.pdf
+                        span.timestamp 04/04/2017
+                      a(href="")
+                        img(src="images/all_media_2.png", alt="Sample Picture")
+                        span.timestamp 04/04/2017
+                      a(href="")
+                        img(src="images/all_media_3.png", alt="Sample Picture")
+                        span.timestamp 04/04/2017
+                      a(href="")
+                        img(src="images/all_media_4.png", alt="Sample Picture")
+                        span.timestamp 04/04/2017
+                      a(href="")
+                        img(src="images/all_media_5.png", alt="Sample Picture")
+                        span.timestamp 04/04/2017
+                      a(href="")
+                        img(src="images/all_media_6.png", alt="Sample Picture")
+                        span.timestamp 04/04/2017
+                      a(href="")
+                        img(src="images/all_media_6.png", alt="Sample Picture")
+                        span.timestamp 04/04/2017
+                #ortho_set.tab-pane(role='tabpanel')
+                  .form-group
+                    select.selectpicker(name="select_ortho_set")
+                      option(value="active") March 29, 2017 11:59am
+                    .os_media_gallery
+                      div
+                        a(href="")
+                          img(src="images/ortho_set_1.png", alt="Sample Picture")
+                        a(href="") 
+                          img(src="images/ortho_set_2.png", alt="Sample Picture")
+                        a(href="")                      
+                          img(src="images/ortho_set_3.png", alt="Sample Picture")
+                      div
+                        a(href="")                      
+                          img(src="images/ortho_set_4.png", alt="Sample Picture")
+                        a(href="")                      
+                          img(src="http://placehold.it/180x123", alt="Sample Picture")
+                        a(href="")                      
+                          img(src="images/ortho_set_5.png", alt="Sample Picture")
+                      a(href="")                      
+                        img(src="images/ortho_set_6.png", alt="Sample Picture")
+                      a(href="")                      
+                        img(src="images/ortho_set_7.png", alt="Sample Picture")
+                      a(href="")                      
+                        img(src="images/ortho_set_8.png", alt="Sample Picture")
+                #panorex.tab-pane(role='tabpanel')
+                  .form-group
+                    select.selectpicker(name="select_panorex")
+                      option(value="active") Filter By - All
+                #lateral_cef.tab-pane(role='tabpanel')
+                  .form-group
+                    select.selectpicker(name="select_lateral_cef")
+                      option(value="active") Filter By - All
+                #intra_oral_radiographs.tab-pane(role='tabpanel')
+                  .form-group
+                    select.selectpicker(name="select_intra_oral_radiographs")
+                      option(value="active") Filter By - All
+                #misc_photo.tab-pane(role='tabpanel')
+                  .form-group
+                    select.selectpicker(name="select_misc_photos")
+                      option(value="active") Filter By - All
+                #documents.tab-pane(role='tabpanel')
+                  .form-group
+                    select.selectpicker(name="select_documents")
+                      option(value="active") Filter By - All
+        .sidebar
+          .row
+            .recent_ortho_set
+              h2 Recent Ortho Set
+              .gallery_ortho_set
+                .gallery-row
+                  a.swipebox(href="images/recent_ortho_set_1.png", rel="gallery_ortho_set", title="Recent Ortho Set")
+                    img.gallery-item(src="images/recent_ortho_set_1.png", alt="Sample picture")
+                  a.swipebox(href="images/recent_ortho_set_2.png", rel="gallery_ortho_set", title="Recent Ortho Set")
+                    img.gallery-item(src="images/recent_ortho_set_2.png", alt="Sample picture")
+                  a.swipebox(href="images/recent_ortho_set_3.png", rel="gallery_ortho_set", title="Recent Ortho Set")
+                    img.gallery-item(src="images/recent_ortho_set_3.png", alt="Sample picture")
+                .gallery-row
+                  a.swipebox(href="images/recent_ortho_set_4.png", rel="gallery_ortho_set", title="Recent Ortho Set")
+                    img.gallery-item(src="images/recent_ortho_set_4.png", alt="Sample picture")
+                  a.swipebox(href="")
+                    img.gallery-item
+                  a.swipebox(href="images/recent_ortho_set_5.png", rel="gallery_ortho_set", title="Recent Ortho Set")
+                    img.gallery-item(src="images/recent_ortho_set_5.png", alt="Sample picture")
+                .gallery-row
+                  a.swipebox(href="images/recent_ortho_set_6.png", rel="gallery_ortho_set", title="Recent Ortho Set")
+                    img.gallery-item(src="images/recent_ortho_set_6.png", alt="Sample picture")
+                  a.swipebox(href="images/recent_ortho_set_7.png", rel="gallery_ortho_set", title="Recent Ortho Set")
+                    img.gallery-item(src="images/recent_ortho_set_7.png", alt="Sample picture")
+                  a.swipebox(href="images/recent_ortho_set_8.png", rel="gallery_ortho_set", title="Recent Ortho Set")
+                    img.gallery-item(src="images/recent_ortho_set_8.png", alt="Sample picture")
+              span.timestamp 4 April 2016, 5:32 PM
+            .recent_panorex
+              h2 Recent Panorex
+              .gallery_panorex
+                a.swipebox(href="images/recent_panorex.png", rel="gallery_panorex", title="Recent Panorex")
+                  img.gallery-item(src="images/recent_panorex.png", alt="Sample picture")
+              span.timestamp 4 April 2016, 5:32 PM
+            .recent_lateral_cephalogram
+              h2 Recent Lateral Cephalogram              
+              .gallery_lateral_cephalogram              
+                a.swipebox(href="images/recent_lateral_cephalogram.png", rel="gallery_lateral_cephalogram", title="Recent Lateral Cephalogram ")
+                  img.gallery-item(src="images/recent_lateral_cephalogram.png", alt="Sample picture")
+              span.timestamp 4 April 2016, 5:32 PM
+            .recent_full_mouth_series
+              h2 Recent Full Mouth Series
+              .row
+                .first.col-xs-4
+                  .row
+                    .col-xs-6
+                      a.swipebox(href="images/recent_fms_1.png", rel="gallery_full_mouth", title="Recent Full Mouth Series")
+                        img.gallery-item(src="images/recent_fms_1.png", alt="Sample picture")
+                    .col-xs-6
+                      a.swipebox(href="images/recent_fms_1.png", rel="gallery_full_mouth", title="Recent Full Mouth Series")
+                        img.gallery-item(src="images/recent_fms_1.png", alt="Sample picture")
+                  .row
+                    .col-xs-6
+                      a.swipebox(href="images/recent_fms_1.png", rel="gallery_full_mouth", title="Recent Full Mouth Series")
+                        img.gallery-item(src="images/recent_fms_1.png", alt="Sample picture")
+                    .col-xs-6
+                      a.swipebox(href="images/recent_fms_1.png", rel="gallery_full_mouth", title="Recent Full Mouth Series")
+                        img.gallery-item(src="images/recent_fms_1.png", alt="Sample picture")
+                .second.col-xs-4
+                  .row.space
+                    .col-xs-4
+                      a.swipebox(href="images/recent_fms_2.png", rel="gallery_full_mouth", title="Recent Full Mouth Series")
+                        img.gallery-item(src="images/recent_fms_2.png", alt="Sample picture")
+                    .col-xs-4
+                      a.swipebox(href="images/recent_fms_2.png", rel="gallery_full_mouth", title="Recent Full Mouth Series")
+                        img.gallery-item(src="images/recent_fms_2.png", alt="Sample picture")
+                    .col-xs-4
+                      a.swipebox(href="images/recent_fms_2.png", rel="gallery_full_mouth", title="Recent Full Mouth Series")
+                        img.gallery-item(src="images/recent_fms_2.png", alt="Sample picture")
+                  .row
+                    .col-xs-4
+                      a.swipebox(href="images/recent_fms_2.png", rel="gallery_full_mouth", title="Recent Full Mouth Series")
+                        img.gallery-item(src="images/recent_fms_2.png", alt="Sample picture")
+                    .col-xs-4
+                      a.swipebox(href="images/recent_fms_2.png", rel="gallery_full_mouth", title="Recent Full Mouth Series")
+                        img.gallery-item(src="images/recent_fms_2.png", alt="Sample picture")
+                    .col-xs-4
+                      a.swipebox(href="images/recent_fms_2.png", rel="gallery_full_mouth", title="Recent Full Mouth Series")
+                        img.gallery-item(src="images/recent_fms_2.png", alt="Sample picture")
+                .third.col-xs-4
+                  .row
+                    .col-xs-6
+                      a.swipebox(href="images/recent_fms_1.png", rel="gallery_full_mouth", title="Recent Full Mouth Series")
+                        img.gallery-item(src="images/recent_fms_1.png", alt="Sample picture")
+                    .col-xs-6
+                      a.swipebox(href="images/recent_fms_1.png", rel="gallery_full_mouth", title="Recent Full Mouth Series")
+                        img.gallery-item(src="images/recent_fms_1.png", alt="Sample picture")
+                  .row
+                    .col-xs-6
+                      a.swipebox(href="images/recent_fms_1.png", rel="gallery_full_mouth", title="Recent Full Mouth Series")
+                        img.gallery-item(src="images/recent_fms_1.png", alt="Sample picture")
+                    .col-xs-6
+                      a.swipebox(href="images/recent_fms_1.png", rel="gallery_full_mouth", title="Recent Full Mouth Series")
+                        img.gallery-item(src="images/recent_fms_1.png", alt="Sample picture")
+              span.timestamp 4 April 2016, 5:32 PM
+  .row
+    include ../../_includes/orthodontist/footer
+include ../../_includes/modal_disclaimer
+include ../../_includes/modal_upload
+include ../../_includes/modal_your_notes
+include ../../_includes/modal_orthodontist_notes
+include ../../_includes/modal_edit_media
