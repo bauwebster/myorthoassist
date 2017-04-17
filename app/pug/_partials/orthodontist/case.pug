@@ -88,7 +88,7 @@ main.push.container-fluid(role="main")
                     span.timestamp 5 April 2016, 5:32 PM
               form.form_conversation_submit(action="")
                 .input-group
-                  input(type='text', placeholder='Write a message...')
+                  textarea.auto_grow(name='chat_message', placeholder='Write a message...')
                   span.input-group-btn
                     button.btn_pri(type='submit')
                       i.fa.fa-paper-plane(aria-hidden="true")

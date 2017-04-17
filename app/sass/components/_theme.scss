@@ -1951,39 +1951,83 @@
       }
     }
     .form_conversation_submit {
-      margin-left: -15px;
-      margin-right: -15px;
       @include clearfix();
+      position: relative;
+      border-top: 1px solid $grey-dark;
+      border-bottom: 1px solid $grey-dark;
+      background: $white;
+      margin-left: -$px_fifteen;
+      margin-right: -$px_fifteen;
       box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, 0.1);
       .fa {
         margin-right: $px_twenty;
       }
-      input {
-        padding-left: $px_thirty;
+      textarea {
+        width: calc(100% - 200px);
+        padding: $px_fifteen;
         border: none;
-        height: 80px;
-        line-height: 80px;
-        border-radius: 0;
-        padding-right: 45px;
+        color: $grey-tone;
+        resize: none;
+        line-height: normal;
         @include input_text_color($silver-dark);
+        @media #{$phablet} {
+          width: calc(100% - 65px);
+        }
       }
       button {
+        color: $color-primary;
+        border: none;
+        box-shadow: none;
+        background: none;
         @include font-size(16px);
+        border-radius: 0;
+        line-height: normal;
         text-transform: uppercase;
+        &:hover {
+          color: darken($color-primary, 10%);
+          box-shadow: none;
+          background: none;
+        }
+        &:active {
+          color: darken($color-primary, 10%);
+          box-shadow: none;
+          background: none;
+        }
+        &:focus {
+          color: darken($color-primary, 10%);
+          box-shadow: none;
+          background: none;
+        }
+        @media #{$phablet} {
+          .fa {
+            margin-right: 5px;
+          }
+          span {
+            display: none;
+          }
+        }
       }
       .input-group {
-        position: relative;
-        width: 100%;
+        display: block;
       }
       .input-group-btn {
         position: absolute;
         top: 0;
-        right: 15px;
+        right: 0;
+        bottom: 0;
         width: auto;
-        line-height: 80px;
+        padding: $px_fifteen;
         background-color: $white;
-        padding-left: $px_thirty;
-        padding-right: $px_thirty;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @media #{$phablet} {
+          padding: 0;
+          right: $px_fifteen;
+        }
+        > .btn {
+          flex: 1 1 0%;
+        }
       }
     }
     .chat_window {
@@ -2126,23 +2170,13 @@
       padding: $px_fifteen 0 !important;
     }
     .form_conversation_submit {
-      position: fixed;
-      left: 0;
+      position: fixed !important;
+      left: $px_fifteen;
       bottom: 72px;
-      right: 0;
-      background-color: $white;
-      border-top: 1px solid $grey-dark;
-      text-align: center !important;
+      right: $px_fifteen;
+      border-bottom: none !important;
       .btn_pri span {
         display: none;
-      }
-      input {
-        height: 50px !important;
-        line-height: 50px !important;
-      }
-      .input-group-btn {
-        padding-right: 0 !important;
-        line-height: 50px !important;
       }
     }
     // Diagnosis
@@ -2779,39 +2813,83 @@
       }
     }
     .form_conversation_submit {
-      margin-left: -15px;
-      margin-right: -15px;
       @include clearfix();
+      position: relative;
+      border-top: 1px solid $grey-dark;
+      border-bottom: 1px solid $grey-dark;
+      background: $white;
+      margin-left: -$px_fifteen;
+      margin-right: -$px_fifteen;
       box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, 0.1);
       .fa {
         margin-right: $px_twenty;
       }
-      input {
-        padding-left: $px_thirty;
+      textarea {
+        width: calc(100% - 200px);
+        padding: $px_fifteen;
         border: none;
-        height: 80px;
-        line-height: 80px;
-        border-radius: 0;
-        padding-right: 45px;
+        color: $grey-tone;
+        resize: none;
+        line-height: normal;
         @include input_text_color($silver-dark);
+        @media #{$phablet} {
+          width: calc(100% - 65px);
+        }
       }
       button {
+        color: $color-primary;
+        border: none;
+        box-shadow: none;
+        background: none;
         @include font-size(16px);
+        border-radius: 0;
+        line-height: normal;
         text-transform: uppercase;
+        &:hover {
+          color: darken($color-primary, 10%);
+          box-shadow: none;
+          background: none;
+        }
+        &:active {
+          color: darken($color-primary, 10%);
+          box-shadow: none;
+          background: none;
+        }
+        &:focus {
+          color: darken($color-primary, 10%);
+          box-shadow: none;
+          background: none;
+        }
+        @media #{$phablet} {
+          .fa {
+            margin-right: 5px;
+          }
+          span {
+            display: none;
+          }
+        }
       }
       .input-group {
-        position: relative;
-        width: 100%;
+        display: block;
       }
       .input-group-btn {
         position: absolute;
         top: 0;
-        right: 15px;
+        right: 0;
+        bottom: 0;
         width: auto;
-        line-height: 80px;
+        padding: $px_fifteen;
         background-color: $white;
-        padding-left: $px_thirty;
-        padding-right: $px_thirty;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @media #{$phablet} {
+          padding: 0;
+          right: $px_fifteen;
+        }
+        > .btn {
+          flex: 1 1 0%;
+        }
       }
     }
     .chat_window {
@@ -3002,23 +3080,13 @@
       padding: $px_fifteen 0 !important;
     }
     .form_conversation_submit {
-      position: fixed;
-      left: 0;
+      position: fixed !important;
+      left: $px_fifteen;
       bottom: 72px;
-      right: 0;
-      background-color: $white;
-      border-top: 1px solid $grey-dark;
-      text-align: center !important;
+      right: $px_fifteen;
+      border-bottom: none !important;
       .btn_pri span {
         display: none;
-      }
-      input {
-        height: 50px !important;
-        line-height: 50px !important;
-      }
-      .input-group-btn {
-        padding-right: 0 !important;
-        line-height: 50px !important;
       }
     }
     // Diagnosis
