@@ -131,7 +131,7 @@ $(document).ready(function() {
   $('.swipebox').swipebox();
 
   // 4. Autogrow Textareas
-  $('.auto_grow').autogrow({vertical: true, horizontal: false});
+  $('.auto_grow').autogrow({vertical: true, horizontal: false, flickering: false});
 
   // 5. Popovers
   $('.modal_popover').popover({

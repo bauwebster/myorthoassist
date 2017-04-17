@@ -1534,6 +1534,11 @@
         margin: $px_five 0 0;
       }
     }
+    .register_fields {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
   }
   // Content styles for Case - DENTIST
   .media_tab {
@@ -1954,7 +1959,6 @@
       @include clearfix();
       position: relative;
       border-top: 1px solid $grey-dark;
-      border-bottom: 1px solid $grey-dark;
       background: $white;
       margin-left: -$px_fifteen;
       margin-right: -$px_fifteen;
@@ -1969,6 +1973,7 @@
         color: $grey-tone;
         resize: none;
         line-height: normal;
+        box-shadow: none !important;
         @include input_text_color($silver-dark);
         @media #{$phablet} {
           width: calc(100% - 65px);
@@ -2000,6 +2005,7 @@
         }
         @media #{$phablet} {
           .fa {
+            margin-top: 15px;
             margin-right: 5px;
           }
           span {
@@ -2018,16 +2024,16 @@
         width: auto;
         padding: $px_fifteen;
         background-color: $white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
         @media #{$phablet} {
           padding: 0;
           right: $px_fifteen;
         }
-        > .btn {
-          flex: 1 1 0%;
-        }
+        // > .btn {
+        //   flex: 1 1 0%;
+        // }
       }
     }
     .chat_window {
@@ -2816,7 +2822,6 @@
       @include clearfix();
       position: relative;
       border-top: 1px solid $grey-dark;
-      border-bottom: 1px solid $grey-dark;
       background: $white;
       margin-left: -$px_fifteen;
       margin-right: -$px_fifteen;
@@ -2827,6 +2832,7 @@
       textarea {
         width: calc(100% - 200px);
         padding: $px_fifteen;
+        box-shadow: none !important;
         border: none;
         color: $grey-tone;
         resize: none;
