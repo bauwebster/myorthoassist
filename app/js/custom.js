@@ -140,20 +140,17 @@ $(document).ready(function() {
 
   // 6. Dismiss Upload modal below 768
   if($(window).width() < 768) {
-
     $('#upload_files').modal('hide');
-
-    // var $select = $('<select class="selectpicker"></select>');
-    // $('.media_tab li a').each(function() {
-    //   $select.append('<option>' + $(this).text() + '</option>');
-    // });
-    // $('.nav').before($select).remove();
-
 	}
   $(window).on("load resize", function() {
     if($(window).width() < 768) {
       $('#upload_files').modal('hide');
     }
+  });
+
+  // 7. Nav tabs to Select on Case page
+  $('#media_type_select').on('change', function (e) {
+    $('.media_tab li a').eq($(this).val()).tab('show'); 
   });
 
 });

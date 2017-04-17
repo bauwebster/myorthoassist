@@ -1535,6 +1535,56 @@
   }
 }
 // Content styles
+.media_tab {
+  @media #{$phablet} {
+    display: none;
+  }
+}
+.tab-pane#media {
+  .media_type_form {
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    .bootstrap-select {
+      margin:0;
+      .btn {
+        border-top:0;
+        border-left:0;
+        border-right:0;
+        border-radius:0;
+      }
+    }
+  }
+  @media #{$phablet__up} {
+    .media_type_form {
+      display: none;
+    }
+  }
+  @media #{$phablet} {
+    .tab-content {
+      .tab-pane {
+        padding-top:61px;
+        > .form-group {
+          position: absolute;
+          top:32px;
+          left:0;
+          width: 100%;
+          .bootstrap-select {
+            margin:0;
+            width: 100%;
+            .btn {
+              border-top:0;
+              border-left:0;
+              border-right:0;
+              border-radius:0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 .orthodontist_notes {
   height: 494px;
   overflow-y: auto;

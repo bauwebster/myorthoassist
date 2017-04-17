@@ -267,6 +267,15 @@ main.push.container-fluid(role="main")
                     button.btn_sec(type='button') Cancel
                     button.btn_pri(type='submit') Save                                  
             #media.tab-pane(role='tabpanel')
+              form.media_type_form
+                select#media_type_select.selectpicker(data-width="100%")
+                  option(value="0") All Media
+                  option(value="1") Ortho Set
+                  option(value="2") Panorex
+                  option(value="3") Lateral Cef
+                  option(value="4") Intra-oral Radiographs
+                  option(value="5") Misc Photos
+                  option(value="6") Documents
               ul.nav.nav-tabs.media_tab(role='tablist')
                 li.active(role='presentation')
                   a(href='#all_media', aria-controls='home', role='tab', data-toggle='tab') All Media
