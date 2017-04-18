@@ -81,12 +81,12 @@
       padding: 0;
     }
     .image-editor-wrap {
-      margin: 0 0 $px_thirty;
-      width: 202px;
+      margin: 0 auto $px_thirty;
+      width: 352px;
       .image-container,
       .cropit-preview {
-        width: 200px;
-        height: 200px;
+        width: 350px;
+        height: 250px;
         background-size:45%;
       }
     }

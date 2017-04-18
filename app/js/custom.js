@@ -188,14 +188,4 @@ $(document).ready(function() {
     $(this).closest('.image-editor').cropit('rotateCCW');
   });
 
-  // 9. Use Hash to link to Active tab
-  var hash = document.location.hash;
-  if (hash) {
-    $('.parent-tab a[href='+hash+']').tab('show');
-  }
-  // Change hash for page-reload
-  $('.parent-tab a').on('shown.bs.tab', function (e) {
-    window.location.hash = e.target.hash;
-  });
-
 });
