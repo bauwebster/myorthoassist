@@ -313,130 +313,221 @@ main.push.container-fluid(role="main")
                       option(value="panorex") Panorex
                       option(value="lateral_cef") Lateral Cef
                       option(value="misc_photos") Misc. Photos                      
-                  .timed_gallery
-                    a(href="",data-toggle="modal", data-target="#modal_edit_media")
-                      img(src="images/all_media_1.png", alt="Sample Picture")
-                      span.timestamp 04/04/2017
-                    a.document(href="")
-                      img(src="images/all_media_pdf.png", alt="Sample Picture")                      
-                      span.document_name Some_Document_Title.pdf
-                      span.timestamp 04/04/2017
-                    a.swipebox(href="images/all_media_2.png", rel="gallery_all_media", title="All Media")
-                      img(src="images/all_media_2.png", alt="Sample Picture")
-                      span.timestamp 04/04/2017
-                    a.swipebox(href="images/all_media_3.png", rel="gallery_all_media", title="All Media")
-                      img(src="images/all_media_3.png", alt="Sample Picture")
-                      span.timestamp 04/04/2017
-                    a.swipebox(href="images/all_media_4.png", rel="gallery_all_media", title="All Media")
-                      img(src="images/all_media_4.png", alt="Sample Picture")
-                      span.timestamp 04/04/2017
-                    a.swipebox(href="images/all_media_5.png", rel="gallery_all_media", title="All Media")
-                      img(src="images/all_media_5.png", alt="Sample Picture")
-                      span.timestamp 04/04/2017
-                    a.swipebox(href="images/all_media_6.png", rel="gallery_all_media", title="All Media")
-                      img(src="images/all_media_6.png", alt="Sample Picture")
-                      span.timestamp 04/04/2017
-                    a.swipebox(href="images/all_media_6.png", rel="gallery_all_media", title="All Media")
-                      img(src="images/all_media_6.png", alt="Sample Picture")
-                      span.timestamp 04/04/2017
+                  .media_gallery
+                    ul
+                      li
+                        a.edit(href="",data-toggle="modal", data-target="#modal_edit_media")
+                          i.fa.fa-pencil(aria-hidden="true")
+                        a.swipebox(href="images/all_media_1.png", rel="gallery_all_media", title="All Media")
+                          img(src="images/all_media_1.png", alt="Sample Picture")
+                          span.timestamp 04/04/2017
+                      li
+                        a.edit(href="",data-toggle="modal", data-target="#modal_edit_media")
+                          i.fa.fa-pencil(aria-hidden="true")
+                        a.document(href="http://www.pdf995.com/samples/pdf.pdf" target="_blank")
+                          img(src="images/all_media_pdf.png", alt="Sample Picture")                      
+                          span.document_name Some_Document_Title.pdf
+                          span.timestamp 04/04/2017
+                      li
+                        a.edit(href="",data-toggle="modal", data-target="#modal_edit_media")
+                          i.fa.fa-pencil(aria-hidden="true")
+                        a.swipebox(href="images/all_media_2.png", rel="gallery_all_media", title="All Media")
+                          img(src="images/all_media_2.png", alt="Sample Picture")
+                          span.timestamp 04/04/2017
+                      li
+                        a.edit(href="",data-toggle="modal", data-target="#modal_edit_media")
+                          i.fa.fa-pencil(aria-hidden="true")
+                        a.swipebox(href="images/all_media_3.png", rel="gallery_all_media", title="All Media")
+                          img(src="images/all_media_3.png", alt="Sample Picture")
+                          span.timestamp 04/04/2017
+                      li
+                        a.edit(href="",data-toggle="modal", data-target="#modal_edit_media")
+                          i.fa.fa-pencil(aria-hidden="true")
+                        a.swipebox(href="images/all_media_4.png", rel="gallery_all_media", title="All Media")
+                          img(src="images/all_media_4.png", alt="Sample Picture")
+                          span.timestamp 04/04/2017
+                      li
+                        a.edit(href="",data-toggle="modal", data-target="#modal_edit_media")
+                          i.fa.fa-pencil(aria-hidden="true")
+                        a.swipebox(href="images/all_media_5.png", rel="gallery_all_media", title="All Media")
+                          img(src="images/all_media_5.png", alt="Sample Picture")
+                          span.timestamp 04/04/2017
+                      li
+                        a.edit(href="",data-toggle="modal", data-target="#modal_edit_media")
+                          i.fa.fa-pencil(aria-hidden="true")
+                        a.swipebox(href="images/all_media_6.png", rel="gallery_all_media", title="All Media")
+                          img(src="images/all_media_6.png", alt="Sample Picture")
+                          span.timestamp 04/04/2017
+                      li
+                        a.edit(href="",data-toggle="modal", data-target="#modal_edit_media")
+                          i.fa.fa-pencil(aria-hidden="true")
+                        a.swipebox(href="images/all_media_6.png", rel="gallery_all_media", title="All Media")
+                          img(src="images/all_media_6.png", alt="Sample Picture")
+                          span.timestamp 04/04/2017
                 #ortho_set.tab-pane(role='tabpanel')
                   .form-group
                     select.selectpicker(name="select_ortho_set")
                       option(value="active") March 29, 2017 11:59am
-                  .timed_gallery
+                  .media_gallery
                     div
-                      a.swipebox(href="images/ortho_set_1.png", rel="gallery_ortho_set", title="Ortho Set")
-                        img(src="images/ortho_set_1.png", alt="Sample Picture")
-                        span.timestamp 04/04/2017
-                      a.swipebox(href="images/ortho_set_2.png", rel="gallery_ortho_set", title="Ortho Set")
-                        img(src="images/ortho_set_2.png", alt="Sample Picture")
-                        span.timestamp 04/04/2017
-                      a.swipebox(href="images/ortho_set_3.png", rel="gallery_ortho_set", title="Ortho Set")             
-                        img(src="images/ortho_set_3.png", alt="Sample Picture")
-                        span.timestamp 04/04/2017
+                      ul
+                        li
+                          a.edit(href="",data-toggle="modal", data-target="#modal_edit_media")
+                            i.fa.fa-pencil(aria-hidden="true")
+                          a.swipebox(href="images/ortho_set_1.png", rel="gallery_ortho_set", title="Ortho Set")
+                            img(src="images/ortho_set_1.png", alt="Sample Picture")
+                            span.timestamp 04/04/2017
+                        li
+                          a.edit(href="",data-toggle="modal", data-target="#modal_edit_media")
+                            i.fa.fa-pencil(aria-hidden="true")
+                          a.swipebox(href="images/ortho_set_2.png", rel="gallery_ortho_set", title="Ortho Set")
+                            img(src="images/ortho_set_2.png", alt="Sample Picture")
+                            span.timestamp 04/04/2017
+                        li
+                          a.edit(href="",data-toggle="modal", data-target="#modal_edit_media")
+                            i.fa.fa-pencil(aria-hidden="true")
+                          a.swipebox(href="images/ortho_set_3.png", rel="gallery_ortho_set", title="Ortho Set")             
+                            img(src="images/ortho_set_3.png", alt="Sample Picture")
+                            span.timestamp 04/04/2017                                                
                     div
-                      a.swipebox(href="images/ortho_set_4.png", rel="gallery_ortho_set", title="Ortho Set")           
-                        img(src="images/ortho_set_4.png", alt="Sample Picture")
-                        span.timestamp 04/04/2017
-                      a.swipebox(href="http://placehold.it/180x123", rel="gallery_ortho_set", title="Ortho Set")               
-                        img(src="http://placehold.it/180x123", alt="Sample Picture")
-                        span.timestamp 04/04/2017
-                      a.swipebox(href="images/ortho_set_5.png", rel="gallery_ortho_set", title="Ortho Set")             
-                        img(src="images/ortho_set_5.png", alt="Sample Picture")
-                        span.timestamp 04/04/2017
+                      ul
+                        li
+                          a.edit(href="",data-toggle="modal", data-target="#modal_edit_media")
+                            i.fa.fa-pencil(aria-hidden="true")
+                          a.swipebox(href="images/ortho_set_4.png", rel="gallery_ortho_set", title="Ortho Set")           
+                            img(src="images/ortho_set_4.png", alt="Sample Picture")
+                            span.timestamp 04/04/2017
+                        li
+                          a.edit(href="",data-toggle="modal", data-target="#modal_edit_media")
+                            i.fa.fa-pencil(aria-hidden="true")
+                          a.swipebox(href="http://placehold.it/180x123", rel="gallery_ortho_set", title="Ortho Set")               
+                            img(src="http://placehold.it/180x123", alt="Sample Picture")
+                            span.timestamp 04/04/2017
+                        li
+                          a.edit(href="",data-toggle="modal", data-target="#modal_edit_media")
+                            i.fa.fa-pencil(aria-hidden="true")
+                          a.swipebox(href="images/ortho_set_5.png", rel="gallery_ortho_set", title="Ortho Set")             
+                            img(src="images/ortho_set_5.png", alt="Sample Picture")
+                            span.timestamp 04/04/2017
                     div
-                      a.swipebox(href="images/ortho_set_6.png", rel="gallery_ortho_set", title="Ortho Set")                   
-                        img(src="images/ortho_set_6.png", alt="Sample Picture")
-                        span.timestamp 04/04/2017
-                      a.swipebox(href="images/ortho_set_7.png", rel="gallery_ortho_set", title="Ortho Set")                    
-                        img(src="images/ortho_set_7.png", alt="Sample Picture")
-                        span.timestamp 04/04/2017
-                      a.swipebox(href="images/ortho_set_8.png", rel="gallery_ortho_set", title="Ortho Set")                 
-                        img(src="images/ortho_set_8.png", alt="Sample Picture")
-                        span.timestamp 04/04/2017
+                      ul
+                        li
+                          a.edit(href="",data-toggle="modal", data-target="#modal_edit_media")
+                            i.fa.fa-pencil(aria-hidden="true")
+                          a.swipebox(href="images/ortho_set_6.png", rel="gallery_ortho_set", title="Ortho Set")                   
+                            img(src="images/ortho_set_6.png", alt="Sample Picture")
+                            span.timestamp 04/04/2017
+                        li
+                          a.edit(href="",data-toggle="modal", data-target="#modal_edit_media")
+                            i.fa.fa-pencil(aria-hidden="true")
+                          a.swipebox(href="images/ortho_set_7.png", rel="gallery_ortho_set", title="Ortho Set")                    
+                            img(src="images/ortho_set_7.png", alt="Sample Picture")
+                            span.timestamp 04/04/2017
+                        li
+                          a.edit(href="",data-toggle="modal", data-target="#modal_edit_media")
+                            i.fa.fa-pencil(aria-hidden="true")
+                          a.swipebox(href="images/ortho_set_8.png", rel="gallery_ortho_set", title="Ortho Set")                 
+                            img(src="images/ortho_set_8.png", alt="Sample Picture")
+                            span.timestamp 04/04/2017
                 #panorex.tab-pane(role='tabpanel')
                   .form-group
                     select.selectpicker(name="select_panorex")
                       option(value="active") March 29, 2017 11:59am
-                  .timed_gallery
-                    a.swipebox(href="images/recent_panorex.png", rel="gallery_panorex", title="Panorex")
-                      img(src="images/recent_panorex.png", alt="Sample Picture")
-                      span.timestamp 04/04/2017
+                  .media_gallery
+                    ul
+                      li
+                        a.edit(href="",data-toggle="modal", data-target="#modal_edit_media")
+                          i.fa.fa-pencil(aria-hidden="true")
+                        a.swipebox(href="images/recent_panorex.png", rel="gallery_panorex", title="Panorex")
+                          img(src="images/recent_panorex.png", alt="Sample Picture")
+                          span.timestamp 04/04/2017
                 #lateral_cef.tab-pane(role='tabpanel')
                   .form-group
                     select.selectpicker(name="select_lateral_cef")
                       option(value="active") March 29, 2017 11:59am
-                  .timed_gallery
-                    a.swipebox(href="images/recent_lateral_cephalogram.png", rel="gallery_lateral_cef", title="Lateral CEF")
-                      img(src="images/recent_lateral_cephalogram.png", alt="Sample Picture")
-                      span.timestamp 04/04/2017
+                  .media_gallery
+                    ul
+                      li
+                        a.edit(href="",data-toggle="modal", data-target="#modal_edit_media")
+                          i.fa.fa-pencil(aria-hidden="true")
+                        a.swipebox(href="images/recent_lateral_cephalogram.png", rel="gallery_lateral_cef", title="Lateral CEF")
+                          img(src="images/recent_lateral_cephalogram.png", alt="Sample Picture")
+                          span.timestamp 04/04/2017
                 #intra_oral_radiographs.tab-pane(role='tabpanel')
                   .form-group
                     select.selectpicker(name="select_intra_oral_radiographs")
                       option(value="active") March 29, 2017 11:59am
-                  .timed_gallery
-                    div
-                      a.swipebox(href="images/illustrations/x-ray-1.jpg", rel="gallery_intra_oral_radiographs", title="Intra Oral Radiographs")
-                        img(src="images/illustrations/x-ray-1.jpg", alt="Sample Picture")
-                        span.timestamp 04/04/2017
-                      a.swipebox(href="images/illustrations/x-ray-2.jpg", rel="gallery_intra_oral_radiographs", title="Intra Oral Radiographs")
-                        img(src="images/illustrations/x-ray-2.jpg", alt="Sample Picture")
-                        span.timestamp 04/04/2017
-                      a.swipebox(href="images/illustrations/x-ray-3.jpg", rel="gallery_intra_oral_radiographs", title="Intra Oral Radiographs")                  
-                        img(src="images/illustrations/x-ray-3.jpg", alt="Sample Picture")
-                        span.timestamp 04/04/2017
+                  .media_gallery
+                    ul
+                      li
+                        a.edit(href="",data-toggle="modal", data-target="#modal_edit_media")
+                          i.fa.fa-pencil(aria-hidden="true")
+                        a.swipebox(href="images/illustrations/x-ray-1.jpg", rel="gallery_intra_oral_radiographs", title="Intra Oral Radiographs")
+                          img(src="images/illustrations/x-ray-1.jpg", alt="Sample Picture")
+                          span.timestamp 04/04/2017
+                      li
+                        a.edit(href="",data-toggle="modal", data-target="#modal_edit_media")
+                          i.fa.fa-pencil(aria-hidden="true")
+                        a.swipebox(href="images/illustrations/x-ray-2.jpg", rel="gallery_intra_oral_radiographs", title="Intra Oral Radiographs")
+                          img(src="images/illustrations/x-ray-2.jpg", alt="Sample Picture")
+                          span.timestamp 04/04/2017
+                      li
+                        a.edit(href="",data-toggle="modal", data-target="#modal_edit_media")
+                          i.fa.fa-pencil(aria-hidden="true")
+                        a.swipebox(href="images/illustrations/x-ray-3.jpg", rel="gallery_intra_oral_radiographs", title="Intra Oral Radiographs")                  
+                          img(src="images/illustrations/x-ray-3.jpg", alt="Sample Picture")
+                          span.timestamp 04/04/2017
                 #misc_photo.tab-pane(role='tabpanel')
                   .form-group
                     select.selectpicker(name="select_misc_photos")
                       option(value="active") March 29, 2017 11:59am
-                  .timed_gallery
-                    div
-                      a.swipebox(href="http://placehold.it/201x200", rel="gallery_misc_photo", title="Misc Photo")
-                        img(src="http://placehold.it/201x200", alt="Sample Picture")
-                        span.timestamp 04/04/2017
-                      a.swipebox(href="http://placehold.it/202x200", rel="gallery_misc_photo", title="Misc Photo") 
-                        img(src="http://placehold.it/202x200", alt="Sample Picture")
-                        span.timestamp 04/04/2017
-                      a.swipebox(href="http://placehold.it/203x200", rel="gallery_misc_photo", title="Misc Photo")                      
-                        img(src="http://placehold.it/203x200", alt="Sample Picture")
-                        span.timestamp 04/04/2017
+                      .media_gallery
+                        ul
+                          li
+                            a.edit(href="",data-toggle="modal", data-target="#modal_edit_media")
+                              i.fa.fa-pencil(aria-hidden="true")
+                            a.swipebox(href="http://placehold.it/201x200", rel="gallery_misc_photo", title="Misc Photo")
+                              img(src="http://placehold.it/201x200", alt="Sample Picture")
+                              span.timestamp 04/04/2017
+                          li
+                            a.edit(href="",data-toggle="modal", data-target="#modal_edit_media")
+                              i.fa.fa-pencil(aria-hidden="true")
+                            a.swipebox(href="http://placehold.it/202x200", rel="gallery_misc_photo", title="Misc Photo") 
+                              img(src="http://placehold.it/202x200", alt="Sample Picture")
+                              span.timestamp 04/04/2017
+                          li
+                            a.edit(href="",data-toggle="modal", data-target="#modal_edit_media")
+                              i.fa.fa-pencil(aria-hidden="true")
+                            a.swipebox(href="http://placehold.it/203x200", rel="gallery_misc_photo", title="Misc Photo")                      
+                              img(src="http://placehold.it/203x200", alt="Sample Picture")
+                              span.timestamp 04/04/2017
                 #documents.tab-pane(role='tabpanel')
                   .form-group
                     select.selectpicker(name="select_documents")
                       option(value="active") March 29, 2017 11:59am
-                  .timed_gallery
-                    a.document(href="")
-                      img(src="images/all_media_pdf.png", alt="Sample Picture")                      
-                      span.document_name Some_Document_Title.pdf
-                      span.timestamp 04/04/2017
-                    a.document(href="")
-                      img(src="images/all_media_pdf.png", alt="Sample Picture")                      
-                      span.document_name Some_Document_Title.pdf
-                      span.timestamp 04/04/2017
-                    a.document(href="")
-                      img(src="images/all_media_pdf.png", alt="Sample Picture")                      
-                      span.document_name Some_Document_Title.pdf
-                      span.timestamp 04/04/2017
+                  .media_gallery
+                    ul
+                      li
+                        a.edit(href="",data-toggle="modal", data-target="#modal_edit_media")
+                          i.fa.fa-pencil(aria-hidden="true")
+                        a.document(href="")
+                          img(src="images/all_media_pdf.png", alt="Sample Picture")                      
+                          span.document_name Some_Document_Title.pdf
+                          span.timestamp 04/04/2017
+                      li
+                        a.edit(href="",data-toggle="modal", data-target="#modal_edit_media")
+                          i.fa.fa-pencil(aria-hidden="true")
+                        a.document(href="")
+                          img(src="images/all_media_pdf.png", alt="Sample Picture")                      
+                          span.document_name Some_Document_Title.pdf
+                          span.timestamp 04/04/2017
+                      li
+                        a.edit(href="",data-toggle="modal", data-target="#modal_edit_media")
+                          i.fa.fa-pencil(aria-hidden="true")
+                        a.document(href="")
+                          img(src="images/all_media_pdf.png", alt="Sample Picture")                      
+                          span.document_name Some_Document_Title.pdf
+                          span.timestamp 04/04/2017
         .sidebar
           .row
             .recent_ortho_set
