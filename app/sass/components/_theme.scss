@@ -2066,6 +2066,9 @@
       padding: $px_fifteen;
       max-height: 478px;
       overflow-y: scroll;
+      @media #{$desktop__up} {
+        max-height: 600px;
+      }
     }
     .panel {
       display: block;
@@ -2940,6 +2943,9 @@
       padding: $px_fifteen;
       max-height: 478px;
       overflow-y: scroll;
+      @media #{$desktop__up} {
+        max-height: 600px;
+      }
     }
     .panel {
       display: block;
