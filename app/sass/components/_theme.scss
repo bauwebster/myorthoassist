@@ -1745,6 +1745,8 @@
       font-weight: $font-weight-regular;
     }
     .media_gallery {
+      height: 600px;
+      overflow: auto;
       ul {
         list-style:none;
         padding:0;
@@ -2622,6 +2624,8 @@
       font-weight: $font-weight-regular;
     }
     .media_gallery {
+      height: 600px;
+      overflow: auto;
       ul {
         list-style:none;
         padding:0;
