@@ -2633,6 +2633,88 @@
       @include font-size(14px);
       font-weight: $font-weight-regular;
     }
+    .media_gallery {
+      ul {
+        list-style:none;
+        padding:0;
+        margin:0;
+        li {
+          display: inline-block;
+          a.edit {
+
+          }
+          .timestamp {
+            opacity: 0;
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+            z-index: 2;
+            color: $white;
+            transition: all .5s;
+            @include font-size(10px);
+          }
+          .document_name {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: $grey-tone;
+            @include font-size(14px);
+          }
+          .edit_picture {
+            display: block;
+            opacity: 0;
+            position: absolute;
+            right: 5px;
+            bottom: 5px;
+            @include font-size(12px);
+            color: $white;
+          }
+          .document {
+            background-color: $greyant;
+          }
+          a.swipebox,
+          a.document {
+            display: inline-block;
+            position: relative;
+            &::after {
+              position: absolute;
+              content: '\A';
+              width: 100%;
+              height: 100%;
+              opacity: 0;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              z-index: 5;
+              transition: all 0.5s;
+              // background: rgba(0,0,0,0.4);
+              /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100 */
+              background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+              background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+              background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+            }
+            &:hover {
+              &::after {
+                opacity: 1;
+              }
+              .timestamp {
+                opacity: 1;
+                z-index: 10;
+                transition: all .5s;
+              }
+              .edit_picture {
+                z-index: 10;
+                opacity: 1;
+                transition: all .5s;
+              }
+            }
+          }
+        }
+      }
+    }
     .timed_gallery {
       .timestamp {
         opacity: 0;
