@@ -7,13 +7,15 @@
         h4.modal-title Edit Media
       //- .modal-header
       .modal-body     
-        .image-editor
-          .cropit-preview
-          input.cropit-image-zoom-input(type='range')
-          button.rotate-ccw
-            i.fa.fa-undo(aria-hidden='true')
-          button.rotate-cw
-            i.fa.fa-repeat(aria-hidden='true') 
+        .image-editor-wrap
+          .image-container(style="background-image:url('images/image_icon_watermark.png');")
+            .image-editor
+              .cropit-preview
+              input.cropit-image-zoom-input(type='range')
+              button.rotate-ccw
+                i.fa.fa-undo(aria-hidden='true')
+              button.rotate-cw
+                i.fa.fa-repeat(aria-hidden='true')
         hr
         .form-group
           label(for="edit_media_date") Upload Date
