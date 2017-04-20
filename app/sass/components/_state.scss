@@ -188,23 +188,23 @@ textarea {
     color: darken($grey-darkest, 20%);
   }
 }
-.btn_pri_solid {
-  @extend .btn;
-  @extend .btn-primary;
-  color: $white;
-  &:hover {
-    color: darken($white, 20%);
-    background-color: darken($color-primary, 5%);
-  }
-  &:active {
-    color: darken($white, 20%);
-    background-color: darken($color-primary, 5%);
-  }
-  &:focus {
-    color: darken($white, 20%);
-    background-color: darken($color-primary, 5%);
-  }
-}
+// .btn_pri_solid {
+//   @extend .btn;
+//   @extend .btn-primary;
+//   color: $white;
+//   &:hover {
+//     color: darken($white, 20%);
+//     background-color: darken($color-primary, 5%);
+//   }
+//   &:active {
+//     color: darken($white, 20%);
+//     background-color: darken($color-primary, 5%);
+//   }
+//   &:focus {
+//     color: darken($white, 20%);
+//     background-color: darken($color-primary, 5%);
+//   }
+// }
 .btn_pri_solid {
   @extend .btn;
   color: $white;

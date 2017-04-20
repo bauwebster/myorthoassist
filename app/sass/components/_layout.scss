@@ -502,7 +502,7 @@ Table of Contents:
   }
 }
 
-// 10. Terms Page - ORTHODONTIST
+// 11. Terms Page - ORTHODONTIST
 .terms-orthodontist {
   .page-title {
     @include make-sm-column(12);
@@ -512,5 +512,40 @@ Table of Contents:
   }
   .site-footer {
     @include make-sm-column(12);
+  }
+}
+
+// 12. Error
+.error {
+  .columns {
+    @include make-sm-column(8);
+    @include make-sm-column-offset(2);
+  }
+  main {
+    @media #{$phablet__up} {
+      // --- Align this box vertically centered
+      // --- Source: https://css-tricks.com/centering-css-complete-guide/
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      // --- Align this box vertically centered
+    }
+  }
+  footer {
+    @media #{$phablet__up} {
+      // --- Align this box vertically centered
+      // --- Source: https://css-tricks.com/centering-css-complete-guide/
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      // --- Align this box vertically centered
+    }
+    @media #{$desktop} {
+      bottom: 0;
+    }
+    @media #{$desktop__up} {
+      bottom: 3%;
+    }
   }
 }

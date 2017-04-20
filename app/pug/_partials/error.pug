@@ -1,0 +1,34 @@
+main.container(role="main")
+  .row
+    .columns
+      figure
+        img(src="images/logo.png", alt="MyOrthoAssist", title="My Ortho Assist App")
+      .well
+        h1.page-title
+          i.fa.fa-exclamation-circle(aria-hidden='true')
+          | System Error. Oops you've have encountered an error.
+        p
+          | It appears that Either something went wrong or the page doesn't exist anymore..
+        p
+          | This website is temporarily unable to service your request as it has exceeded it's resource limit. Please check back shortly.
+        p
+          | If you are the owner of the account and are regularly seeing this error, please read more about it in our knowledgebase
+          | .
+        p
+          | If you have any questions, please contact our Technical Support department.
+        hr
+        div
+          a.btn_pri(href="#") Return to Login
+    //- .columns
+  //- .row
+//- main | .container
+footer.container
+  .row
+    .columns
+      span All rights reserved &copy; 2017 MyOrthoAssist
+      a(href="", data-toggle="modal", data-target="#disclaimer", title="Terms and conditions") Terms & Conditions
+    //- .columns
+  //- .row
+//- footer | .container
+include ../_includes/modal_disclaimer
+include ../_includes/modal_resetpassword

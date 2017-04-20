@@ -3266,6 +3266,104 @@
   }
 }
 
+// 11. Error
+.error {
+  position: relative;
+  color: $white;
+  min-height: 100vh;
+  @include font-size(14px);
+  background: $white url('../images/moa_whitelines_pattern.jpg') repeat;
+  figure {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 $px_fifteen;
+    img {
+      max-width: 200px;
+    }
+    @media #{$phablet} {
+      margin: $px_fifteen 0;
+      img {
+        max-width: 150px;
+      }
+    }
+  }
+  .well {
+    border: none;
+    color: $grey-tone;
+    border-radius: 4px;
+    @media #{$phablet} {
+      margin-top: $px_twenty;
+    }
+  }
+  .page-title {
+    text-align: left;
+    line-height: normal;
+    margin: 0 0 $px_twenty;
+    padding: 0 0 $px_twenty;
+    @include font-size(24px);
+    color: darken($red, 10%);
+    border-bottom: 1px solid $grey-dark;
+    .fa {
+      margin-right: $px_five;
+    }
+    @media #{$phablet} {
+      @include font-size(18px);
+    }
+  }
+  p {
+    @include font-size(14px);
+    @media #{$phablet} {
+      @include font-size(12px);
+    }
+  }
+  footer {
+    text-align: center;
+    @include font-size(12px);
+    a {
+      color: $white;
+      margin-bottom: $px_thirty;
+      text-decoration: underline;
+      @media #{$desktop__up} {
+        margin-bottom: 0;
+      }
+      @media #{$desktop} {
+        display: block;
+        margin-bottom: 0;
+      }
+      @media #{$tablet} {
+        display: block;
+        margin-bottom: 0;
+      }
+      @media #{$phablet} {
+        display: block;
+        margin-bottom: 0;
+      }
+      @media #{$mobile} {
+        display: block;
+        margin-bottom: $px_thirty;
+      }
+    }
+    @media #{$desktop__up} {
+      a {
+        margin-bottom: 0;
+      }
+      span::after {
+        content: "\00a0\00a0\00a0|\00a0\00a0\00a0";
+      }
+    }
+  }
+  div {
+    @include clearfix();
+  }
+  .btn_pri {
+    @extend .pull-right;
+    padding: 0;
+    line-height: 1;
+    @include font-size(16px);
+    text-transform: uppercase;
+  }
+}
+
 // Page Modals
 #disclaimer {
   @include modal_disclaimer();
